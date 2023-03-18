@@ -20,3 +20,14 @@ window.addEventListener('scroll', ()=> {
         }
     })
 })
+
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('header');
+    if (window.pageYOffset > 450) {
+      navbar.classList.add('sticky');
+      navbar.classList.remove('white');
+    } else {
+      navbar.classList.remove('sticky');
+      navbar.classList.add('white');
+    }
+  });

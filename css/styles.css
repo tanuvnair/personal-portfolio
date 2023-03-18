@@ -11,18 +11,46 @@ body {
     background-color: #000000;
 }
 
+.white {
+    background-color: #F6F1F1;
+}
+
+.white a{
+    color: #000000;
+}
+
+.white a:hover {
+    background-color: #000000;
+    color: #F6F1F1;
+}
+
+.white .logo a {
+    color: #000000;
+}
+
+.white .logo a:hover {
+    background-color: #F6F1F1;
+}
+
 header {
     background-color: #000000;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
+    width: 100%;
     position: sticky;
-    top: 0;
+    top: -100px;
     right: 0;
     left: 0;
     z-index: 100;
+    transition: all 0.5s ease 0s;
 }
+
+.sticky {
+    transition: all 0.5s ease 0s;
+    top: 0;
+  }
 
 section {
     font-family: "Montserrat", sans-serif;
