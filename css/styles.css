@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@500&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@500&family=Roboto&family=Source+Code+Pro&display=swap');
 
 * {
     box-sizing: border-box;
@@ -12,6 +12,7 @@ body {
 }
 
 header {
+    background-color: #000000;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -20,6 +21,7 @@ header {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 100;
 }
 
 section {
@@ -63,25 +65,58 @@ nav li a:hover {
 }
 
 #home {
+    display: flex;
     flex-direction: column;
-    min-height: 90vh;
-    padding-bottom: 75px;
+    min-height: 100vh;
+    padding-bottom: 8%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 #home h1 {
     font-family: 'Source Code Pro', monospace;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 #home p{
+    font-family: Roboto;
     width: 50%;
     margin-top: 10px;
     text-align: center;
 }
 
-#about, #contact {
+#about, #projects, #contact {
     background-color: #F6F1F1;
     color:#000000;
+}
+
+#about, #contact {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+section h1 {
+    font-size: 3rem;
+    margin-top: 75px;
+}
+
+section p {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+#projects {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 .logo {
@@ -105,4 +140,63 @@ nav li a:hover {
 
 .active:hover {
     background-color: rgba(246, 241, 241, 0.7);
+}
+
+.custom-shape-divider-top-1679109298 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1679109298 svg {
+    position: relative;
+    display: block;
+    width: calc(176% + 1.3px);
+    height: 281px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1679109298 .shape-fill {
+    fill: #F6F1F1;
+}
+
+.custom-shape-divider-bottom-1679109527 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1679109527 svg {
+    position: relative;
+    display: block;
+    width: calc(180% + 1.3px);
+    height: 212px;
+}
+
+.custom-shape-divider-bottom-1679109628 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1679109628 svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 221px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1679109628 .shape-fill {
+    fill: #F6F1F1;
 }
