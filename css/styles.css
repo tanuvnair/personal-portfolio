@@ -56,7 +56,10 @@ nav li a {
 }
 
 nav li a:hover {
-    color: #146C94;
+    color:#000000;
+    background-color: #F6F1F1;
+    padding: 15px 25px;
+    border-radius: 0px;
 }
 
 #myVideo {
