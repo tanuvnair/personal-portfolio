@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Montserrat&display=swap');
+
+:root {
+    --p-color: #313638;
+    --s-color: #28AFB0;
+    --font-color: #ffffff;
+}
+
+/* Elements */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, a{
+    font-family: Montserrat;
+}
+
+p {
+    font-family: Hind;
+}
+
+header {
+    background-color: var(--p-color);
+    color: var(--font-p-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/* Ids */
+
+#logo {
+    letter-spacing: 0.3rem;
+}
+
+#logo a {
+    color: var(--s-color);
+}
+
+#hero {
+    padding: 25px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+}
+
+/* Classes */
+
+.nav-items {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links {
+    padding: 15px 20px;
+    transition: all 0.3s ease 0s;
+    color: var(--font-color);
+}
+
+.nav-links:hover {
+    background-color: var(--s-color);
+}
