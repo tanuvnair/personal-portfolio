@@ -1,12 +1,11 @@
 :root {
-    --p-color: #222831;
-    --s-color: #00ADB5;
-    --rgb-s-color: 0, 173, 181;
-    --font-color: #EEEEEE;
+    --p-color: rgb(34, 40, 49);
+    --s-color: rgb(115,131,191);
+    --rgb-s-color: 115,131,191;
+    --font-color: rgb(238, 238, 238);
     --rgb: 118, 76, 41;
-    --h1-size: 3rem;
-    --h2-size: 2rem;
-    --p-size: 1.5rem;
+    --h1-size: 3.75rem;
+    --p-size: 1.25rem;
 }
 
 /* Elements */
@@ -24,12 +23,12 @@ body {
     height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6, a{
-    font-family: 'Roboto Condensed';
+h1, h2, h3, h4, h5, h6, a, button{
+    font-family: 'Rubik', sans-serif;
 }
 
-p, button{
-    font-family: 'Roboto';
+p{
+    font-family: 'Roboto Mono', monospace;
 }
 
 header {   
@@ -59,8 +58,13 @@ header {
     background-size: cover;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+#hero-text {
+    width: 50%;
 }
 
 #hero-text h1 {
@@ -71,7 +75,7 @@ header {
 #hero-text p {
     color: var(--font-color);
     font-size: var(--p-size);
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 #hero-image img{
