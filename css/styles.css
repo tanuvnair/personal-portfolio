@@ -1,9 +1,7 @@
 :root {
-    --p-color: rgb(34, 40, 49);
-    --s-color: rgb(115,131,191);
-    --rgb-s-color: 115,131,191;
-    --font-color: rgb(238, 238, 238);
-    --rgb: 118, 76, 41;
+    --primary-color: rgb(101, 30, 196);
+    --secondary-color: rgb(252, 247, 255);
+    --accent-color: rgb(31, 25, 38);
     --h1-size: 3.75rem;
     --p-size: 1.25rem;
 }
@@ -34,7 +32,7 @@ p{
 header {   
     position: absolute;
     width: 100%;
-    color: var(--font-p-color);
+    color: var(--accent-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,14 +46,11 @@ header {
 }
 
 #logo a {
-    color: var(--s-color);
+    color: var(--secondary-color);
 }
 
 #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hero.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--primary-color);
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
@@ -68,12 +63,12 @@ header {
 }
 
 #hero-text h1 {
-    color: var(--s-color);
+    color: var(--secondary-color);
     font-size: var(--h1-size);
 }
 
 #hero-text p {
-    color: var(--font-color);
+    color: var(--secondary-color);
     font-size: var(--p-size);
     margin-top: 10px;
 }
@@ -84,7 +79,7 @@ header {
 }
 
 #hero-image img:hover {
-    height: 41vh;
+    height: 42vh;
 }
 
 /* Classes */
@@ -96,23 +91,27 @@ header {
 
 .nav-links {
     padding: 15px 20px;
-    transition: all 0.3s ease 0s;
-    color: var(--font-color);
+    transition: all 0.1s ease 1s;
+    color: var(--secondary-color);
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 .nav-links:hover {
-    color: var(--s-color);
+    opacity: 1;
 }
 
 .cta {
     transition: all 0.3s ease 0s;
-    background-color: rgba(var(--rgb-s-color), 1);
-    color: var(--font-color);
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
     border: none;
     border-radius: 50px;
     padding: 15px 25px;
 }
 
 .cta:hover {
-    background-color: rgba(var(--rgb-s-color), 0.7);
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
 }
