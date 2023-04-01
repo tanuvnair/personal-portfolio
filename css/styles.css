@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind&family=Montserrat&display=swap');
 
 :root {
-    --p-color: #313638;
-    --s-color: #28AFB0;
-    --font-color: #ffffff;
+    --p-color: #222831;
+    --s-color: #00ADB5;
+    --rgb-s-color: 0, 173, 181;
+    --font-color: #EEEEEE;
+    --rgb: 118, 76, 41;
+    --h1-size: 3rem;
+    --h2-size: 2rem;
+    --p-size: 1.5rem;
 }
 
 /* Elements */
@@ -14,10 +19,11 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
+    scroll-behavior: smooth;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6, a{
@@ -28,8 +34,9 @@ p {
     font-family: Hind;
 }
 
-header {
-    background-color: var(--p-color);
+header {   
+    position: absolute;
+    width: 100%;
     color: var(--font-p-color);
     display: flex;
     justify-content: space-between;
@@ -48,12 +55,34 @@ header {
 }
 
 #hero {
-    padding: 25px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hero.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#hero-text h1 {
+    color: var(--s-color);
+    font-size: var(--h1-size);
+}
+
+#hero-text p {
+    color: var(--font-color);
+    font-size: var(--p-size);
+    margin-top: 25px;
+}
+
+#hero-image img{
+    transition: all 0.3s ease 0s;
+    height: 40vh;
+}
+
+#hero-image img:hover {
+    height: 41vh;
 }
 
 /* Classes */
@@ -70,5 +99,18 @@ header {
 }
 
 .nav-links:hover {
-    background-color: var(--s-color);
+    color: var(--s-color);
+}
+
+.cta {
+    transition: all 0.3s ease 0s;
+    background-color: rgba(var(--rgb-s-color), 1);
+    color: var(--font-color);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 25px;
+}
+
+.cta:hover {
+    background-color: rgba(var(--rgb-s-color), 0.7);
 }
