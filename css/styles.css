@@ -78,7 +78,7 @@ header {
 }
 
 .hero {
-    margin-top: -109px;
+    margin-top: -106px;
     background-color: var(--primary-color);
     background-image: url('/img/blob.svg');
     background-repeat: no-repeat;
