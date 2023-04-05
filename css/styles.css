@@ -18,15 +18,24 @@
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, a, button{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
     font-family: 'Roboto', sans-serif;
 }
 
-p, ul, li{
+p,
+ul,
+li {
     font-family: 'Nunito', sans-serif;
 }
 
-header { 
+header {
     position: sticky;
     top: -100px;
     width: 100%;
@@ -88,15 +97,15 @@ header {
 .hero-text h1 {
     color: var(--accent-color);
     font-size: var(--h1-size);
+    margin-bottom: 15px;
 }
 
 .hero-text p {
     color: var(--secondary-color);
     font-size: 1.75rem;
-    margin-top: 15px;
 }
 
-.hero-image img{
+.hero-image img {
     height: 40vh;
     transition: transform 0.3s ease 0s;
 }
@@ -126,21 +135,19 @@ section:nth-child(odd) {
     color: var(--secondary-color);
 }
 
+section img {
+    margin-bottom: 15px;
+}
+
 section h1 {
     font-size: var(--h1-size);
     color: var(--accent-color);
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
 section p {
-    width: 75%;
+    width: 60%;
     font-size: var(--p-size);
-}
-
-.about-me div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .avatar {
@@ -165,17 +172,24 @@ section p {
     border-radius: 4px;
 }
 
-.socials {
-    display: flex;
-    justify-content: center;
-    gap: 75px;
-    flex-wrap: wrap;
-}
-
 .social-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    justify-content: center;
+    gap: 125px;
+}
+
+.social-list a {
+    color: var(--primary-color);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+}
+
+.social-list a:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
 }
 
 .cta {
@@ -184,7 +198,7 @@ section p {
     font-weight: bold;
     cursor: pointer;
     background-color: var(--secondary-color);
-    color: var(--primary-color);    
+    color: var(--primary-color);
     border: none;
     padding: 15px 25px;
 }
