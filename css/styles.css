@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6, a, button{
     font-family: 'Roboto', sans-serif;
 }
 
-p{
+p, ul, li{
     font-family: 'Nunito', sans-serif;
 }
 
@@ -85,7 +85,7 @@ header {
 
 .hero-text p {
     color: var(--secondary-color);
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-top: 15px;
 }
 
