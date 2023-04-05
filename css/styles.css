@@ -18,6 +18,11 @@
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
+}
+
 h1,
 h2,
 h3,
@@ -192,6 +197,71 @@ section p {
     transform: scale(1.2);
 }
 
+.contact-me form {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+}
+
+.control-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.control-wrapper div {
+    flex: 1;
+}
+
+.contact-me form label {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--secondary-color);
+}
+
+.contact-me form input {
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    min-width: 300px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.contact-me form input:focus, .contact-me form textarea:focus {
+    outline: none;
+}
+
+.contact-me form textarea {
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    min-width: 300px;
+    max-width: 100%;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    height: calc(100% - 40px);
+}
+
+.contact-me form button {
+    margin-top: 15px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.contact-me form button:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
 .cta {
     transition: all 0.3s ease 0s;
     letter-spacing: 0.05rem;
@@ -204,7 +274,7 @@ section p {
 }
 
 .cta:hover {
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.13rem;
     padding: 15px 30px;
 }
 
