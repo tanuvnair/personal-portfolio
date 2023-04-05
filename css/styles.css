@@ -6,8 +6,6 @@
     --p-size: 1.25rem;
 }
 
-/* Elements */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,53 +37,13 @@ header {
     padding: 30px 10%;
 }
 
-/* Ids */
-
-#logo {
+.logo {
     letter-spacing: 0.2rem;
 }
 
-#logo a {
+.logo a {
     color: var(--secondary-color);
 }
-
-#hero {
-    background-color: var(--primary-color);
-    background-image: url('/img/blob.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-}
-
-#hero-text {
-    width: 50%;
-}
-
-#hero-text h1 {
-    color: var(--accent-color);
-    font-size: var(--h1-size);
-}
-
-#hero-text p {
-    color: var(--secondary-color);
-    font-size: var(--p-size);
-    margin-top: 10px;
-}
-
-#hero-image img{
-    transition: all 0.3s ease 0s;
-    height: 40vh;
-}
-
-#hero-image img:hover {
-    height: 42vh;
-}
-
-/* Classes */
 
 .nav-items {
     display: inline-block;
@@ -102,6 +60,103 @@ header {
 
 .nav-links:hover {
     opacity: 1;
+}
+
+.hero {
+    background-color: var(--primary-color);
+    background-image: url('/img/blob.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    color: var(--accent-color);
+    font-size: var(--h1-size);
+}
+
+.hero-text p {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+.hero-image img{
+    height: 40vh;
+}
+
+section {
+    padding: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+section:nth-child(odd) {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+section:nth-child(even) h1 {
+    color: var(--accent-color);
+}
+
+section:nth-child(odd) h1 {
+    color: var(--secondary-color);
+}
+ 
+section h1 {
+    font-size: var(--h1-size);
+    margin-bottom: 16px;
+}
+
+section p {
+    width: 75%;
+    font-size: var(--p-size);
+}
+
+.about-me div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-list {
+    display: flex;
+    gap: 20px;
+}
+
+.project-list li {
+    border: 1px solid white;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-list {
+    display: flex;
+    gap: 150px;
 }
 
 .cta {
