@@ -82,6 +82,22 @@ header {
     transition: all 0.3s ease 0s;
 }
 
+.contact-btn {
+    transition: all 0.3s ease 0s;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 15px 25px;
+}
+
+.contact-btn:hover {
+    letter-spacing: 0.15rem;
+    padding: 15px 30px;
+}
+
 .hero {
     margin-top: -106px;
     background-color: var(--primary-color);
@@ -248,34 +264,22 @@ section p {
     height: calc(100% - 40px);
 }
 
-.contact-me form button {
-    margin-top: 15px;
+.cta {
     background-color: var(--accent-color);
     color: var(--secondary-color);
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.contact-me form button:hover {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-}
-
-.cta {
-    transition: all 0.3s ease 0s;
-    letter-spacing: 0.05rem;
-    font-weight: bold;
     cursor: pointer;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border: none;
     padding: 15px 25px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
 }
 
 .cta:hover {
-    letter-spacing: 0.13rem;
-    padding: 15px 30px;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    letter-spacing: 0.14rem;
 }
 
 .active {
