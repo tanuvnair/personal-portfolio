@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #22223B;
+    --primary-color: #22223b;
     --rgb-primary-color: 34, 34, 59;
-    --secondary-color: #F2E9E4;
+    --secondary-color: #f2e9e4;
     --rgb-secondary-color: 242, 233, 228;
-    --accent-color: #907AD6;
+    --accent-color: #907ad6;
     --rgb-accent-color: 144, 122, 214;
     --h1-size: 3.75rem;
     --p-size: 1.25rem;
@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     /* font-family: 'Nunito', sans-serif; */
 }
 
@@ -31,13 +31,13 @@ h5,
 h6,
 a,
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 p,
 ul,
 li {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 header {
@@ -100,7 +100,7 @@ header {
 .hero {
     margin-top: -106px;
     background-color: var(--primary-color);
-    background-image: url('../img/blob.svg');
+    background-image: url("../img/blob.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -174,7 +174,12 @@ section p {
     height: 50%;
     border-radius: 100%;
     transition: all 0.3s ease 0s;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .avatar:hover {
@@ -239,28 +244,36 @@ section p {
 }
 
 .contact-me form input {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
     width: 100%;
     min-width: 300px;
-    padding: 10px 20px;
+    padding: 10px;
     margin-bottom: 10px;
     font-size: 1.2rem;
     color: var(--primary-color);
 }
 
-.contact-me form input:focus, .contact-me form textarea:focus {
+.contact-me form input:focus,
+.contact-me form textarea:focus {
     outline: none;
 }
 
 .contact-me form textarea {
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
+    resize: none;
     width: 100%;
     min-width: 300px;
     max-width: 100%;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 1.2rem;
     color: var(--primary-color);
     height: calc(100% - 40px);
+}
+
+.word-count {
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font-size: 0.75rem;
 }
 
 .cta {
@@ -288,5 +301,7 @@ section p {
 .sticky {
     top: 0;
     background-color: var(--primary-color);
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
