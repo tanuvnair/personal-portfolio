@@ -273,7 +273,7 @@ section p {
 .word-count {
     float: right;
     padding: 0.1rem 0 0 0;
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 .cta {
@@ -286,6 +286,10 @@ section p {
     font-weight: 400;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
+}
+
+.contact-me .cta {
+    margin-top: 10px;
 }
 
 .cta:hover {
