@@ -18,54 +18,56 @@
     <div class="fixed inset-0 bg-black/50 z-10"></div>
 
     <!-- Content -->
-    <div class="relative z-20 grid grid-cols-1 md:grid-cols-[1fr_4fr] h-screen p-4 md:p-16 gap-4 md:gap-8">
+    <div class="relative z-20 grid grid-cols-1 md:grid-cols-[1fr_4fr] h-screen p-4 md:p-8 lg:p-16 gap-4 md:gap-8">
         <!-- Left Container (Navbar) -->
-        <div class="flex flex-col items-center gap-6 md:gap-12 p-4 md:p-6 border-2 border-primary backdrop-blur-xl">
+        <div
+            class="flex flex-col items-center gap-6 md:gap-12 p-4 md:p-6 border-2 border-primary backdrop-blur-xl h-fit">
             <div class="mt-4 md:mt-12 flex flex-col items-center gap-4 md:gap-6">
                 <!-- Avatar -->
-                <div class="rounded-full bg-primary w-1/2 max-w-[500px] hover:rotate-180 transition-all">
+                <div class="rounded-full bg-primary w-24 md:w-32 lg:w-40 hover:rotate-180 transition-all">
                     <img class="rounded-full" src="./img/avatar.png" alt="tanuv's avatar">
                 </div>
 
                 <!-- Name/Title -->
                 <h1
-                    class="text-text hover:text-primary font-bold text-lg md:text-3xl lg:text-5xl transition-colors cursor-pointer">
+                    class="text-text hover:text-primary font-bold text-lg md:text-2xl lg:text-3xl transition-colors cursor-pointer">
                     tanuv.</h1>
             </div>
 
             <!-- Navigation Links -->
-            <nav class="flex flex-col items-center gap-4 md:gap-8 w-full">
-                <a href="#aboutme" class="text-base md:text-lg opacity-75 hover:opacity-100 transition-all">About</a>
+            <nav class="flex flex-col items-center gap-4 md:gap-6 w-full">
+                <a href="#aboutme" class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">About</a>
                 <a href="#timeline"
-                    class="text-base md:text-lg opacity-75 hover:opacity-100 transition-all">Timeline</a>
+                    class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Timeline</a>
                 <a href="#projects"
-                    class="text-base md:text-lg opacity-75 hover:opacity-100 transition-all">Projects</a>
-                <a href="#resume" class="text-base md:text-lg opacity-75 hover:opacity-100 transition-all">Resume</a>
-                <a href="#contact" class="text-base md:text-lg opacity-75 hover:opacity-100 transition-all">Contact</a>
+                    class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Projects</a>
+                <a href="#resume" class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Resume</a>
+                <a href="#contact" class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Contact</a>
             </nav>
 
             <!-- Social Links -->
             <div class="flex gap-4 mt-auto">
                 <a href="https://github.com/tanuvnair" target="_blank"
-                    class="text-xl md:text-2xl hover:text-primary transition-colors">
+                    class="text-lg md:text-xl hover:text-primary transition-colors">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://linkedin.com/in/tanuvnair" target="_blank"
-                    class="text-xl md:text-2xl hover:text-primary transition-colors">
+                    class="text-lg md:text-xl hover:text-primary transition-colors">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:tanuvnair@gmail.com" class="text-xl md:text-2xl hover:text-primary transition-colors">
+                <a href="mailto:tanuvnair@gmail.com" class="text-lg md:text-xl hover:text-primary transition-colors">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </div>
 
         <!-- Right Container (Main Content) -->
-        <div class="flex flex-col p-10 overflow-y-auto border-2 border-primary backdrop-blur-xl">
+        <div
+            class="flex flex-col p-4 md:p-6 lg:p-8 overflow-y-auto border-2 border-primary backdrop-blur-xl max-h-full">
             <!-- About Me Section -->
-            <section id="aboutme" class="flex flex-col justify-center mb-8">
-                <h2 class="text-4xl font-bold mb-4">About Me</h2>
-                <p class="text-xl">Hi there! I'm Tanuv Nair, a recent graduate with a Bachelor's degree in
+            <section id="aboutme" class="mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">About Me</h2>
+                <p class="text-base md:text-lg">Hi there! I'm Tanuv Nair, a recent graduate with a Bachelor's degree in
                     Computer Applications. Passionate about technology and problem-solving, I enjoy exploring the world
                     of software development, artificial intelligence, and innovative tech solutions.
 
@@ -81,132 +83,169 @@
                     Let's connect and build something amazing together!</p>
             </section>
 
+            <!-- [Rest of the sections remain exactly the same as in the previous version] -->
             <!-- Timeline Section -->
-            <section id="timeline" class="flex flex-col justify-center mb-8">
-                <h2 class="text-4xl font-bold mb-8">Timeline</h2>
+            <section id="timeline" class="mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Timeline</h2>
 
                 <!-- Timeline Container -->
-                <div class="relative">
+                <div class="relative pl-4">
                     <!-- Timeline Line -->
-                    <div class="absolute left-1/2 w-1 h-full bg-primary transform -translate-x-1/2 z-0"></div>
+                    <div class="absolute left-0 w-1 h-full bg-primary"></div>
 
                     <!-- Timeline Items -->
                     <div class="space-y-8">
-                        <!-- Timeline Item 1 -->
-                        <div class="flex items-center w-full">
-                            <!-- Left Side -->
-                            <div class="w-1/2 pr-4 md:pr-8 text-right">
-                                <h3 class="text-base md:text-lg font-bold">July 2020</h3>
-                                <p class="text-xs md:text-sm opacity-75">Passed ICSE Boards with 86%</p>
-                            </div>
-
-                            <!-- Timeline Indicator -->
-                            <div
-                                class="w-6 h-6 md:w-8 md:h-8 bg-primary rounded-full flex items-center justify-center z-10">
-                                <i class="fas fa-award text-white text-xs md:text-sm"></i>
-                            </div>
-
-                            <!-- Right Side (Empty for alternating layout) -->
-                            <div class="w-1/2"></div>
+                        <!-- Timeline Items (Now all left-aligned) -->
+                        <div class="ml-6">
+                            <h3 class="text-lg md:text-xl font-bold">July 2020</h3>
+                            <p class="text-sm md:text-base opacity-75">Passed ICSE Boards with 86%</p>
                         </div>
 
-                        <!-- Timeline Item 2 -->
-                        <div class="flex items-center w-full">
-                            <!-- Left Side (Empty for alternating layout) -->
-                            <div class="w-1/2"></div>
-
-                            <!-- Timeline Indicator -->
-                            <div
-                                class="w-6 h-6 md:w-8 md:h-8 bg-primary rounded-full flex items-center justify-center z-10">
-                                <i class="fas fa-award text-white text-xs md:text-sm"></i>
-                            </div>
-
-                            <!-- Right Side -->
-                            <div class="w-1/2 pl-4 md:pl-8">
-                                <h3 class="text-base md:text-lg font-bold">July 2022</h3>
-                                <p class="text-xs md:text-sm opacity-75">Passed ISC Boards with 75%</p>
-                            </div>
+                        <div class="ml-6">
+                            <h3 class="text-lg md:text-xl font-bold">July 2022</h3>
+                            <p class="text-sm md:text-base opacity-75">Passed ISC Boards with 75%</p>
                         </div>
 
-                        <!-- Timeline Item 3 -->
-                        <div class="flex items-center w-full">
-                            <!-- Left Side -->
-                            <div class="w-1/2 pr-4 md:pr-8 text-right">
-                                <h3 class="text-base md:text-lg font-bold">July 2022</h3>
-                                <p class="text-xs md:text-sm opacity-75">Got into S.K. Somaiya College for Bachelors in
-                                    Computer
-                                    Applications</p>
-                            </div>
-
-                            <!-- Timeline Indicator -->
-                            <div
-                                class="w-6 h-6 md:w-8 md:h-8 bg-primary rounded-full flex items-center justify-center z-10">
-                                <i class="fas fa-university text-white text-xs md:text-sm"></i>
-                            </div>
-
-                            <!-- Right Side (Empty for alternating layout) -->
-                            <div class="w-1/2"></div>
+                        <div class="ml-6">
+                            <h3 class="text-lg md:text-xl font-bold">July 2022</h3>
+                            <p class="text-sm md:text-base opacity-75">Got into S.K. Somaiya College for Bachelors in
+                                Computer Applications</p>
                         </div>
 
-                        <!-- Timeline Item 4 -->
-                        <div class="flex items-center w-full">
-                            <!-- Left Side (Empty for alternating layout) -->
-                            <div class="w-1/2"></div>
-
-                            <!-- Timeline Indicator -->
-                            <div
-                                class="w-6 h-6 md:w-8 md:h-8 bg-primary rounded-full flex items-center justify-center z-10">
-                                <i class="fas fa-laptop-code text-white text-xs md:text-sm"></i>
-                            </div>
-
-                            <!-- Right Side -->
-                            <div class="w-1/2 pl-4 md:pl-8">
-                                <h3 class="text-base md:text-lg font-bold">November 2023</h3>
-                                <p class="text-xs md:text-sm opacity-75">Started an internship at Algorisys in Software
-                                    and AI
-                                    Engineering</p>
-                            </div>
+                        <div class="ml-6">
+                            <h3 class="text-lg md:text-xl font-bold">November 2023</h3>
+                            <p class="text-sm md:text-base opacity-75">Started an internship at Algorisys in Software
+                                and AI Engineering</p>
                         </div>
 
-                        <!-- Timeline Item 5 (Present) -->
-                        <div class="flex items-center w-full">
-                            <!-- Left Side -->
-                            <div class="w-1/2 pr-4 md:pr-8 text-right">
-                                <h3 class="text-base md:text-lg font-bold">Present</h3>
-                                <p class="text-xs md:text-sm opacity-75">Currently pursuing Bachelors in Computer
-                                    Applications and
-                                    interning at Algorisys</p>
-                            </div>
-
-                            <!-- Timeline Indicator -->
-                            <div
-                                class="w-6 h-6 md:w-8 md:h-8 bg-primary rounded-full flex items-center justify-center z-10 animate-pulse">
-                                <i class="fas fa-star text-white text-xs md:text-sm"></i>
-                            </div>
-
-                            <!-- Right Side (Empty for alternating layout) -->
-                            <div class="w-1/2"></div>
+                        <div class="ml-6">
+                            <h3 class="text-lg md:text-xl font-bold">Present</h3>
+                            <p class="text-sm md:text-base opacity-75">Currently pursuing Bachelors in Computer
+                                Applications and interning at Algorisys</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Projects Section -->
-            <section id="projects" class="flex flex-col justify-center mb-8">
-                <h2 class="text-4xl font-bold mb-4">Projects</h2>
-                <p class="text-xl">Coming soon! Stay tuned for my latest projects.</p>
+            <section id="projects" class="mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project Card 1 -->
+                    <div class="border-2 border-primary rounded-lg overflow-hidden backdrop-blur-xl">
+                        <img src="/api/placeholder/400/200" alt="Project 1" class="w-full h-48 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Project Name</h3>
+                            <p class="text-sm mb-4 opacity-75">Brief description of the project and its key features.
+                                What problems does it solve?</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-primary/20 rounded-full text-xs">React</span>
+                                <span class="px-2 py-1 bg-primary/20 rounded-full text-xs">Node.js</span>
+                                <span class="px-2 py-1 bg-primary/20 rounded-full text-xs">MongoDB</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <a href="#" class="text-primary hover:text-text transition-colors">
+                                    <i class="fab fa-github mr-2"></i>Code
+                                </a>
+                                <a href="#" class="text-primary hover:text-text transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Resume Section -->
-            <section id="resume" class="flex flex-col justify-center mb-8">
-                <h2 class="text-4xl font-bold mb-4">Resume</h2>
-                <p class="text-xl">Download my resume <a href="#" class="text-blue-700 underline">here</a>.</p>
+            <section id="resume" class="mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Resume</h2>
+
+                <!-- Skills -->
+                <div class="mb-8">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Skills</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Programming Languages -->
+                        <div class="border-2 border-primary p-4 rounded-lg backdrop-blur-xl">
+                            <h4 class="text-lg font-bold mb-2">Programming Languages</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Java</span>
+                            </div>
+                        </div>
+
+                        <!-- Web Technologies -->
+                        <div class="border-2 border-primary p-4 rounded-lg backdrop-blur-xl">
+                            <h4 class="text-lg font-bold mb-2">Web Technologies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">HTML/CSS</span>
+                            </div>
+                        </div>
+
+                        <!-- Tools & Frameworks -->
+                        <div class="border-2 border-primary p-4 rounded-lg backdrop-blur-xl">
+                            <h4 class="text-lg font-bold mb-2">Tools & Frameworks</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Git</span>
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Docker</span>
+                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">TailwindCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Resume -->
+                <div class="flex justify-start">
+                    <a href="path-to-your-resume.pdf"
+                        class="inline-flex items-center px-6 py-3 bg-primary text-text rounded-lg hover:bg-text hover:text-primary transition-colors">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Resume
+                    </a>
+                </div>
             </section>
 
             <!-- Contact Section -->
-            <section id="contact" class="flex flex-col justify-center mb-8">
-                <h2 class="text-4xl font-bold mb-4">Contact</h2>
-                <p class="text-xl">Feel free to reach out to me via email or social media!</p>
+            <section id="contact" class="mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Contact</h2>
+
+                <!-- Contact Form -->
+                <div class="w-full">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text" />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text" />
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text"></textarea>
+                        </div>
+
+                        <div class="flex justify-start">
+                            <button type="submit"
+                                class="px-6 py-3 bg-primary text-text rounded-lg hover:bg-text hover:text-primary transition-colors">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </div>
     </div>
