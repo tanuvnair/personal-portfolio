@@ -11,19 +11,171 @@
     <title>tanuv.</title>
 </head>
 
-<body class="bg-background">
-    <div class="bg-red-400 grid grid-cols-[1fr_3fr] h-screen">
-        <div class="bg-yellow-300 p-5">
-            <img src="" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, doloremque quas ducimus,
-                quia doloribus dolorem perferendis saepe voluptate aperiam cumque vel eveniet autem ea? Distinctio unde
-                vel ipsa molestiae!</p>
+<body class="bg-background text-text">
+    <!-- Background Image with Overlay -->
+    <div class="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
+        style="background-image: url('./img/background-image.svg');"></div>
+    <div class="fixed inset-0 bg-black/50 z-10"></div>
+
+    <!-- Content -->
+    <div class="relative z-20 grid grid-cols-1 md:grid-cols-[1fr_4fr] h-screen p-16 gap-8">
+        <!-- Left Container (Navbar) -->
+        <div class="flex flex-col items-center gap-12 p-6 border-2 border-primary backdrop-blur-xl">
+            <div class="mt-12 flex flex-col items-center gap-6">
+                <!-- Avatar -->
+                <div class="rounded-full bg-primary w-1/2">
+                    <img class="rounded-full" src="./img/avatar.png" alt="tanuv's avatar">
+                </div>
+
+                <!-- Name/Title -->
+                <h1
+                    class="text-text hover:text-primary font-bold text-lg md:text-3xl lg:text-5xl transition-colors cursor-pointer">
+                    tanuv.</h1>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-col items-center gap-8 w-full">
+                <a href="#about" class="text-lg md:text-xl opacity-75 hover:opacity-100 transition-all">About</a>
+                <a href="#timeline" class="text-lg md:text-xl opacity-75 hover:opacity-100 transition-all">Timeline</a>
+                <a href="#projects" class="text-lg md:text-xl opacity-75 hover:opacity-100 transition-all">Projects</a>
+                <a href="#resume" class="text-lg md:text-xl opacity-75 hover:opacity-100 transition-all">Resume</a>
+                <a href="#contact" class="text-lg md:text-xl opacity-75 hover:opacity-100 transition-all">Contact</a>
+            </nav>
+
+            <!-- Social Links -->
+            <div class="flex gap-4 mt-auto">
+                <a href="https://github.com/tanuvnair" target="_blank"
+                    class="text-2xl hover:text-primary transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/tanuvnair" target="_blank"
+                    class="text-2xl hover:text-primary transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:tanuvnair@gmail.com" class="text-2xl hover:text-primary transition-colors">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </div>
 
-        <div class="bg-blue-400 p-5">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus aperiam maiores sint molestiae
-                assumenda voluptatem, consequatur saepe ab, quidem est, perferendis facilis eos! Nemo distinctio illo
-                tenetur ducimus, quasi harum.</p>
+        <!-- Right Container (Main Content) -->
+        <div class="p-5 overflow-y-auto">
+            <section id="about" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">About Me</h2>
+                <p>I am a fresher who has just recently completed my Bachelors Degree in Computer Applications</p>
+            </section>
+
+
+            <section id="timeline" class="mb-8 flex flex-col items-start">
+                <h2 class="text-2xl font-bold mb-8">Timeline</h2>
+
+                <!-- Timeline Container -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 w-1 h-full bg-primary transform -translate-x-1/2 z-0"></div>
+
+                    <!-- Timeline Items -->
+                    <div class="space-y-8">
+                        <!-- Timeline Item 1 -->
+                        <div class="flex items-center w-full">
+                            <!-- Left Side -->
+                            <div class="w-1/2 pr-8 text-right">
+                                <h3 class="text-lg font-bold">July 2020</h3>
+                                <p class="text-sm opacity-75">Passed ICSE Boards with 86%</p>
+                            </div>
+
+                            <!-- Timeline Indicator -->
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center z-10">
+                                <i class="fas fa-award text-white"></i>
+                            </div>
+
+                            <!-- Right Side (Empty for alternating layout) -->
+                            <div class="w-1/2"></div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="flex items-center w-full">
+                            <!-- Left Side (Empty for alternating layout) -->
+                            <div class="w-1/2"></div>
+
+                            <!-- Timeline Indicator -->
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center z-10">
+                                <i class="fas fa-award text-white"></i>
+                            </div>
+
+                            <!-- Right Side -->
+                            <div class="w-1/2 pl-8">
+                                <h3 class="text-lg font-bold">July 2022</h3>
+                                <p class="text-sm opacity-75">Passed ISC Boards with 75%</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="flex items-center w-full">
+                            <!-- Left Side -->
+                            <div class="w-1/2 pr-8 text-right">
+                                <h3 class="text-lg font-bold">July 2022</h3>
+                                <p class="text-sm opacity-75">Got into S.K. Somaiya College for Bachelors in Computer
+                                    Applications</p>
+                            </div>
+
+                            <!-- Timeline Indicator -->
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center z-10">
+                                <i class="fas fa-university text-white"></i>
+                            </div>
+
+                            <!-- Right Side (Empty for alternating layout) -->
+                            <div class="w-1/2"></div>
+                        </div>
+
+                        <!-- Timeline Item 4 -->
+                        <div class="flex items-center w-full">
+                            <!-- Left Side (Empty for alternating layout) -->
+                            <div class="w-1/2"></div>
+
+                            <!-- Timeline Indicator -->
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center z-10">
+                                <i class="fas fa-laptop-code text-white"></i>
+                            </div>
+
+                            <!-- Right Side -->
+                            <div class="w-1/2 pl-8">
+                                <h3 class="text-lg font-bold">November 2023</h3>
+                                <p class="text-sm opacity-75">Started an internship at Algorisys in Software and AI
+                                    Engineering</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 5 -->
+                        <div class="flex items-center w-full">
+                            <!-- Left Side -->
+                            <div class="w-1/2 pr-8 text-right">
+                                <h3 class="text-lg font-bold">June 2025</h3>
+                                <p class="text-sm opacity-75">Graduating with a degree in Bachelors in Computer
+                                    Applications</p>
+                            </div>
+
+                            <!-- Timeline Indicator -->
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center z-10">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+
+                            <!-- Right Side (Empty for alternating layout) -->
+                            <div class="w-1/2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resume" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Resume</h2>
+                <p>Download my resume <a href="#" class="text-blue-700 underline">here</a>.</p>
+            </section>
+
+            <section id="contact" class="mb-8">
+                <h2 class="text-2xl font-bold mb-4">Contact</h2>
+                <p>Feel free to reach out to me via email or social media!</p>
+            </section>
         </div>
     </div>
 
