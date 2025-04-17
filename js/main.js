@@ -164,6 +164,102 @@ window.addEventListener("load", () => {
     setTimeout(typeWriter, 1000);
 });
 
+function validateForm(name, email, message) {
+    const errors = {};
+
+    if (!name.trim()) {
+        errors.name = "Name is required";
+    }
+
+    if (!email.trim()) {
+        errors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errors.email = "Please enter a valid email address";
+    }
+
+    if (!message.trim()) {
+        errors.message = "Message is required";
+    }
+
+    return errors;
+}
+
+function showError(inputId, message) {
+    const errorDiv = document.getElementById(`${inputId}-error`);
+    if (errorDiv) {
+        errorDiv.textContent = message;
+    } else {
+        const input = document.getElementById(inputId);
+        const div = document.createElement("div");
+        div.id = `${inputId}-error`;
+        div.className = "text-red-500 text-sm mt-1";
+        div.textContent = message;
+        input.parentNode.appendChild(div);
+    }
+}
+
+function clearErrors() {
+    const errorDivs = document.querySelectorAll('[id$="-error"]');
+    errorDivs.forEach((div) => div.remove());
+}
+
+document
+    .getElementById("contact-form")
+    .addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const formData = new FormData(form);
+        const formProps = Object.fromEntries(formData);
+
+        const errors = validateForm(
+            formProps.name,
+            formProps.email,
+            formProps.message
+        );
+
+        clearErrors();
+
+        if (Object.keys(errors).length > 0) {
+            for (const [field, message] of Object.entries(errors)) {
+                showError(field, message);
+            }
+            return;
+        }
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        submitButton.innerHTML =
+            '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+        submitButton.disabled = true;
+
+        try {
+            const response = await fetch("https://formspree.io/f/myzkodgr", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json",
+                },
+            });
+
+            if (response.ok) {
+                form.reset();
+                alert(
+                    "Thank you for your message! I will get back to you soon."
+                );
+            } else {
+                throw new Error("Failed to send message");
+            }
+        } catch (error) {
+            alert(
+                "Sorry, there was an error sending your message. Please try again later."
+            );
+        } finally {
+            submitButton.innerHTML = originalButtonText;
+            submitButton.disabled = false;
+        }
+    });
+
 // Theme toggle functionality
 const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
