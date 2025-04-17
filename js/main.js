@@ -1,3 +1,19 @@
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+
+mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+
+// Close mobile menu when clicking on a link
+const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
+});
+
 // Theme toggle functionality
 const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
@@ -19,4 +35,5 @@ themeToggle.addEventListener("click", () => {
     localStorage.setItem("theme", currentTheme);
 });
 
+// Get the current year for the footer
 document.getElementById("year").textContent = new Date().getFullYear();
