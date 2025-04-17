@@ -1,38 +1,283 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png" />
+        <link rel="stylesheet" href="css/output.css" />
+        <title>tanuv's portfolio</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
-    <link rel="stylesheet" href="css/output.css">
-    <title>tanuv's portfolio</title>
-</head>
+    <body class="font-sans bg-background text-text transition-all duration-300">
+        <header class="fixed top-0 w-full">
+            <nav class="flex items-center justify-between py-16 px-64">
+                <div class="text-3xl font-bold">
+                    <a href="#" class="transition-colors hover:text-text/80">
+                        <span class="flex items-center gap-3">
+                            <svg
+                                data-testid="geist-icon"
+                                height="22"
+                                stroke-linejoin="round"
+                                style="color: currentcolor"
+                                viewBox="0 0 16 16"
+                                width="22"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M7.06463 3.20474C5.79164 1.93175 3.72772 1.93175 2.45474 3.20474C1.18175 4.47773 1.18175 6.54166 2.45474 7.81465L8 13.3599L13.5453 7.81465C14.8182 6.54166 14.8182 4.47773 13.5453 3.20474C12.2723 1.93175 10.2084 1.93175 8.93537 3.20474L8.53033 3.60979L8 4.14012L7.46967 3.60979L7.06463 3.20474ZM8 2.02321C6.13348 0.286219 3.21165 0.326509 1.39408 2.14408C-0.464694 4.00286 -0.464691 7.01653 1.39408 8.87531L7.46967 14.9509L8 15.4812L8.53033 14.9509L14.6059 8.87531C16.4647 7.01653 16.4647 4.00286 14.6059 2.14408C12.7884 0.326509 9.86653 0.286221 8 2.02321Z"
+                                    fill="currentColor"
+                                ></path>
+                            </svg>
+                            tanuv.info
+                        </span>
+                    </a>
+                </div>
+                <ul class="flex items-center gap-16">
+                    <li><a href="#about" class="hover:underline">About</a></li>
+                    <li>
+                        <a href="#projects" class="hover:underline">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="hover:underline">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <button
+                                class="py-2 px-6 rounded-md border-2 border-secondary transition-colors hover:bg-secondary"
+                            >
+                                Hire Me!
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-<body class="font-sans bg-background text-text transition-colors duration-300">
-    <div class="container mx-auto p-4">
-        <h1>Hello</h1>
-        <p>This is some sample text that will change with the theme.</p>
-    </div>
-    <div class="fixed bottom-4 right-4">
-        <button id="themeToggle"
-            class="p-3 rounded-full transition-colors bg-background border-2 border-secondary text-primary hover:bg-secondary">
-            <svg class="dark:hidden" data-testid="geist-icon" height="16" stroke-linejoin="round"
-                style="color: currentcolor;" viewBox="0 0 16 16" width="16">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M1.5 8.00005C1.5 5.53089 2.99198 3.40932 5.12349 2.48889C4.88136 3.19858 4.75 3.95936 4.75 4.7501C4.75 8.61609 7.88401 11.7501 11.75 11.7501C11.8995 11.7501 12.048 11.7454 12.1953 11.7361C11.0955 13.1164 9.40047 14.0001 7.5 14.0001C4.18629 14.0001 1.5 11.3138 1.5 8.00005ZM6.41706 0.577759C2.78784 1.1031 0 4.22536 0 8.00005C0 12.1422 3.35786 15.5001 7.5 15.5001C10.5798 15.5001 13.2244 13.6438 14.3792 10.9921L13.4588 9.9797C12.9218 10.155 12.3478 10.2501 11.75 10.2501C8.71243 10.2501 6.25 7.78767 6.25 4.7501C6.25 3.63431 6.58146 2.59823 7.15111 1.73217L6.41706 0.577759ZM13.25 1V1.75V2.75L14.25 2.75H15V4.25H14.25H13.25V5.25V6H11.75V5.25V4.25H10.75L10 4.25V2.75H10.75L11.75 2.75V1.75V1H13.25Z"
-                    fill="currentColor"></path>
-            </svg>
-            <!-- Sun icon (shown in dark mode) -->
-            <svg class="hidden dark:block" data-testid="geist-icon" height="16" stroke-linejoin="round"
-                style="color: currentcolor;" viewBox="0 0 16 16" width="16">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.75 0.75V0H7.25V0.75V2V2.75H8.75V2V0.75ZM11.182 3.75732L11.7123 3.22699L12.0659 2.87344L12.5962 2.34311L13.6569 3.40377L13.1265 3.9341L12.773 4.28765L12.2426 4.81798L11.182 3.75732ZM8 10.5C9.38071 10.5 10.5 9.38071 10.5 8C10.5 6.61929 9.38071 5.5 8 5.5C6.61929 5.5 5.5 6.61929 5.5 8C5.5 9.38071 6.61929 10.5 8 10.5ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM13.25 7.25H14H15.25H16V8.75H15.25H14H13.25V7.25ZM0.75 7.25H0V8.75H0.75H2H2.75V7.25H2H0.75ZM2.87348 12.0659L2.34315 12.5962L3.40381 13.6569L3.93414 13.1265L4.28769 12.773L4.81802 12.2426L3.75736 11.182L3.22703 11.7123L2.87348 12.0659ZM3.75735 4.81798L3.22702 4.28765L2.87347 3.9341L2.34314 3.40377L3.4038 2.34311L3.93413 2.87344L4.28768 3.22699L4.81802 3.75732L3.75735 4.81798ZM12.0659 13.1265L12.5962 13.6569L13.6569 12.5962L13.1265 12.0659L12.773 11.7123L12.2426 11.182L11.182 12.2426L11.7123 12.773L12.0659 13.1265ZM8.75 13.25V14V15.25V16H7.25V15.25V14V13.25H8.75Z"
-                    fill="currentColor"></path>
-            </svg>
-        </button>
-    </div>
-    <script src="js/main.js"></script>
-</body>
+        <main class="container mx-auto px-6">
+            <section
+                id="hero"
+                class="min-h-screen flex flex-col justify-center items-center text-center"
+            >
+                <h1 class="text-5xl font-bold mb-4">Hi, I'm Tanuv</h1>
+                <p class="text-xl max-w-2xl">
+                    Hi there! I'm a recent graduate with a Bachelor's degree in
+                    Computer Applications.
+                </p>
+            </section>
 
+            <section id="about" class="py-20">
+                <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <p class="text-lg leading-relaxed">
+                            Your about me text goes here. This section can
+                            include your background, education, and professional
+                            journey.
+                        </p>
+                    </div>
+                    <div
+                        class="md:w-1/2 aspect-square rounded-full overflow-hidden"
+                    >
+                        <!-- Image placeholder -->
+                        <div class="w-full h-full"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="py-20">
+                <h2 class="text-3xl font-bold mb-12 text-center">
+                    My Projects
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div class="rounded-lg overflow-hidden">
+                        <div class="aspect-video"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">
+                                Project 1
+                            </h3>
+                            <p class="mb-4">
+                                Project description goes here with details about
+                                what you built.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full"
+                                    >Tech 1</span
+                                >
+                                <span class="px-3 py-1 rounded-full"
+                                    >Tech 2</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg overflow-hidden">
+                        <div class="aspect-video"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">
+                                Project 2
+                            </h3>
+                            <p class="mb-4">
+                                Project description goes here with details about
+                                what you built.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full"
+                                    >Tech 1</span
+                                >
+                                <span class="px-3 py-1 rounded-full"
+                                    >Tech 2</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg overflow-hidden">
+                        <div class="aspect-video"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">
+                                Project 3
+                            </h3>
+                            <p class="mb-4">
+                                Project description goes here with details about
+                                what you built.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-full"
+                                    >Tech 1</span
+                                >
+                                <span class="px-3 py-1 rounded-full"
+                                    >Tech 2</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="py-20">
+                <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+                        <ul class="space-y-2">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Backend</h3>
+                        <ul class="space-y-2">
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>Database</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Tools</h3>
+                        <ul class="space-y-2">
+                            <li>Git</li>
+                            <li>VS Code</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="py-20">
+                <h2 class="text-3xl font-bold mb-12 text-center">
+                    Get In Touch
+                </h2>
+                <form class="max-w-2xl mx-auto space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Your Name"
+                                class="w-full p-3"
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="email"
+                                placeholder="Your Email"
+                                class="w-full p-3"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <textarea
+                            placeholder="Your Message"
+                            class="w-full p-3 h-40"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="px-6 py-3 w-full md:w-auto">
+                        Send Message
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="py-8">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="hover:underline">LinkedIn</a>
+                    <a href="#" class="hover:underline">GitHub</a>
+                    <a href="#" class="hover:underline">Twitter</a>
+                </div>
+                <p class="text-center">
+                    &copy; <span id="year"></span> Your Name. All rights
+                    reserved.
+                </p>
+            </div>
+        </footer>
+
+        <div class="fixed bottom-4 right-4">
+            <button
+                id="themeToggle"
+                class="p-6 rounded-full transition-colors bg-background border-2 border-secondary text-primary hover:bg-secondary"
+            >
+                <svg
+                    class="dark:hidden"
+                    data-testid="geist-icon"
+                    height="16"
+                    stroke-linejoin="round"
+                    style="color: currentcolor"
+                    viewBox="0 0 16 16"
+                    width="16"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.5 8.00005C1.5 5.53089 2.99198 3.40932 5.12349 2.48889C4.88136 3.19858 4.75 3.95936 4.75 4.7501C4.75 8.61609 7.88401 11.7501 11.75 11.7501C11.8995 11.7501 12.048 11.7454 12.1953 11.7361C11.0955 13.1164 9.40047 14.0001 7.5 14.0001C4.18629 14.0001 1.5 11.3138 1.5 8.00005ZM6.41706 0.577759C2.78784 1.1031 0 4.22536 0 8.00005C0 12.1422 3.35786 15.5001 7.5 15.5001C10.5798 15.5001 13.2244 13.6438 14.3792 10.9921L13.4588 9.9797C12.9218 10.155 12.3478 10.2501 11.75 10.2501C8.71243 10.2501 6.25 7.78767 6.25 4.7501C6.25 3.63431 6.58146 2.59823 7.15111 1.73217L6.41706 0.577759ZM13.25 1V1.75V2.75L14.25 2.75H15V4.25H14.25H13.25V5.25V6H11.75V5.25V4.25H10.75L10 4.25V2.75H10.75L11.75 2.75V1.75V1H13.25Z"
+                        fill="currentColor"
+                    ></path>
+                </svg>
+                <!-- Sun icon (shown in dark mode) -->
+                <svg
+                    class="hidden dark:block"
+                    data-testid="geist-icon"
+                    height="16"
+                    stroke-linejoin="round"
+                    style="color: currentcolor"
+                    viewBox="0 0 16 16"
+                    width="16"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.75 0.75V0H7.25V0.75V2V2.75H8.75V2V0.75ZM11.182 3.75732L11.7123 3.22699L12.0659 2.87344L12.5962 2.34311L13.6569 3.40377L13.1265 3.9341L12.773 4.28765L12.2426 4.81798L11.182 3.75732ZM8 10.5C9.38071 10.5 10.5 9.38071 10.5 8C10.5 6.61929 9.38071 5.5 8 5.5C6.61929 5.5 5.5 6.61929 5.5 8C5.5 9.38071 6.61929 10.5 8 10.5ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM13.25 7.25H14H15.25H16V8.75H15.25H14H13.25V7.25ZM0.75 7.25H0V8.75H0.75H2H2.75V7.25H2H0.75ZM2.87348 12.0659L2.34315 12.5962L3.40381 13.6569L3.93414 13.1265L4.28769 12.773L4.81802 12.2426L3.75736 11.182L3.22703 11.7123L2.87348 12.0659ZM3.75735 4.81798L3.22702 4.28765L2.87347 3.9341L2.34314 3.40377L3.4038 2.34311L3.93413 2.87344L4.28768 3.22699L4.81802 3.75732L3.75735 4.81798ZM12.0659 13.1265L12.5962 13.6569L13.6569 12.5962L13.1265 12.0659L12.773 11.7123L12.2426 11.182L11.182 12.2426L11.7123 12.773L12.0659 13.1265ZM8.75 13.25V14V15.25V16H7.25V15.25V14V13.25H8.75Z"
+                        fill="currentColor"
+                    ></path>
+                </svg>
+            </button>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
 </html>

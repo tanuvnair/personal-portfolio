@@ -18,3 +18,5 @@ themeToggle.addEventListener("click", () => {
     const currentTheme = html.classList.contains("dark") ? "dark" : "light";
     localStorage.setItem("theme", currentTheme);
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();
