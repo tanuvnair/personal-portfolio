@@ -1,254 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Tanuv Nair's Personal Portfolio, resume, projects made by me as a student." />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/tailwind.css" />
-    <link rel="shortcut icon" href="img/avatar-bg.png" type="images/x-icon" />
-    <title>tanuv.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
+    <link rel="stylesheet" href="css/output.css">
+    <title>tanuv's portfolio</title>
 </head>
 
-<body class="bg-background text-text scroll-smooth">
-    <!-- Background Image with Overlay -->
-    <div class="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style="background-image: url('./img/background-image.svg');"></div>
-    <div class="fixed inset-0 bg-black/50 z-10"></div>
-
-    <!-- Content -->
-    <div class="relative z-20 grid grid-cols-1 md:grid-cols-[1fr_4fr] h-screen p-4 md:p-8 lg:p-16 gap-4 md:gap-8">
-        <!-- Left Container (Navbar) -->
-        <div
-            class="flex flex-col items-center gap-6 md:gap-12 p-4 md:p-6 border-2 border-primary backdrop-blur-xl h-fit">
-            <div class="mt-4 md:mt-12 flex flex-col items-center gap-4 md:gap-6">
-                <!-- Avatar -->
-                <div class="rounded-full bg-primary w-24 md:w-32 lg:w-40 hover:rotate-180 transition-all">
-                    <img class="rounded-full" src="./img/avatar.png" alt="tanuv's avatar">
-                </div>
-
-                <!-- Name/Title -->
-                <h1
-                    class="text-text hover:text-primary font-bold text-lg md:text-2xl lg:text-3xl transition-colors cursor-default">
-                    tanuv.
-                </h1>
-            </div>
-
-            <!-- Navigation Links -->
-            <nav class="flex flex-col items-center gap-4 md:gap-6 w-full">
-                <a href="#aboutme" class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">About Me</a>
-                <a href="#timeline"
-                    class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Timeline</a>
-                <a href="#projects" class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Latest
-                    GitHub Projects</a>
-                <a href="#resume" class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Resume</a>
-                <a href="#contact" class="text-sm md:text-base opacity-75 hover:opacity-100 transition-all">Contact
-                    Me</a>
-            </nav>
-
-            <!-- Social Links -->
-            <div class="flex gap-4 mt-auto">
-                <a href="https://github.com/tanuvnair" target="_blank"
-                    class="text-lg md:text-xl hover:text-primary transition-colors">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/tanuv" target="_blank"
-                    class="text-lg md:text-xl hover:text-primary transition-colors">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://youtube.com/tanuv" target="_blank"
-                    class="text-lg md:text-xl hover:text-primary transition-colors">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://instagram.com/tanuvvvv" target="_blank"
-                    class="text-lg md:text-xl hover:text-primary transition-colors">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://x.com/tanuvnair" target="_blank"
-                    class="text-lg md:text-xl hover:text-primary transition-colors">
-                    <i class="fab fa-twitter"></i>
-                </a>
-
-            </div>
-        </div>
-
-        <!-- Right Container (Main Content) -->
-        <div
-            class="flex flex-col p-4 md:p-6 lg:p-8 overflow-y-auto border-2 border-primary backdrop-blur-xl max-h-full">
-            <!-- About Me Section -->
-            <section id="aboutme" class="mb-12">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">About Me</h2>
-                <p class="text-base md:text-lg">Hi there! I'm Tanuv Nair, a recent graduate with a Bachelor's degree in
-                    Computer Applications. Passionate about technology and problem-solving, I enjoy exploring the world
-                    of software development, artificial intelligence, and innovative tech solutions.
-
-                    During my academic journey, I gained hands-on experience in programming, web development, and
-                    software engineering, which has fueled my curiosity to learn and grow in the tech industry. I'm
-                    currently interning at Algorisys, where I'm diving into software and AI engineering, further honing
-                    my skills and contributing to real-world projects.
-
-                    When I'm not coding, you can find me tinkering with new tools, learning about emerging technologies,
-                    or brainstorming creative ideas to solve everyday challenges. I'm always eager to collaborate,
-                    learn, and take on new opportunities to make an impact.
-
-                    Let's connect and build something amazing together!</p>
-            </section>
-
-            <!-- [Rest of the sections remain exactly the same as in the previous version] -->
-            <!-- Timeline Section -->
-            <section id="timeline" class="mb-12">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Timeline</h2>
-
-                <!-- Timeline Container -->
-                <div class="relative pl-4">
-                    <!-- Timeline Line -->
-                    <div class="absolute left-0 w-1 h-full bg-primary"></div>
-
-                    <!-- Timeline Items -->
-                    <div class="space-y-8">
-                        <!-- Timeline Items (Now all left-aligned) -->
-                        <div class="ml-6">
-                            <h3 class="text-lg md:text-xl font-bold">July 2020</h3>
-                            <p class="text-sm md:text-base opacity-75">Passed ICSE Boards with 86%</p>
-                        </div>
-
-                        <div class="ml-6">
-                            <h3 class="text-lg md:text-xl font-bold">July 2022</h3>
-                            <p class="text-sm md:text-base opacity-75">Passed ISC Boards with 72%</p>
-                        </div>
-
-                        <div class="ml-6">
-                            <h3 class="text-lg md:text-xl font-bold">July 2022</h3>
-                            <p class="text-sm md:text-base opacity-75">Got into S.K. Somaiya College for Bachelors in
-                                Computer Applications</p>
-                        </div>
-
-                        <div class="ml-6">
-                            <h3 class="text-lg md:text-xl font-bold">November 2023</h3>
-                            <p class="text-sm md:text-base opacity-75">Started an internship at Algorisys in Software
-                                and AI Engineering</p>
-                        </div>
-
-                        <div class="ml-6">
-                            <h3 class="text-lg md:text-xl font-bold">Present</h3>
-                            <p class="text-sm md:text-base opacity-75">Currently pursuing Bachelors in Computer
-                                Applications and interning at Algorisys</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="mb-12">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Latest GitHub Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                </div>
-            </section>
-
-            <!-- Resume Section -->
-            <section id="resume" class="mb-12">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Resume</h2>
-
-                <!-- Skills -->
-                <div class="mb-8">
-                    <h3 class="text-xl md:text-2xl font-bold mb-4">Skills</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Programming Languages -->
-                        <div class="border-2 border-primary p-6 rounded-lg backdrop-blur-xl">
-                            <h4 class="text-lg font-bold mb-2">Programming Languages</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">JavaScript</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">C</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Java</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Python</span>
-                            </div>
-                        </div>
-
-                        <!-- Web Technologies -->
-                        <div class="border-2 border-primary p-6 rounded-lg backdrop-blur-xl">
-                            <h4 class="text-lg font-bold mb-2">Web Technologies</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">HTML/CSS</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">React</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Node.js</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Express.js</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">MongoDB</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">PostgreSQL</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Prisma</span>
-                            </div>
-                        </div>
-
-                        <!-- Tools & Frameworks -->
-                        <div class="border-2 border-primary p-6 rounded-lg backdrop-blur-xl">
-                            <h4 class="text-lg font-bold mb-2">Tools & Frameworks</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Git</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">TailwindCSS</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Next.js</span>
-                                <span class="px-3 py-1 bg-primary/20 rounded-full text-sm">Auth.js</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Download Resume -->
-                <div class="flex justify-start">
-                    <a href="./resume.pdf"
-                        class="inline-flex items-center px-6 py-3 bg-primary text-text rounded-lg hover:bg-text hover:text-primary transition-colors">
-                        <i class="fas fa-download mr-2"></i>
-                        Download Resume
-                    </a>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="mb-12">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Contact Me</h2>
-
-                <!-- Contact Form -->
-                <div class="w-full">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name"
-                                    class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text" />
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                                <input type="email" id="email" name="email"
-                                    class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text" />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject"
-                                class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text" />
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4"
-                                class="w-full px-4 py-2 bg-background border-2 border-primary rounded-lg focus:outline-none focus:border-text"></textarea>
-                        </div>
-
-                        <div class="flex justify-start">
-                            <button type="submit"
-                                class="px-6 py-3 bg-primary text-text rounded-lg hover:bg-text hover:text-primary transition-colors">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </div>
+<body class="bg-background text-text transition-colors duration-300">
+    <div class="flex justify-end p-4">
+        <button id="themeToggle" class="px-4 py-2 rounded-md transition-colors bg-secondary text-primary">
+            Toggle Theme
+        </button>
     </div>
 
-    <script src="https://kit.fontawesome.com/8b835e0cdc.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
+    <div class="container mx-auto p-4">
+        <h1 class="text-primary dark:text-primary-dark">Hello</h1>
+        <p class="text-text dark:text-text-dark">This is some sample text that will change with the theme.</p>
+    </div>
+
+    <script src="js/main.js" />
 </body>
 
 </html>
