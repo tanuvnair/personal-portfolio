@@ -218,6 +218,17 @@ button {
     background: var(--accent-soft);
 }
 
+.route-indicator {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-align: right;
+    padding: 2px var(--margin) 3px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: 0.02em;
+    opacity: 0.75;
+}
+
 .mobile-toggle {
     display: flex;
     flex-direction: column;
@@ -255,8 +266,8 @@ button {
 
 .mobile-menu {
     display: none;
-    position: fixed;
-    top: calc(var(--header-h) + 25px);
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--bg);
@@ -779,13 +790,15 @@ html.dark .btn-primary {
 
 /* ---------------------------------- theme toggle ---------------------------------- */
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .theme-toggle {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 55;
-    width: 46px;
-    height: 46px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     border: 1px solid var(--line);
     background: var(--surface);
@@ -794,6 +807,12 @@ html.dark .btn-primary {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
 }
 
 .icon-moon {
