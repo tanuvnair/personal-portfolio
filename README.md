@@ -22,6 +22,6 @@ To run or modify this project locally:
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/your-username/tanuv.info.git](https://github.com/your-username/tanuv.info.git)
+git clone https://github.com/tanuvnair/tanuvnair.github.io.git
 cd tanuv.info
 ```
