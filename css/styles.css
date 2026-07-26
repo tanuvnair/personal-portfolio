@@ -1,5 +1,5 @@
 /* ==========================================================================
-   tanuv.info | design tokens
+   tanuv.info — design tokens
    Light mode: paper spec sheet. Dark mode: the blueprint itself.
    ========================================================================== */
 
@@ -186,9 +186,9 @@ button {
 .nav-desktop {
     display: none;
     align-items: center;
-    gap: 32px;
+    gap: 26px;
     font-family: var(--font-mono);
-    font-size: 0.875rem;
+    font-size: 0.85rem;
 }
 
 @media (min-width: 768px) {
@@ -434,7 +434,7 @@ html.dark .btn-primary {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #3EBD75;
+    background: #FF0000;
     margin-right: 6px;
 }
 
