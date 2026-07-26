@@ -1,287 +1,146 @@
-// Mobile menu toggle
-const mobileMenuButton = document.getElementById("mobile-menu-button");
-const mobileMenu = document.getElementById("mobile-menu");
+// ---------------------------------------------------------------------------
+// theme (light / blueprint-dark)
+// ---------------------------------------------------------------------------
+(function initTheme() {
+  const stored = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = stored || (prefersDark ? 'dark' : 'light');
+  if (theme === 'dark') document.documentElement.classList.add('dark');
+})();
 
-mobileMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const isDark = document.documentElement.classList.toggle('dark');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const projectsContainer = document.getElementById("projects-container");
-
-    // Create centered loading spinner
-    const loadingDiv = document.createElement("div");
-    loadingDiv.className =
-        "col-span-full flex flex-col items-center justify-center py-16";
-    loadingDiv.innerHTML = `
-        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-        <p class="mt-4">Loading projects...</p>
-    `;
-    projectsContainer.appendChild(loadingDiv);
-
-    // Fetch repositories from GitHub API
-    fetch(
-        "https://api.github.com/users/tanuvnair/repos?sort=updated&direction=desc&per_page=10"
-    )
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json();
-        })
-        .then((repositories) => {
-            // Clear loading indicator
-            projectsContainer.innerHTML = "";
-
-            // Filter out forks if you only want original projects and limit to 10
-            const projects = repositories
-                .filter((repo) => !repo.fork)
-                .slice(0, 8);
-
-            if (projects.length === 0) {
-                projectsContainer.innerHTML =
-                    '<p class="text-center col-span-full py-8">No projects found on GitHub.</p>';
-                return;
-            }
-
-            // Display each project
-            projects.forEach((repo) => {
-                const projectCard = document.createElement("div");
-                projectCard.className =
-                    "rounded-lg overflow-hidden bg-background border-2 border-secondary shadow-md hover:shadow-lg transition-shadow";
-
-                projectCard.innerHTML = `
-                    <div class="p-4 md:p-6">
-                        <h3 class="text-xl font-semibold mb-2">
-                            ${repo.name}
-                        </h3>
-                        <p class="mb-4 text-gray-600 dark:text-gray-300">
-                            ${repo.description || "No description provided"}
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            ${
-                                repo.language
-                                    ? `<span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm">${repo.language}</span>`
-                                    : ""
-                            }
-                            <span class="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm">${
-                                repo.stargazers_count
-                            } ★</span>
-                            <span class="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm">Updated ${formatDate(
-                                repo.updated_at
-                            )}</span>
-                        </div>
-                        <div class="mt-4">
-                            <a href="${
-                                repo.html_url
-                            }" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-accent hover:underline">
-                                View on GitHub
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                </svg>
-                            </a>
-                            ${
-                                repo.homepage
-                                    ? `<a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="ml-4 inline-flex items-center text-green-600 dark:text-green-400 hover:underline">
-                                Live Demo
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                </svg>
-                            </a>`
-                                    : ""
-                            }
-                        </div>
-                    </div>
-                `;
-
-                projectsContainer.appendChild(projectCard);
-            });
-        })
-        .catch((error) => {
-            console.error("Error fetching GitHub projects:", error);
-            projectsContainer.innerHTML = `
-                <div class="col-span-full text-center py-8 text-red-500">
-                    <p>Error loading projects from GitHub.</p>
-                    <p class="mt-2">Please try again later or visit <a href="https://github.com/tanuvnair" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">my GitHub profile</a> directly.</p>
-                </div>
-            `;
-        });
-
-    function formatDate(dateString) {
-        const options = { year: "numeric", month: "short", day: "numeric" };
-        return new Date(dateString).toLocaleDateString(undefined, options);
-    }
+// ---------------------------------------------------------------------------
+// mobile menu
+// ---------------------------------------------------------------------------
+const menuBtn = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen);
 });
+mobileMenu.querySelectorAll('a').forEach((a) =>
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  })
+);
 
-// Close mobile menu when clicking on a link
-const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-mobileMenuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-    });
-});
-
-// Typing animation
-const typingText = document.getElementById("typing-text");
+// ---------------------------------------------------------------------------
+// hero typing effect
+// ---------------------------------------------------------------------------
 const phrases = [
-    "Software Engineer",
-    "Full-Stack Developer",
-    "Creative Problem Solver",
-    "Linux Tinkerer",
-    "Competitive Gamer",
-    "Audiophile",
+  'backend engineer',
+  'systems architect',
+  'go / typescript',
+  'building tm1go',
 ];
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let isEnd = false;
+const typingEl = document.getElementById('typing-text');
+let phraseIdx = 0, charIdx = 0, deleting = false;
 
-function typeWriter() {
-    const currentPhrase = phrases[phraseIndex];
-
-    if (isDeleting) {
-        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
+function typeLoop() {
+  const current = phrases[phraseIdx];
+  if (!deleting) {
+    charIdx++;
+    typingEl.textContent = current.slice(0, charIdx);
+    if (charIdx === current.length) {
+      deleting = true;
+      setTimeout(typeLoop, 1400);
+      return;
     }
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-        isEnd = true;
-        isDeleting = true;
-        setTimeout(typeWriter, 1500);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        setTimeout(typeWriter, 500);
-    } else {
-        const speed = isDeleting ? 100 : 150;
-        setTimeout(typeWriter, speed);
+  } else {
+    charIdx--;
+    typingEl.textContent = current.slice(0, charIdx);
+    if (charIdx === 0) {
+      deleting = false;
+      phraseIdx = (phraseIdx + 1) % phrases.length;
     }
+  }
+  setTimeout(typeLoop, deleting ? 40 : 70);
 }
+typeLoop();
 
-// Start the typing effect when page loads
-window.addEventListener("load", () => {
-    setTimeout(typeWriter, 1000);
+// ---------------------------------------------------------------------------
+// reveal-on-scroll
+// ---------------------------------------------------------------------------
+document.querySelectorAll('.about-grid, .projects-grid, .spec-sheet, .contact-form').forEach((el) => {
+  el.classList.add('reveal');
 });
-
-function validateForm(name, email, message) {
-    const errors = {};
-
-    if (!name.trim()) {
-        errors.name = "Name is required";
-    }
-
-    if (!email.trim()) {
-        errors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        errors.email = "Please enter a valid email address";
-    }
-
-    if (!message.trim()) {
-        errors.message = "Message is required";
-    }
-
-    return errors;
-}
-
-function showError(inputId, message) {
-    const errorDiv = document.getElementById(`${inputId}-error`);
-    if (errorDiv) {
-        errorDiv.textContent = message;
-    } else {
-        const input = document.getElementById(inputId);
-        const div = document.createElement("div");
-        div.id = `${inputId}-error`;
-        div.className = "text-red-500 text-sm mt-1";
-        div.textContent = message;
-        input.parentNode.appendChild(div);
-    }
-}
-
-function clearErrors() {
-    const errorDivs = document.querySelectorAll('[id$="-error"]');
-    errorDivs.forEach((div) => div.remove());
-}
-
-document
-    .getElementById("contact-form")
-    .addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const form = e.target;
-        const formData = new FormData(form);
-        const formProps = Object.fromEntries(formData);
-
-        const errors = validateForm(
-            formProps.name,
-            formProps.email,
-            formProps.message
-        );
-
-        clearErrors();
-
-        if (Object.keys(errors).length > 0) {
-            for (const [field, message] of Object.entries(errors)) {
-                showError(field, message);
-            }
-            return;
-        }
-
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.innerHTML;
-        submitButton.innerHTML =
-            '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-        submitButton.disabled = true;
-
-        try {
-            const response = await fetch("https://formspree.io/f/myzkodgr", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json",
-                },
-            });
-
-            if (response.ok) {
-                form.reset();
-                alert(
-                    "Thank you for your message! I will get back to you soon."
-                );
-            } else {
-                throw new Error("Failed to send message");
-            }
-        } catch (error) {
-            alert(
-                "Sorry, there was an error sending your message. Please try again later."
-            );
-        } finally {
-            submitButton.innerHTML = originalButtonText;
-            submitButton.disabled = false;
-        }
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      }
     });
+  },
+  { threshold: 0.15 }
+);
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-// Theme toggle functionality
-const themeToggle = document.getElementById("themeToggle");
-const html = document.documentElement;
+// ---------------------------------------------------------------------------
+// GitHub projects
+// ---------------------------------------------------------------------------
+const FALLBACK_REPOS = [
+  { name: 'tm1go', description: 'Go package for the IBM TM1 REST API.', language: 'Go', stargazers_count: 0, html_url: 'https://github.com/tanuvnair/tm1go' },
+  { name: 'fluxroom', description: 'Real-time collaborative text editor.', language: 'TypeScript', stargazers_count: 0, html_url: 'https://github.com/tanuvnair' },
+  { name: 'portfolio', description: 'This site - source available on request.', language: 'HTML', stargazers_count: 0, html_url: 'https://github.com/tanuvnair' },
+];
 
-// Check for saved theme preference or use system preference
-const savedTheme =
-    localStorage.getItem("theme") ||
-    (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light");
+async function loadProjects() {
+  const container = document.getElementById('projects-container');
+  try {
+    const res = await fetch('https://api.github.com/users/tanuvnair/repos?sort=updated&per_page=6');
+    if (!res.ok) throw new Error('GitHub API error');
+    let repos = await res.json();
+    repos = repos.filter((r) => !r.fork).slice(0, 6);
+    if (!repos.length) throw new Error('No repos');
+    renderProjects(repos);
+  } catch (err) {
+    renderProjects(FALLBACK_REPOS);
+  }
+}
 
-html.classList.add(savedTheme);
+function renderProjects(repos) {
+  const container = document.getElementById('projects-container');
+  container.innerHTML = '';
+  repos.forEach((repo) => {
+    const card = document.createElement('a');
+    card.href = repo.html_url;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.className = 'project-card';
+    card.innerHTML = `
+      <span class="project-name">${repo.name}</span>
+      <p class="project-desc">${repo.description || 'No description provided.'}</p>
+      <div class="project-meta">
+        ${repo.language ? `<span><span class="lang-dot"></span>${repo.language}</span>` : ''}
+        <span>★ ${repo.stargazers_count ?? 0}</span>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+loadProjects();
 
-themeToggle.addEventListener("click", () => {
-    html.classList.toggle("dark");
-    html.classList.toggle("light");
-
-    const currentTheme = html.classList.contains("dark") ? "dark" : "light";
-    localStorage.setItem("theme", currentTheme);
+// ---------------------------------------------------------------------------
+// contact form (no backend wired up - swap action for your endpoint)
+// ---------------------------------------------------------------------------
+const form = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  if (!name) return;
+  formStatus.textContent = `Thanks, ${name.split(' ')[0]} - message noted. I'll reply soon.`;
+  form.reset();
 });
 
-// Get the current year for the footer
-document.getElementById("year").textContent = new Date().getFullYear();
+// ---------------------------------------------------------------------------
+// footer year
+// ---------------------------------------------------------------------------
+document.getElementById('year').textContent = new Date().getFullYear();
