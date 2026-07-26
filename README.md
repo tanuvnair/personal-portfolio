@@ -1,6 +1,27 @@
-# personal-portfolio
-My personal portfolio that I originally made in first year but now have updated in third year
+# Tanuv Nair - Portfolio Website 🚀
 
-## Screenshots
-### Hero Section
-<img width="1726" height="1007" alt="image" src="https://github.com/user-attachments/assets/acf25db4-9ed9-423e-9f91-3719eb484014" />
+[![Live Demo](https://img.shields.io/badge/website-live-brightgreen)](https://tanuv.info/)
+
+Source code for my personal portfolio website, [tanuv.info](https://tanuv.info/), designed and built to showcase my background, technical skills, and featured projects.
+
+## Features
+
+- **Responsive Design:** Optimized for seamless viewing across mobile, tablet, and desktop screens.
+- **Project Showcase:** Highlights selected software projects and repositories with links to live demos and source code.
+- **Interactive Sections:** Clear layouts for About Me, Skills, Experience, and Contact.
+
+## Tech Stack
+
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Deployment:** GitHub Pages
+- **Tools:** Git & GitHub, VS Code, Figma
+
+## Getting Started
+
+To run or modify this project locally:
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/your-username/tanuv.info.git](https://github.com/your-username/tanuv.info.git)
+cd tanuv.info
+```
