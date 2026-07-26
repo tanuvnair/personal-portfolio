@@ -124,10 +124,12 @@ mobileMenuLinks.forEach((link) => {
 // Typing animation
 const typingText = document.getElementById("typing-text");
 const phrases = [
-    "Web Developer",
-    "Problem Solver",
-    "Tech Enthusiast",
-    "Creative Thinker",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Creative Problem Solver",
+    "Linux Tinkerer",
+    "Competitive Gamer",
+    "Audiophile",
 ];
 let phraseIndex = 0;
 let charIndex = 0;
