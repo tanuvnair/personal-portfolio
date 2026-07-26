@@ -1,458 +1,235 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png" />
-    <link rel="stylesheet" href="css/output.css" />
-    <title>tanuv's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>tanuv.info | software engineer</title>
 </head>
 
-<body class="font-sans bg-background text-text">
-    <header class="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50">
-        <nav class="flex items-center justify-between py-6 px-6 md:py-12 md:px-16 lg:px-32 xl:px-64">
-            <div class="text-2xl md:text-3xl font-bold">
-                <a href="#" class="transition-colors hover:text-text/80">
-                    <span class="flex items-center gap-3">
-                        <svg data-testid="geist-icon" height="22" stroke-linejoin="round" style="color: currentcolor"
-                            viewBox="0 0 16 16" width="22">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M7.06463 3.20474C5.79164 1.93175 3.72772 1.93175 2.45474 3.20474C1.18175 4.47773 1.18175 6.54166 2.45474 7.81465L8 13.3599L13.5453 7.81465C14.8182 6.54166 14.8182 4.47773 13.5453 3.20474C12.2723 1.93175 10.2084 1.93175 8.93537 3.20474L8.53033 3.60979L8 4.14012L7.46967 3.60979L7.06463 3.20474ZM8 2.02321C6.13348 0.286219 3.21165 0.326509 1.39408 2.14408C-0.464694 4.00286 -0.464691 7.01653 1.39408 8.87531L7.46967 14.9509L8 15.4812L8.53033 14.9509L14.6059 8.87531C16.4647 7.01653 16.4647 4.00286 14.6059 2.14408C12.7884 0.326509 9.86653 0.286221 8 2.02321Z"
-                                fill="currentColor"></path>
-                        </svg>
-                        tanuv.info
-                    </span>
-                </a>
+<body>
+    <!-- registration marks -->
+    <div class="reg reg-tl" aria-hidden="true"></div>
+    <div class="reg reg-tr" aria-hidden="true"></div>
+    <div class="reg reg-bl" aria-hidden="true"></div>
+    <div class="reg reg-br" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="logo-mark">◆</span>
+                <span>tanuv<span class="dim">.info</span></span>
+            </a>
+
+            <nav class="nav-desktop" aria-label="Primary">
+                <a href="#about" data-route="/about">/about</a>
+                <a href="#projects" data-route="/projects">/projects</a>
+                <a href="#skills" data-route="/skills">/skills</a>
+                <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer" data-route="/notes">/notes
+                    ↗</a>
+                <a href="#contact" class="nav-cta" data-route="/contact">/contact&nbsp;→</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.75 0.75V0H7.25V0.75V2V2.75H8.75V2V0.75ZM11.182 3.75732L11.7123 3.22699L12.0659 2.87344L12.5962 2.34311L13.6569 3.40377L13.1265 3.9341L12.773 4.28765L12.2426 4.81798L11.182 3.75732ZM8 10.5C9.38071 10.5 10.5 9.38071 10.5 8C10.5 6.61929 9.38071 5.5 8 5.5C6.61929 5.5 5.5 6.61929 5.5 8C5.5 9.38071 6.61929 10.5 8 10.5ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM13.25 7.25H14H15.25H16V8.75H15.25H14H13.25V7.25ZM0.75 7.25H0V8.75H0.75H2H2.75V7.25H2H0.75ZM2.87348 12.0659L2.34315 12.5962L3.40381 13.6569L3.93414 13.1265L4.28769 12.773L4.81802 12.2426L3.75736 11.182L3.22703 11.7123L2.87348 12.0659ZM3.75735 4.81798L3.22702 4.28765L2.87347 3.9341L2.34314 3.40377L3.4038 2.34311L3.93413 2.87344L4.28768 3.22699L4.81802 3.75732L3.75735 4.81798ZM12.0659 13.1265L12.5962 13.6569L13.6569 12.5962L13.1265 12.0659L12.773 11.7123L12.2426 11.182L11.182 12.2426L11.7123 12.773L12.0659 13.1265ZM8.75 13.25V14V15.25V16H7.25V15.25V14V13.25H8.75Z" />
+                    </svg>
+                    <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.5 8.00005C1.5 5.53089 2.99198 3.40932 5.12349 2.48889C4.88136 3.19858 4.75 3.95936 4.75 4.7501C4.75 8.61609 7.88401 11.7501 11.75 11.7501C11.8995 11.7501 12.048 11.7454 12.1953 11.7361C11.0955 13.1164 9.40047 14.0001 7.5 14.0001C4.18629 14.0001 1.5 11.3138 1.5 8.00005ZM6.41706 0.577759C2.78784 1.1031 0 4.22536 0 8.00005C0 12.1422 3.35786 15.5001 7.5 15.5001C10.5798 15.5001 13.2244 13.6438 14.3792 10.9921L13.4588 9.9797C12.9218 10.155 12.3478 10.2501 11.75 10.2501C8.71243 10.2501 6.25 7.78767 6.25 4.7501C6.25 3.63431 6.58146 2.59823 7.15111 1.73217L6.41706 0.577759Z" />
+                    </svg>
+                </button>
+
+                <button id="mobile-menu-button" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-button"
-                class="transition-colors rounded-md md:hidden p-2 focus:outline-none hover:bg-secondary">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-
-            <!-- Desktop Menu -->
-            <ul class="hidden md:flex items-center gap-8 lg:gap-16">
-                <li><a href="#about" class="hover:underline">About</a></li>
-                <li>
-                    <a href="#projects" class="hover:underline">Projects</a>
-                </li>
-                <li>
-                    <a href="#skills" class="hover:underline">Skills</a>
-                </li>
-                <li>
-                    <a href="#contact"
-                        class="py-2 px-4 lg:px-6 rounded-md border-2 border-secondary hover:bg-secondary">
-                        Hire Me!
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Mobile Menu (hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-background/95 backdrop-blur-sm">
-            <ul class="px-6 py-4 space-y-4">
-                <li>
-                    <a href="#about" class="block hover:underline">About</a>
-                </li>
-                <li>
-                    <a href="#projects" class="block hover:underline">Projects</a>
-                </li>
-                <li>
-                    <a href="#skills" class="block hover:underline">Skills</a>
-                </li>
-                <li>
-                    <a href="#contact" class="block">
-                        <button
-                            class="w-full py-2 px-6 rounded-md border-2 border-secondary transition-colors hover:bg-secondary">
-                            Hire Me!
-                        </button>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </header>
 
-    <main class="container mx-auto px-6 pt-24 md:pt-20">
-        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-            <!-- Shape decorations (behind content) -->
-            <div class="absolute inset-0 overflow-hidden -z-10">
-                <!-- Abstract shapes -->
-                <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-accent/20 blur-3xl"></div>
-                <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-primary/10 blur-3xl rounded-full"></div>
-                <div class="absolute top-1/3 right-1/3 w-48 h-48 bg-secondary/15 blur-3xl rounded-full"></div>
-            </div>
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#about">/about</a>
+        <a href="#projects">/projects</a>
+        <a href="#skills">/skills</a>
+        <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer">/notes ↗</a>
+        <a href="#contact">/contact</a>
+    </div>
+    </header>
 
-            <!-- Landing Page Content -->
-            <div class="max-w-4xl mx-auto">
-                <!-- Animated greeting -->
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                        Hello, I'm Tanuv
-                    </span>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-grid">
+                <p class="eyebrow">software engineer | mumbai, india</p>
+                <h1 class="hero-title">
+                    Tanuv Nair<br>
+                    <span class="hero-cursor"><span id="typing-text"></span><span class="caret">_</span></span>
                 </h1>
-
-                <!-- Typing animation text -->
-                <div class="h-12 md:h-16 mb-8 flex justify-center items-center">
-                    <span id="typing-text" class="text-2xl md:text-3xl font-mono"></span>
-                    <span class="animate-pulse">|</span>
-                </div>
-
-                <!-- Short introduction -->
-                <p class="font-light tracking-wide text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-                    A passionate
-                    <span class="font-semibold">Software Engineer</span>
-                    specializing in full-stack development and scalable architectures, building digital solutions that
-                    matter.
+                <p class="hero-copy">
+                    I build high-throughput distributed systems and the unglamorous
+                    infrastructure underneath them - ETL pipelines, HRMS platforms,
+                    Linux servers that stay up.
                 </p>
-
-                <!-- Call to action buttons -->
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#projects"
-                        class="px-6 py-3 rounded-md bg-gradient-to-r from-primary to-accent text-white hover:opacity-80 transition-opacity">
-                        View My Work
-                    </a>
-                    <a href="#contact" class="px-6 py-3 rounded-md border-2 border-secondary hover:bg-secondary">
-                        Contact Me
-                    </a>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View work</a>
+                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
                 </div>
             </div>
 
-            <!-- Animated scroll indicator -->
-            <div class="absolute bottom-10 animate-bounce hidden md:block">
-                <a href="#about" class="flex flex-col items-center">
-                    <span class="mb-2 text-sm">Scroll Down</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 5v14M19 12l-7 7-7-7" />
-                    </svg>
-                </a>
-            </div>
-        </section>
-
-        <section id="about" class="min-h-screen py-20 flex flex-col justify-center">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold">About Me</h2>
-                    <div class="w-16 h-1 bg-accent mx-auto mt-4"></div>
-                </div>
-
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2">
-                        <div class="space-y-6 text-lg">
-                            <p>
-                                Hello! I'm
-                                <span class="font-semibold text-accent">Tanuv Nair</span>, a Software Engineer and
-                                Bachelor of
-                                Computer Applications graduate from Somaiya Vidyavihar University. I'm passionate about
-                                building
-                                robust, scalable systems and solving complex problems through clean code.
-                            </p>
-
-                            <p>
-                                Currently, I work as an <span class="font-medium text-accent">Associate Software
-                                    Engineer at
-                                    Algorisys Technologies</span>. My day-to-day involves architecting high-throughput
-                                distributed ETL pipelines in Go, engineering zero-downtime features for critical HRMS
-                                platforms,
-                                and managing end-to-end Linux server infrastructures.
-                            </p>
-
-                            <p>
-                                My journey started with a deep curiosity for how things work under the hood—from
-                                building
-                                AI-powered applications and MERN stack tools during my internship, to learning how to
-                                create a
-                                custom graphics engine from scratch in C.
-                            </p>
-
-                            <p>
-                                Beyond my professional work, I love building tools that solve real problems. Whether I'm
-                                developing <span class="font-medium text-accent">tm1go</span> (an open-source Go package
-                                for TM1
-                                APIs), creating real-time collaborative editors like Fluxroom, or experimenting with
-                                approximate
-                                calorie trackers, I thrive on bringing innovative ideas to life.
-                            </p>
-
-                            <p class="font-medium text-primary/50">
-                                Let's connect and build something impactful!
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="lg:w-1/2 flex justify-center">
-                        <div
-                            class="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border border-gray-200 shadow-md">
-                            <img src="img/avatar.png" alt="Tanuv Nair" class="w-full h-full object-cover"
-                                loading="lazy" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="min-h-screen py-16 md:py-20 flex flex-col justify-center">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold">Latest GitHub Projects</h2>
-                <div class="w-16 h-1 bg-accent mx-auto mt-4"></div>
-            </div>
-            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
-        </section>
-
-        <section id="skills" class="min-h-screen py-16 md:py-20 flex flex-col justify-center items-center gap-8">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold">Skills, Technologies & Interests</h2>
-                    <div class="w-16 h-1 bg-accent mx-auto mt-4"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Skills Card -->
-                    <div
-                        class="rounded-xl border-2 border-secondary overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="p-8">
-                            <div class="flex flex-col items-center mb-6">
-                                <div
-                                    class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-600 mb-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-semibold">
-                                    Skills
-                                </h3>
-                            </div>
-                            <ul class="space-y-3">
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                    Full-Stack Development
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                    System Design & Architecture
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                    REST API Development
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                    Data Integration (ETL)
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                    Server Administration
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                    OOP
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Technologies Card -->
-                    <div
-                        class="rounded-xl border-2 border-secondary overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="p-8">
-                            <div class="flex flex-col items-center mb-6">
-                                <div
-                                    class="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-semibold">
-                                    Technologies
-                                </h3>
-                            </div>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <span class="min-w-[8px] w-2 h-2 bg-green-500 rounded-full mr-2 mt-2"></span>
-                                    Go, TypeScript/JavaScript
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="min-w-[8px] w-2 h-2 bg-green-500 rounded-full mr-2 mt-2"></span>
-                                    React.js, Next.js, SolidStart
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="min-w-[8px] w-2 h-2 bg-green-500 rounded-full mr-2 mt-2"></span>
-                                    Node.js, SAP ABAP
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="min-w-[8px] w-2 h-2 bg-green-500 rounded-full mr-2 mt-2"></span>
-                                    PostgreSQL, MongoDB
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="min-w-[8px] w-2 h-2 bg-green-500 rounded-full mr-2 mt-2"></span>
-                                    Docker, Linux (Ubuntu/Fedora)
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="min-w-[8px] w-2 h-2 bg-green-500 rounded-full mr-2 mt-2"></span>
-                                    Git
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Interests Card -->
-                    <div
-                        class="rounded-xl border-2 border-secondary overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="p-8">
-                            <div class="flex flex-col items-center mb-6">
-                                <div
-                                    class="flex items-center justify-center w-16 h-16 rounded-full bg-purple-100 text-purple-600 mb-4">
-                                    <!-- Changed icon to a heart to better represent 'Interests' -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <h3 class="text-2xl font-semibold">
-                                    Interests
-                                </h3>
-                            </div>
-                            <ul class="space-y-3">
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                                    Computer Hardware
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                                    Custom Peripherals
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                                    Competitive Gaming
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                                    Strength Training
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                                    Audiophile Equipment (IEMs)
-                                </li>
-                                <li class="flex items-center">
-                                    <span class="min-w-[8px] w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-                                    Stand-up Comedy
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="dataplate" aria-hidden="true">
+                <div class="dataplate-row"><span>LAT</span><span>19.0760° N</span></div>
+                <div class="dataplate-row"><span>LNG</span><span>72.8777° E</span></div>
+                <div class="dataplate-row"><span>ROLE</span><span>Assoc. SWE @ Algorisys</span></div>
+                <div class="dataplate-row"><span>STACK</span><span>Go / SolidStart</span></div>
+                <div class="dataplate-row"><span>STATUS</span><span class="status-dot">busy</span></div>
             </div>
 
-            <a href="./TanuvNairResume.pdf"
-                class="select-none flex items-center gap-2 px-6 py-3 bg-primary text-secondary font-medium rounded-md hover:bg-primary/80 transition-all">
-                <svg data-testid="geist-icon" height="16" stroke-linejoin="round" style="color: currentcolor"
-                    viewBox="0 0 16 16" width="16">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M8.75 1V1.75V8.68934L10.7197 6.71967L11.25 6.18934L12.3107 7.25L11.7803 7.78033L8.70711 10.8536C8.31658 11.2441 7.68342 11.2441 7.29289 10.8536L4.21967 7.78033L3.68934 7.25L4.75 6.18934L5.28033 6.71967L7.25 8.68934V1.75V1H8.75ZM13.5 9.25V13.5H2.5V9.25V8.5H1V9.25V14C1 14.5523 1.44771 15 2 15H14C14.5523 15 15 14.5523 15 14V9.25V8.5H13.5V9.25Z"
-                        fill="currentColor"></path>
+            <a href="#about" class="scroll-cue">
+                <span>scroll</span>
+                <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+                    <path d="M7 1v17M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
-                Download Resume
             </a>
         </section>
 
-        <section id="contact" class="min-h-screen py-16 md:py-20 flex flex-col justify-center">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold">Contact Me!</h2>
-                    <div class="w-16 h-1 bg-accent mx-auto mt-4"></div>
+        <section id="about" class="section">
+            <p class="section-eyebrow">/about</p>
+            <div class="about-grid">
+                <div class="about-photo-wrap">
+                    <div class="about-photo">
+                        <img src="img/avatar.png" alt="Tanuv Nair" loading="lazy" />
+                    </div>
+                    <div class="photo-tick photo-tick-tl"></div>
+                    <div class="photo-tick photo-tick-br"></div>
                 </div>
-                <form id="contact-form" class="max-w-2xl mx-auto space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <input type="text" name="name" id="name" placeholder="Your Name"
-                                class="w-full p-3 rounded-md border-2 border-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all" />
-                        </div>
-                        <div>
-                            <input type="email" name="email" id="email" placeholder="Your Email"
-                                class="w-full p-3 rounded-md border-2 border-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all" />
-                        </div>
-                    </div>
-                    <div>
-                        <textarea name="message" id="message" placeholder="Your Message"
-                            class="w-full p-3 h-40 rounded-md border-2 border-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"></textarea>
-                    </div>
-                    <button name="submit" type="submit"
-                        class="cursor-pointer px-6 py-3 w-full md:w-auto bg-primary text-secondary font-medium rounded-md hover:bg-primary/80 transition-all">
-                        Send Message
-                    </button>
-                </form>
+
+                <div class="about-copy">
+                    <p>
+                        I'm a Software Engineer and BCA graduate from Somaiya Vidyavihar
+                        University, currently working as an
+                        <strong>Associate Software Engineer at Algorisys Technologies</strong>.
+                        My day-to-day is architecting high-throughput distributed ETL
+                        pipelines in Go, shipping zero-downtime features for critical HRMS
+                        platforms, and managing Linux server infrastructure end to end.
+                    </p>
+                    <p>
+                        It started with a curiosity for how things work under the hood -
+                        AI-powered tools and MERN stack apps during my internship, then
+                        further back, building a graphics engine from scratch in C.
+                    </p>
+                    <p>
+                        Outside work I build things that solve real problems:
+                        <strong>tm1go</strong>, an open-source Go package for TM1 APIs;
+                        Fluxroom, a real-time collaborative editor; and a couple of
+                        approximate calorie trackers I keep rewriting for fun.
+                    </p>
+                    <a href="./TanuvNairResume.pdf" class="resume-link">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.75 1V1.75V8.68934L10.7197 6.71967L11.25 6.18934L12.3107 7.25L11.7803 7.78033L8.70711 10.8536C8.31658 11.2441 7.68342 11.2441 7.29289 10.8536L4.21967 7.78033L3.68934 7.25L4.75 6.18934L5.28033 6.71967L7.25 8.68934V1.75V1H8.75ZM13.5 9.25V13.5H2.5V9.25V8.5H1V9.25V14C1 14.5523 1.44771 15 2 15H14C14.5523 15 15 14.5523 15 14V9.25V8.5H13.5V9.25Z" />
+                        </svg>
+                        Download résumé
+                    </a>
+                </div>
             </div>
+        </section>
+
+        <section id="projects" class="section">
+            <p class="section-eyebrow">/projects</p>
+            <h2 class="section-title">Latest from GitHub</h2>
+            <div id="projects-container" class="projects-grid">
+                <p class="projects-loading">fetching repositories…</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <p class="section-eyebrow">/skills</p>
+            <h2 class="section-title">Spec sheet</h2>
+
+            <div class="spec-sheet">
+                <div class="spec-row">
+                    <div class="spec-label">Skills</div>
+                    <div class="spec-items">
+                        <span>Full-stack development</span>
+                        <span>System design &amp; architecture</span>
+                        <span>REST API development</span>
+                        <span>Data integration (ETL)</span>
+                        <span>Server administration</span>
+                        <span>OOP</span>
+                    </div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Technologies</div>
+                    <div class="spec-items">
+                        <span>Go</span>
+                        <span>TypeScript / JavaScript</span>
+                        <span>React.js / Next.js / SolidStart</span>
+                        <span>Node.js</span>
+                        <span>SAP ABAP</span>
+                        <span>PostgreSQL / MongoDB</span>
+                        <span>Docker</span>
+                        <span>Linux (Ubuntu / Fedora)</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-label">Interests</div>
+                    <div class="spec-items">
+                        <span>Computer hardware</span>
+                        <span>Custom peripherals</span>
+                        <span>Competitive gaming</span>
+                        <span>Strength training</span>
+                        <span>Audiophile equipment</span>
+                        <span>Stand-up comedy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <p class="section-eyebrow">/contact</p>
+            <h2 class="section-title">Get in touch</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send message</button>
+                <p class="form-status" id="form-status" role="status"></p>
+            </form>
         </section>
     </main>
 
-    <footer class="py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-row justify-center space-x-6 mb-6">
-                <a href="https://www.linkedin.com/in/tanuv/" class="hover:text-primary/80"><svg data-testid="geist-icon"
-                        height="16" stroke-linejoin="round" style="color: currentcolor" viewBox="0 0 16 16" width="16">
-                        <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 0.895431 15.1046 0 14 0H2ZM5 6.75V13H3V6.75H5ZM5 4.50008C5 5.05554 4.61409 5.5 3.99408 5.5H3.98249C3.38582 5.5 3 5.05554 3 4.50008C3 3.93213 3.39765 3.5 4.00584 3.5C4.61409 3.5 4.98845 3.93213 5 4.50008ZM8.5 13H6.5C6.5 13 6.53178 7.43224 6.50007 6.75H8.5V7.78371C8.5 7.78371 9 6.75 10.5 6.75C12 6.75 13 7.59782 13 9.83107V13H11V10.1103C11 10.1103 11 8.46616 9.7361 8.46616C8.4722 8.46616 8.5 9.93972 8.5 9.93972V13Z"
-                            fill="currentColor"></path>
-                    </svg></a>
-                <a href="https://github.com/tanuvnair" class="hover:text-primary/80"><svg data-testid="geist-icon"
-                        height="16" stroke-linejoin="round" style="color: currentcolor" viewBox="0 0 16 16" width="16">
-                        <g clip-path="url(#clip0_872_3147)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M8 0C3.58 0 0 3.57879 0 7.99729C0 11.5361 2.29 14.5251 5.47 15.5847C5.87 15.6547 6.02 15.4148 6.02 15.2049C6.02 15.0149 6.01 14.3851 6.01 13.7154C4 14.0852 3.48 13.2255 3.32 12.7757C3.23 12.5458 2.84 11.836 2.5 11.6461C2.22 11.4961 1.82 11.1262 2.49 11.1162C3.12 11.1062 3.57 11.696 3.72 11.936C4.44 13.1455 5.59 12.8057 6.05 12.5957C6.12 12.0759 6.33 11.726 6.56 11.5261C4.78 11.3262 2.92 10.6364 2.92 7.57743C2.92 6.70773 3.23 5.98797 3.74 5.42816C3.66 5.22823 3.38 4.40851 3.82 3.30888C3.82 3.30888 4.49 3.09895 6.02 4.1286C6.66 3.94866 7.34 3.85869 8.02 3.85869C8.7 3.85869 9.38 3.94866 10.02 4.1286C11.55 3.08895 12.22 3.30888 12.22 3.30888C12.66 4.40851 12.38 5.22823 12.3 5.42816C12.81 5.98797 13.12 6.69773 13.12 7.57743C13.12 10.6464 11.25 11.3262 9.47 11.5261C9.76 11.776 10.01 12.2558 10.01 13.0056C10.01 14.0752 10 14.9349 10 15.2049C10 15.4148 10.15 15.6647 10.55 15.5847C12.1381 15.0488 13.5182 14.0284 14.4958 12.6673C15.4735 11.3062 15.9996 9.67293 16 7.99729C16 3.57879 12.42 0 8 0Z"
-                                fill="currentColor"></path>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_872_3147">
-                                <rect width="16" height="16" fill="white"></rect>
-                            </clipPath>
-                        </defs>
-                    </svg></a>
-                <a href="https://x.com/tanuvnair" class="hover:text-primary/80"><svg data-testid="geist-icon"
-                        height="16" stroke-linejoin="round" style="color: currentcolor" viewBox="0 0 16 16" width="16">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M0.5 0.5H5.75L9.48421 5.71053L14 0.5H16L10.3895 6.97368L16.5 15.5H11.25L7.51579 10.2895L3 15.5H1L6.61053 9.02632L0.5 0.5ZM12.0204 14L3.42043 2H4.97957L13.5796 14H12.0204Z"
-                            fill="currentColor"></path>
-                    </svg></a>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-social">
+                <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer"
+                    aria-label="Notes">[notes]</a>
+                <a href="https://www.linkedin.com/in/tanuv/" aria-label="LinkedIn">[in]</a>
+                <a href="https://github.com/tanuvnair" aria-label="GitHub">[gh]</a>
+                <a href="https://x.com/tanuvnair" aria-label="X / Twitter">[x]</a>
             </div>
-            <p class="text-center">
-                &copy; <span id="year"></span> Tanuv Nair. All rights
-                reserved.
-            </p>
+            <p>© <span id="year"></span> Tanuv Nair — built with Go-adjacent stubbornness.</p>
         </div>
     </footer>
-
-    <div class="fixed bottom-4 right-4">
-        <button id="themeToggle"
-            class="cursor-pointer p-4 md:p-6 rounded-full transition-colors bg-background border-2 border-secondary text-primary hover:bg-secondary">
-            <svg class="dark:hidden" data-testid="geist-icon" height="16" stroke-linejoin="round"
-                style="color: currentcolor" viewBox="0 0 16 16" width="16">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M1.5 8.00005C1.5 5.53089 2.99198 3.40932 5.12349 2.48889C4.88136 3.19858 4.75 3.95936 4.75 4.7501C4.75 8.61609 7.88401 11.7501 11.75 11.7501C11.8995 11.7501 12.048 11.7454 12.1953 11.7361C11.0955 13.1164 9.40047 14.0001 7.5 14.0001C4.18629 14.0001 1.5 11.3138 1.5 8.00005ZM6.41706 0.577759C2.78784 1.1031 0 4.22536 0 8.00005C0 12.1422 3.35786 15.5001 7.5 15.5001C10.5798 15.5001 13.2244 13.6438 14.3792 10.9921L13.4588 9.9797C12.9218 10.155 12.3478 10.2501 11.75 10.2501C8.71243 10.2501 6.25 7.78767 6.25 4.7501C6.25 3.63431 6.58146 2.59823 7.15111 1.73217L6.41706 0.577759ZM13.25 1V1.75V2.75L14.25 2.75H15V4.25H14.25H13.25V5.25V6H11.75V5.25V4.25H10.75L10 4.25V2.75H10.75L11.75 2.75V1.75V1H13.25Z"
-                    fill="currentColor"></path>
-            </svg>
-            <!-- Sun icon (shown in dark mode) -->
-            <svg class="hidden dark:block" data-testid="geist-icon" height="16" stroke-linejoin="round"
-                style="color: currentcolor" viewBox="0 0 16 16" width="16">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.75 0.75V0H7.25V0.75V2V2.75H8.75V2V0.75ZM11.182 3.75732L11.7123 3.22699L12.0659 2.87344L12.5962 2.34311L13.6569 3.40377L13.1265 3.9341L12.773 4.28765L12.2426 4.81798L11.182 3.75732ZM8 10.5C9.38071 10.5 10.5 9.38071 10.5 8C10.5 6.61929 9.38071 5.5 8 5.5C6.61929 5.5 5.5 6.61929 5.5 8C5.5 9.38071 6.61929 10.5 8 10.5ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM13.25 7.25H14H15.25H16V8.75H15.25H14H13.25V7.25ZM0.75 7.25H0V8.75H0.75H2H2.75V7.25H2H0.75ZM2.87348 12.0659L2.34315 12.5962L3.40381 13.6569L3.93414 13.1265L4.28769 12.773L4.81802 12.2426L3.75736 11.182L3.22703 11.7123L2.87348 12.0659ZM3.75735 4.81798L3.22702 4.28765L2.87347 3.9341L2.34314 3.40377L3.4038 2.34311L3.93413 2.87344L4.28768 3.22699L4.81802 3.75732L3.75735 4.81798ZM12.0659 13.1265L12.5962 13.6569L13.6569 12.5962L13.1265 12.0659L12.773 11.7123L12.2426 11.182L11.182 12.2426L11.7123 12.773L12.0659 13.1265ZM8.75 13.25V14V15.25V16H7.25V15.25V14V13.25H8.75Z"
-                    fill="currentColor"></path>
-            </svg>
-        </button>
-    </div>
 
     <script src="js/main.js"></script>
 </body>
