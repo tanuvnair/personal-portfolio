@@ -2,4 +2,5 @@
 My personal portfolio that I originally made in first year but now have updated in third year
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/6891fd31-481c-4c00-9fb8-486b58a52822)
+### Hero Section
+<img width="1726" height="1007" alt="image" src="https://github.com/user-attachments/assets/acf25db4-9ed9-423e-9f91-3719eb484014" />
