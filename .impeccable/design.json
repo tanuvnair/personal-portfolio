@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-06T20:05:00.000Z",
+  "title": "Design System: tanuv.info",
+  "extensions": {
+    "colorMeta": {
+      "paper-bg": {
+        "role": "neutral",
+        "displayName": "Paper BG",
+        "canonical": "#FAFAF8",
+        "tonalRamp": ["#14171A", "#2A2E33", "#5B6168", "#8A8F96", "#C4C6C2", "#E3E3DF", "#FAFAF8", "#FFFFFF"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#14171A",
+        "tonalRamp": ["#0A0C0E", "#14171A", "#2A2E33", "#5B6168", "#8A8F96", "#C4C6C2", "#E3E3DF", "#FAFAF8"]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#5B6168",
+        "tonalRamp": ["#1A1D21", "#2A2E33", "#3F454C", "#5B6168", "#7A8088", "#A3A8AE", "#D0D2D0", "#EDEEEA"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#E3E3DF",
+        "tonalRamp": ["#5B6168", "#8A8F96", "#B0B3AE", "#C9CAC5", "#D8D8D3", "#E3E3DF", "#EFEFEE", "#FAFAF8"]
+      },
+      "cobalt-signal": {
+        "role": "primary",
+        "displayName": "Cobalt Signal",
+        "canonical": "#2F5DE0",
+        "tonalRamp": ["#0E1C4A", "#16307A", "#1F42A8", "#2F5DE0", "#5A82E8", "#8AA8F0", "#C5D4F8", "#EAF0FF"]
+      },
+      "cobalt-wash": {
+        "role": "primary",
+        "displayName": "Cobalt Wash",
+        "canonical": "#EAF0FF",
+        "tonalRamp": ["#2F5DE0", "#5A82E8", "#8AA8F0", "#B3C6F5", "#D0DBF8", "#E0E8FC", "#EAF0FF", "#F5F8FF"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#14171A", "#5B6168", "#E3E3DF", "#EFEFEE", "#F5F5F2", "#FAFAF8", "#FDFDFB", "#FFFFFF"]
+      },
+      "blueprint-bg": {
+        "role": "neutral",
+        "displayName": "Blueprint BG",
+        "canonical": "#0A2452",
+        "tonalRamp": ["#061530", "#0A2452", "#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#93AEDD", "#EAF2FF"]
+      },
+      "blueprint-ink": {
+        "role": "neutral",
+        "displayName": "Blueprint Ink",
+        "canonical": "#EAF2FF",
+        "tonalRamp": ["#0A2452", "#163A7A", "#4A74B0", "#93AEDD", "#B8CCEB", "#D4E2F5", "#EAF2FF", "#F5F9FF"]
+      },
+      "blueprint-muted": {
+        "role": "neutral",
+        "displayName": "Blueprint Muted",
+        "canonical": "#93AEDD",
+        "tonalRamp": ["#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#6A92C8", "#93AEDD", "#C5D4F0", "#EAF2FF"]
+      },
+      "blueprint-line": {
+        "role": "neutral",
+        "displayName": "Blueprint Line",
+        "canonical": "rgba(234, 242, 255, 0.16)",
+        "tonalRamp": ["rgba(234,242,255,0.06)", "rgba(234,242,255,0.10)", "rgba(234,242,255,0.16)", "rgba(234,242,255,0.24)", "rgba(234,242,255,0.36)", "rgba(234,242,255,0.50)", "rgba(234,242,255,0.70)", "rgba(234,242,255,0.90)"]
+      },
+      "cyan-trace": {
+        "role": "primary",
+        "displayName": "Cyan Trace",
+        "canonical": "#7FB2FF",
+        "tonalRamp": ["#0E2C63", "#1A4A8A", "#2F6AB8", "#4A8CE0", "#7FB2FF", "#A6CBFF", "#D0E4FF", "#EAF2FF"]
+      },
+      "cyan-wash": {
+        "role": "primary",
+        "displayName": "Cyan Wash",
+        "canonical": "rgba(127, 178, 255, 0.12)",
+        "tonalRamp": ["rgba(127,178,255,0.06)", "rgba(127,178,255,0.12)", "rgba(127,178,255,0.20)", "rgba(127,178,255,0.32)", "rgba(127,178,255,0.48)", "rgba(127,178,255,0.64)", "rgba(127,178,255,0.80)", "#7FB2FF"]
+      },
+      "blueprint-surface": {
+        "role": "neutral",
+        "displayName": "Blueprint Surface",
+        "canonical": "#0E2C63",
+        "tonalRamp": ["#061530", "#0A2452", "#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#93AEDD", "#EAF2FF"]
+      },
+      "blueprint-btn-ink": {
+        "role": "neutral",
+        "displayName": "Blueprint Button Ink",
+        "canonical": "#08163A",
+        "tonalRamp": ["#040B1C", "#08163A", "#0A2452", "#0E2C63", "#163A7A", "#4A74B0", "#93AEDD", "#EAF2FF"]
+      },
+      "status-live": {
+        "role": "primary",
+        "displayName": "Status Live",
+        "canonical": "#FF0000",
+        "tonalRamp": ["#4A0000", "#8A0000", "#C00000", "#FF0000", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE0E0"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name lockup only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "Project names and logo weight." },
+      "body": { "displayName": "Body", "purpose": "Paragraph reading; about and supporting copy." },
+      "label": { "displayName": "Label", "purpose": "Nav, form labels, dataplate, footer, buttons." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "theme-swap", "value": "0.35s ease", "purpose": "Background and ink transition on theme change." },
+      { "name": "state", "value": "0.15s–0.2s ease", "purpose": "Hover color, border, and 1–2px lift." },
+      { "name": "reveal", "value": "0.6s ease", "purpose": "Scroll reveal opacity + translateY(14px) → 0." },
+      { "name": "caret-blink", "value": "1s step-end infinite", "purpose": "Hero typing caret." },
+      { "name": "scroll-cue", "value": "2.4s ease-in-out infinite", "purpose": "Desktop scroll hint float." }
+    ],
+    "breakpoints": [
+      { "name": "form-split", "value": "640px" },
+      { "name": "nav-desktop", "value": "768px" },
+      { "name": "projects-2", "value": "700px" },
+      { "name": "hero-split", "value": "900px" },
+      { "name": "projects-3", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink-filled mono CTA; cyan fill in dark mode.",
+      "html": "<button class=\"ds-btn-primary\">View work</button>",
+      "css": ".ds-btn-primary { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.9rem; padding: 13px 26px; border-radius: 3px; border: 1px solid transparent; background: var(--ink, #14171A); color: var(--bg, #FAFAF8); cursor: pointer; transition: transform 0.15s ease, opacity 0.2s ease; } .ds-btn-primary:hover { transform: translateY(-1px); opacity: 0.88; } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; } html.dark .ds-btn-primary { background: var(--accent, #7FB2FF); color: #08163A; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined secondary action; accent on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Get in touch</button>",
+      "css": ".ds-btn-ghost { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.9rem; padding: 13px 26px; border-radius: 3px; border: 1px solid var(--line, #E3E3DF); background: transparent; color: var(--ink, #14171A); cursor: pointer; transition: transform 0.15s ease, border-color 0.2s ease, color 0.2s ease; } .ds-btn-ghost:hover { transform: translateY(-1px); border-color: var(--accent, #2F5DE0); color: var(--accent, #2F5DE0); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+    },
+    {
+      "name": "Nav CTA",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Accent-bordered path link used for /contact.",
+      "html": "<a class=\"ds-nav-cta\" href=\"#contact\">/contact →</a>",
+      "css": ".ds-nav-cta { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.85rem; color: var(--accent, #2F5DE0); border: 1px solid var(--accent, #2F5DE0); padding: 6px 13px; border-radius: 3px; text-decoration: none; transition: background 0.2s ease; } .ds-nav-cta:hover { background: var(--accent-soft, #EAF0FF); } .ds-nav-cta:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Surface field with mono uppercase label.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Email</span><input class=\"ds-input\" type=\"email\" placeholder=\"you@company.com\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; } .ds-field-label { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.78rem; color: var(--muted, #5B6168); text-transform: uppercase; letter-spacing: 0.04em; } .ds-input { font-family: var(--font-sans, Inter, sans-serif); font-size: 1rem; padding: 12px 14px; border: 1px solid var(--line, #E3E3DF); border-radius: 3px; background: var(--surface, #FFFFFF); color: var(--ink, #14171A); transition: border-color 0.2s ease; } .ds-input:focus { border-color: var(--accent, #2F5DE0); outline: none; } .ds-input:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "GitHub project plate with dashed meta footer.",
+      "html": "<a class=\"ds-project-card\" href=\"#\"><span class=\"ds-project-name\">tm1go</span><p class=\"ds-project-desc\">Go package for the IBM TM1 REST API.</p><div class=\"ds-project-meta\"><span><span class=\"ds-lang-dot\"></span>Go</span><span>★ 0</span></div></a>",
+      "css": ".ds-project-card { display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--line, #E3E3DF); border-radius: 3px; padding: 22px; background: var(--surface, #FFFFFF); text-decoration: none; color: inherit; transition: border-color 0.2s ease, transform 0.2s ease; } .ds-project-card:hover { border-color: var(--accent, #2F5DE0); transform: translateY(-2px); } .ds-project-name { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-weight: 600; font-size: 0.98rem; color: var(--ink, #14171A); } .ds-project-desc { margin: 0; flex: 1; color: var(--muted, #5B6168); font-size: 0.9rem; font-family: var(--font-sans, Inter, sans-serif); } .ds-project-meta { display: flex; gap: 16px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.75rem; color: var(--muted, #5B6168); padding-top: 8px; border-top: 1px dashed var(--line, #E3E3DF); } .ds-lang-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2F5DE0); display: inline-block; margin-right: 5px; }"
+    },
+    {
+      "name": "Dataplate",
+      "kind": "custom",
+      "refersTo": "dataplate",
+      "description": "Hero instrument plaque with dashed key/value rows.",
+      "html": "<div class=\"ds-dataplate\"><div class=\"ds-dataplate-row\"><span>ROLE</span><span>Assoc. SWE @ Algorisys</span></div><div class=\"ds-dataplate-row\"><span>STACK</span><span>Go / SolidStart</span></div><div class=\"ds-dataplate-row\"><span>STATUS</span><span class=\"ds-status\">busy</span></div></div>",
+      "css": ".ds-dataplate { border: 1px solid var(--line, #E3E3DF); border-radius: 3px; padding: 18px 20px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.78rem; background: var(--surface, #FFFFFF); } .ds-dataplate-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px dashed var(--line, #E3E3DF); color: var(--muted, #5B6168); } .ds-dataplate-row:last-child { border-bottom: none; } .ds-dataplate-row span:last-child { color: var(--ink, #14171A); } .ds-status::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #FF0000; margin-right: 6px; }"
+    },
+    {
+      "name": "Spec Item",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Skills/spec sheet item with ink bullet — not a filled chip.",
+      "html": "<span class=\"ds-spec-item\">Data integration (ETL)</span>",
+      "css": ".ds-spec-item { position: relative; padding-left: 14px; font-size: 0.95rem; color: var(--muted, #5B6168); font-family: var(--font-sans, Inter, sans-serif); } .ds-spec-item::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: var(--ink, #14171A); border-radius: 50%; }"
+    },
+    {
+      "name": "Path Nav Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Default mono path link in the primary nav.",
+      "html": "<a class=\"ds-nav-link\" href=\"#projects\">/projects</a>",
+      "css": ".ds-nav-link { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.85rem; color: var(--muted, #5B6168); text-decoration: none; transition: color 0.2s ease; } .ds-nav-link:hover { color: var(--ink, #14171A); } .ds-nav-link:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Blueprint Spec Sheet",
+    "overview": "Light mode reads as a paper engineering print — cool off-white stock, graphite ink, hairline rules. Dark mode is the blueprint itself: deep navy field, cyan traces, dashed instrument rows. The interface behaves like a fabricated plate for a working systems engineer, not a marketing landing page.\n\nDensity is deliberate and technical. Mono type carries identity, navigation, and labels; sans carries long-form reading. Corners stay nearly square. Depth comes from borders and tonal surfaces, not shadow stacks. Motion is sparse: a caret blink, a soft scroll reveal, a 1–2px hover lift.",
+    "keyCharacteristics": [
+      "Dual-theme world: paper spec (light) / blueprint (dark)",
+      "JetBrains Mono as the brand voice; Inter for body prose",
+      "Hairline + dashed dividers as structure",
+      "~3px radius everywhere interactive surfaces appear",
+      "Print registration crosses as a quiet desktop signature",
+      "Path-style mono navigation (/about, /projects, …)"
+    ],
+    "rules": [
+      { "name": "The One Trace Rule", "body": "Cobalt/cyan is a signal line, not a theme wash. Keep filled accent surfaces rare (nav CTA border, primary dark button, focus). Prefer ink-on-paper for primary actions in light mode.", "section": "colors" },
+      { "name": "The Theme Swap Rule", "body": "Never invent a third palette. Light and dark share the same roles; only the token values change under html.dark.", "section": "colors" },
+      { "name": "The Mono Authority Rule", "body": "If it identifies the person, the route, or a machine-readable field, it is mono. Body sans is for sentences, not chrome.", "section": "typography" },
+      { "name": "The Plate Margin Rule", "body": "Content never goes edge-to-edge; registration marks and margin breathing room are part of the artifact.", "section": "layout" },
+      { "name": "The Flat Plate Rule", "body": "Do not introduce drop shadows to “finish” a card. If it needs separation, use a hairline or a surface token.", "section": "elevation" },
+      { "name": "The Near-Square Rule", "body": "Radius stays at 3px. Do not drift toward soft 12–16px product UI corners.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do treat light and dark as two finishes of the same plate (paper vs blueprint).",
+      "Do lead identity with JetBrains Mono and path-style chrome.",
+      "Do structure with hairline / dashed rules and surface panels.",
+      "Do keep radius at 3px and accent usage scarce.",
+      "Do honor prefers-reduced-motion (already wired globally)."
+    ],
+    "donts": [
+      "Don't add soft multi-layer shadows or floating glass cards.",
+      "Don't introduce a second accent hue (purple, teal, terracotta) alongside cobalt/cyan.",
+      "Don't round corners into modern SaaS softness.",
+      "Don't replace mono brand chrome with a display serif or Inter-led nav.",
+      "Don't invent testimonials, metrics strips, or decorative illustration as system patterns."
+    ]
+  }
+}
