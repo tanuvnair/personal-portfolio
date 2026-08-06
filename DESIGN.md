@@ -1,231 +1,298 @@
 ---
 name: tanuv.info
-description: Blueprint spec-sheet portfolio for a systems-focused software engineer
+description: Dark craft-bar hireability portfolio. Left-led name hero, status plate, cream on near-black.
 colors:
-  paper-bg: "#FAFAF8"
-  ink: "#14171A"
-  graphite: "#5B6168"
-  hairline: "#E3E3DF"
-  cobalt-signal: "#2F5DE0"
-  cobalt-wash: "#EAF0FF"
-  surface: "#FFFFFF"
-  blueprint-bg: "#0A2452"
-  blueprint-ink: "#EAF2FF"
-  blueprint-muted: "#93AEDD"
-  blueprint-line: "rgba(234, 242, 255, 0.16)"
-  cyan-trace: "#7FB2FF"
-  cyan-wash: "rgba(127, 178, 255, 0.12)"
-  blueprint-surface: "#0E2C63"
-  blueprint-btn-ink: "#08163A"
-  status-live: "#FF0000"
+  near-black: "#0E100F"
+  cream-ink: "#FFFFE3"
+  olive-muted: "#9A9A8A"
+  hairline: "rgba(255, 255, 227, 0.14)"
+  signal-blue: "#18A0FB"
+  signal-soft: "rgba(24, 160, 251, 0.14)"
+  signal-hover: "#3bb0ff"
+  surface: "#161916"
+  busy-red: "#FF3B3B"
+  grid-faint: "rgba(255, 255, 227, 0.04)"
+  selection-ink: "#ffffff"
 typography:
   display:
-    fontFamily: "JetBrains Mono, ui-monospace, monospace"
-    fontSize: "clamp(2.6rem, 7vw, 5rem)"
-    fontWeight: 700
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "clamp(2.8rem, 8vw, 4.75rem)"
+    fontWeight: 800
     lineHeight: 1.02
-    letterSpacing: "-0.02em"
+    letterSpacing: "-0.045em"
   headline:
-    fontFamily: "JetBrains Mono, ui-monospace, monospace"
-    fontSize: "clamp(1.6rem, 3vw, 2.2rem)"
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "clamp(2rem, 4vw, 2.75rem)"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: "-0.04em"
+  title:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 700
+    lineHeight: 1.25
+    letterSpacing: "-0.02em"
+  title-work:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "1.15rem"
+    fontWeight: 700
+    lineHeight: 1.25
+    letterSpacing: "-0.02em"
+  title-email:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "clamp(1.35rem, 3vw, 1.85rem)"
     fontWeight: 700
     lineHeight: 1.2
-    letterSpacing: "-0.01em"
-  title:
-    fontFamily: "JetBrains Mono, ui-monospace, monospace"
-    fontSize: "0.98rem"
-    fontWeight: 600
+    letterSpacing: "-0.02em"
+  body:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "1.05rem"
+    fontWeight: 400
+    lineHeight: 1.65
+    letterSpacing: "normal"
+  body-ui:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 500
     lineHeight: 1.4
     letterSpacing: "normal"
-  body:
-    fontFamily: "Inter, -apple-system, sans-serif"
-    fontSize: "16px"
-    fontWeight: 400
-    lineHeight: 1.6
+  body-sm:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "0.9rem"
+    fontWeight: 500
+    lineHeight: 1.4
     letterSpacing: "normal"
   label:
-    fontFamily: "JetBrains Mono, ui-monospace, monospace"
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
     fontSize: "0.78rem"
-    fontWeight: 400
-    lineHeight: 1.4
+    fontWeight: 600
+    lineHeight: 1.2
     letterSpacing: "0.04em"
+  label-chip:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "0.85rem"
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: "normal"
+  label-meta:
+    fontFamily: "Hanken Grotesk, Segoe UI, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 500
+    lineHeight: 1.2
+    letterSpacing: "0.02em"
 rounded:
-  sm: "3px"
-  full: "9999px"
+  pill: "999px"
+  surface: "12px"
 spacing:
-  xs: "8px"
-  sm: "14px"
-  md: "20px"
-  lg: "48px"
-  xl: "110px"
-  margin: "clamp(20px, 5vw, 96px)"
+  margin: "clamp(16px, 4vw, 48px)"
+  section-y: "clamp(4.5rem, 10vw, 7rem)"
+  pill-h: "44px"
+  header-h: "80px"
+  max: "1120px"
 components:
   button-primary:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper-bg}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sm}"
-    padding: "13px 26px"
+    backgroundColor: "{colors.signal-blue}"
+    textColor: "{colors.near-black}"
+    rounded: "{rounded.pill}"
+    padding: "0.85rem 1.35rem"
+    typography: "{typography.body}"
   button-primary-hover:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper-bg}"
+    backgroundColor: "{colors.signal-hover}"
+    textColor: "{colors.near-black}"
+    rounded: "{rounded.pill}"
+    padding: "0.85rem 1.35rem"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sm}"
-    padding: "13px 26px"
+    textColor: "{colors.signal-blue}"
+    rounded: "{rounded.pill}"
+    padding: "0.85rem 1.35rem"
   button-ghost-hover:
+    backgroundColor: "{colors.signal-soft}"
+    textColor: "{colors.signal-blue}"
+    rounded: "{rounded.pill}"
+    padding: "0.85rem 1.35rem"
+  button-ghost-small:
     backgroundColor: "transparent"
-    textColor: "{colors.cobalt-signal}"
-  nav-cta:
+    textColor: "{colors.signal-blue}"
+    rounded: "{rounded.pill}"
+    padding: "0.45rem 0.9rem"
+  nav-pill:
     backgroundColor: "transparent"
-    textColor: "{colors.cobalt-signal}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sm}"
-    padding: "6px 13px"
-  input-field:
+    textColor: "{colors.cream-ink}"
+    rounded: "{rounded.pill}"
+    height: "{spacing.pill-h}"
+    padding: "0 1.1rem"
+  logo-pill:
+    backgroundColor: "transparent"
+    textColor: "{colors.cream-ink}"
+    rounded: "{rounded.pill}"
+    height: "{spacing.pill-h}"
+    padding: "0 1rem"
+  status-plate:
     backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.sm}"
-    padding: "12px 14px"
-  project-card:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.sm}"
-    padding: "22px"
-  dataplate:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sm}"
-    padding: "18px 20px"
+    textColor: "{colors.cream-ink}"
+    rounded: "{rounded.surface}"
+    padding: "0.35rem 1.15rem"
+  stack-chip:
+    backgroundColor: "transparent"
+    textColor: "{colors.cream-ink}"
+    rounded: "{rounded.pill}"
+    padding: "0.4rem 0.8rem"
+  icon-link:
+    backgroundColor: "transparent"
+    textColor: "{colors.cream-ink}"
+    rounded: "{rounded.pill}"
+    size: "44px"
 ---
 
 # Design System: tanuv.info
 
 ## Overview
 
-**Creative North Star: "The Blueprint Spec Sheet"**
+**Creative North Star: "The Craft Bar Field"**
 
-Light mode reads as a paper engineering print — cool off-white stock, graphite ink, hairline rules. Dark mode is the blueprint itself: deep navy field, cyan traces, dashed instrument rows. The interface behaves like a fabricated plate for a working systems engineer, not a marketing landing page.
+A hireability-first systems portfolio that borrows craft materials from thegr8binil.me (near-black field, faint grid, cream ink, signal blue, Hanken Grotesk, pill chrome) without cloning that site's stage lockup. The composition is left-led: the name is the display signal, the bio and CTAs sit under it, circular icon reach-outs finish the left column, and a right-hand status plate holds ROLE / STACK / BASE / STATUS for a recruiter scan.
 
-Density is deliberate and technical. Mono type carries identity, navigation, and labels; sans carries long-form reading. Corners stay nearly square. Depth comes from borders and tonal surfaces, not shadow stacks. Motion is sparse: a caret blink, a soft scroll reveal, a 1–2px hover lift.
+The field is dark-only. Depth comes from hairline rules, dashed separators, a soft surface mix on the status plate, and restrained motion (hero fade-up, busy glow pulse, hover nudge). Contact is direct email plus copy. There is no footer, no theme toggle, no fake forms or metrics.
 
 **Key Characteristics:**
-- Dual-theme world: paper spec (light) / blueprint (dark)
-- JetBrains Mono as the brand voice; Inter for body prose
-- Hairline + dashed dividers as structure
-- ~3px radius everywhere interactive surfaces appear
-- Print registration crosses as a quiet desktop signature
-- Path-style mono navigation (`/about`, `/projects`, …)
+- Near-black canvas with a masked 48px grid and cream ink
+- Single family: Hanken Grotesk from display through labels
+- Pill chrome at 44px for nav, CTAs, and icon links; 12px radius for plates and photo
+- Left-led hero name + right status plate (Busy red glow pulse)
+- Ruled project rows with a quieter dashed secondary block (Also on GitHub)
 
 ## Colors
 
-One accent family (cobalt → cyan) on a neutral paper/blueprint field. Accent is scarce by design.
+Near-black field, cream ink, olive secondary text, and a single signal blue accent. Busy red is reserved for STATUS.
 
 ### Primary
-- **Cobalt Signal** (`{colors.cobalt-signal}` light / `{colors.cyan-trace}` dark): CTAs in nav, links, focus rings, selection, status accents, photo tick marks. Use sparingly so it reads as instrumentation, not decoration.
-- **Cobalt Wash** (`{colors.cobalt-wash}` / `{colors.cyan-wash}`): Soft fill behind hovered accent borders and related quiet highlights.
+- **Signal Blue** (`#18A0FB`): Primary CTAs, active nav, link accents, focus rings, contact email. Soft wash (`rgba(24, 160, 251, 0.14)`) for logo-dot halo and ghost-button hover. Hover fill lifts to **Signal Hover** (`#3bb0ff` / `--accent-hover`).
+
+### Secondary
+- **Busy Red** (`#FF3B3B`): STATUS label and the busy-dot core. Glow pulse uses expanding `box-shadow` rings in the same hue. Not a general accent.
 
 ### Neutral
-- **Paper BG** (`{colors.paper-bg}`): Page field in light mode.
-- **Ink** (`{colors.ink}`): Primary text and primary button fill (light).
-- **Graphite** (`{colors.graphite}`): Secondary copy, nav defaults, meta.
-- **Hairline** (`{colors.hairline}`): Borders, section rules, dashed dataplate rows.
-- **Surface** (`{colors.surface}`): Raised panels (cards, form fields, dataplate) on the page field.
-- **Blueprint BG / Ink / Muted / Line / Surface** (dark tokens): Same roles remapped onto the blueprint field.
+- **Near Black** (`#0E100F`): Page background and sticky header mix base.
+- **Cream Ink** (`#FFFFE3`): Primary text and selection of chrome borders via hairline.
+- **Olive Muted** (`#9A9A8A`): Lead copy, body secondary, status keys, quieter CTAs.
+- **Hairline** (`rgba(255, 255, 227, 0.14)`): Pill borders, section rules, row dividers.
+- **Surface** (`#161916`): Photo well and status-plate mix partner.
+- **Grid Faint** (`rgba(255, 255, 227, 0.04)`): Fixed 48px field grid under content.
 
 ### Named Rules
-**The One Trace Rule.** Cobalt/cyan is a signal line, not a theme wash. Keep filled accent surfaces rare (nav CTA border, primary dark button, focus). Prefer ink-on-paper for primary actions in light mode.
+**The One Signal Rule.** Signal blue is the only interactive accent for links, CTAs, and focus. Busy red is STATUS-only.
 
-**The Theme Swap Rule.** Never invent a third palette. Light and dark share the same roles; only the token values change under `html.dark`.
+**The Dark Field Rule.** The system is dark-only. Do not introduce a light theme or invert the cream-on-near-black relationship.
 
 ## Typography
 
-**Display Font:** JetBrains Mono (with ui-monospace, monospace)
-**Body Font:** Inter (with -apple-system, sans-serif)
-**Label/Mono Font:** JetBrains Mono
+**Display Font:** Hanken Grotesk (with Segoe UI, sans-serif)
+**Body Font:** Hanken Grotesk (with Segoe UI, sans-serif)
+**Label/Mono Font:** same family (no mono stack)
 
-**Character:** Mono owns the brand — name, hero, section titles, nav, labels, metadata. Sans is the quiet reader for paragraphs. The pairing feels like a terminal bolted to a clean document.
+**Character:** One grotesque voice from hero name to stack chips. Weight and tracking carry hierarchy, not a second face.
 
 ### Hierarchy
-- **Display** (700, `clamp(2.6rem, 7vw, 5rem)`, 1.02): Hero name lockup only.
-- **Headline** (700, `clamp(1.6rem, 3vw, 2.2rem)`): Section titles.
-- **Title** (600, ~0.98rem): Project names, logo weight.
-- **Body** (400, 16px / 1.1rem for hero lead, lh 1.6): About and supporting copy; keep ~46–62ch.
-- **Label** (400–600, 0.72–0.85rem, often tracked): Nav, form labels, dataplate, footer, buttons.
+- **Display** (800, `clamp(2.8rem, 8vw, 4.75rem)`, 1.02): Hero name only (`Tanuv Nair`). Tight negative tracking.
+- **Headline** (700, `clamp(2rem, 4vw, 2.75rem)`, 1.1): Section titles (About, Focus, Projects, Contact).
+- **Title** (700, 1.25rem): Project block titles, focus lane names.
+- **Title work** (700, 1.15rem): Featured work names.
+- **Title email** (700, `clamp(1.35rem, 3vw, 1.85rem)`): Contact address.
+- **Body** (400, 1.05rem, 1.65): Leads and paragraphs. Cap about copy near 58ch; leads near 40rem.
+- **Body UI** (500-600, 0.95rem): Nav, pills, primary buttons, block leads, Also on GitHub repo names.
+- **Body sm** (500-600, 0.9rem): Status values, work CTAs, copy status.
+- **Label** (600, 0.78rem, 0.04em tracking): Status-plate keys (ROLE, STACK, BASE, STATUS). Uppercase in copy, not via CSS transform.
+- **Label chip** (500, 0.85rem): Stack chips, small ghost buttons, recent CTAs.
+- **Label meta** (500, 0.75rem): Language tags under recent repo names.
+
+Self-hosted variable Hanken Grotesk (`fonts/hanken.css`, latin + latin-ext, weight 400-800, `font-display: swap`). Do not load from fonts.googleapis.com.
 
 ### Named Rules
-**The Mono Authority Rule.** If it identifies the person, the route, or a machine-readable field, it is mono. Body sans is for sentences, not chrome.
+**The Single Face Rule.** Do not add a display serif, mono, or second sans. Hierarchy is weight and size only.
+
+**The Name Is Display Rule.** The hero brand signal is the person's name at display scale. Do not demote the name to an eyebrow or replace it with a slogan lockup.
 
 ## Layout
 
-Centered column, max width **1280px**, horizontal margin **`clamp(20px, 5vw, 96px)`**, fixed header **60px**. Sections stack with **~110px** vertical padding and a full-width hairline separator. Hero is a one-column stack that becomes **1.4fr / 0.6fr** at 900px (copy + dataplate). Projects: 1 → 2 (700px) → 3 (1024px). Spec sheet: label column **200px** beside items from 700px. Contact form max **640px**.
+Main column maxes at 1120px with fluid side margin `clamp(16px, 4vw, 48px)`. Sticky header uses a wider 1400px inner grid: logo pill start, nav pill center (from 960px), resume pill end. Sections pad `clamp(4.5rem, 10vw, 7rem)` vertically and separate with a solid hairline top border.
 
-Rhythm favors generous section air and tight instrument clusters (dataplate rows, spec items) rather than card-grid marketing density.
+Hero fills the first viewport under the header (`min-height: calc(100vh - 80px)`). From 900px, hero is a two-column grid (~1.35fr / 0.75fr): copy left, status plate right. About becomes photo + copy from 760px. Focus and projects are single-column ruled lists. Projects nest Selected work (solid rules) then Also on GitHub (dashed separator, quieter rows). Contact is email + copy only. No site footer.
+
+Breakpoints in use: 700px (work row collapse), 760px (about), 900px (hero split), 960px (desktop nav / resume pill).
 
 ### Named Rules
-**The Plate Margin Rule.** Content never goes edge-to-edge; registration marks and margin breathing room are part of the artifact.
+**The Left-Led Hero Rule.** First viewport: name, one lead, one CTA pair, icon row, status plate. No centered stage lockup, floating meta comments, or absolute email pills on the hero.
+
+**The Projects Hierarchy Rule.** `Projects` → Selected work (featured ruled rows) → Also on GitHub (dashed separator, quieter recent rows, same hover nudge).
 
 ## Elevation & Depth
 
-Flat by default. Surfaces separate via background contrast (`--bg` vs `--surface`) and **1px** solid or dashed borders. No ambient shadow vocabulary. Soft presence: header uses translucent bg + **10px** blur. Hover may lift **1–2px** (`translateY`) without casting a shadow.
+Mostly flat tonal craft. Depth comes from the faint grid field, hairline borders, dashed status/secondary separators, a translucent sticky header (`color-mix` + 14px blur), and the status plate's surface mix. Ambient drop shadows are not part of the resting UI.
+
+### Shadow Vocabulary
+- **Logo / accent halo** (`box-shadow: 0 0 0 3px rgba(24, 160, 251, 0.14)`): Soft ring under the logo signal dot.
+- **Busy glow pulse** (`box-shadow` expanding from `0 0 0 0 rgba(255, 59, 59, 0.55)` to `0 0 0 8px` transparent over 1.8s): STATUS busy-dot only. Reduced motion freezes a static soft red ring.
 
 ### Named Rules
-**The Flat Plate Rule.** Do not introduce drop shadows to “finish” a card. If it needs separation, use a hairline or a surface token.
+**The Hairline Depth Rule.** Prefer 1px cream hairlines and dashed dividers over card shadows. Lift is hover motion (1px up or 3px nudge), not layered umbras.
 
 ## Shapes
 
-Nearly square geometry: **3px** radius on buttons, cards, inputs, dataplate, photo. Theme toggle is the exception — full circle. Registration marks and photo corner ticks are hard right angles. Status and language dots are true circles (6–7px).
+Two radii only: full pill (`999px`) for chrome (logo, nav, resume, buttons, icon links, stack chips, mobile toggle), and surface (`12px`) for the status plate and about photo well. Circles appear for the logo dot, busy-dot, and 44px icon-link hits. Borders are 1px hairline unless a ghost button uses signal blue.
 
 ### Named Rules
-**The Near-Square Rule.** Radius stays at 3px. Do not drift toward soft 12–16px product UI corners.
+**The Pill Chrome Rule.** Interactive chrome shares `--pill-h: 44px` and pill radius. Do not invent a third radius family for buttons or nav.
 
 ## Components
 
 ### Buttons
-Precise mono controls with a 1px hover lift.
-- **Shape:** Near-square (3px)
-- **Primary:** Ink fill / paper text (light); cyan fill / deep navy text (dark). Padding `13px 26px`.
-- **Ghost:** Transparent, hairline border; hover shifts border and text to accent.
-- **Focus:** 2px accent outline, 2px offset (global `:focus-visible`).
+Pill CTAs with inline SVG icons, 600 weight, 0.95rem.
+- **Shape:** Full pill (`999px`)
+- **Primary:** Signal blue fill, near-black label (≥4.5:1). Hover to signal-hover, lift 1px.
+- **Ghost:** Transparent, signal blue border and text. Hover fills `signal-soft`.
+- **Small ghost:** Tighter padding for Copy on contact.
+- **Focus:** 2px signal outline, 3px offset (global `:focus-visible`).
+
+### Chips
+Stack chips in Focus: pill outline hairline, cream text, 0.85rem / 500. Not filter controls; static labels.
 
 ### Cards / Containers
-Project cards and the hero dataplate share the same plate language.
-- **Corner Style:** 3px
-- **Background:** Surface on page field
-- **Border:** 1px hairline; project cards accent on hover
-- **Internal Padding:** ~18–22px
-- **Dataplate rows:** Dashed hairline dividers; key muted / value ink
+No marketing cards. Containers that exist:
+- **Status plate:** 12px radius, hairline border, mixed near-black/surface fill, dashed row dividers, muted uppercase keys.
+- **About photo:** 12px radius, hairline, surface well, square crop.
+- **Contact plate:** Unboxed max-width wrapper; email is typography, not a card.
 
 ### Inputs / Fields
-- **Style:** Surface fill, hairline border, 3px radius, mono uppercase labels
-- **Focus:** Accent border (outline still via global focus-visible)
-- **Status line:** Mono, accent-colored acknowledgment text
+No text inputs. Contact is `mailto:` plus a ghost Copy button and a live status line.
 
 ### Navigation
-Fixed frosted header; mono path links; muted default, ink on hover. Accent-bordered `/contact` CTA. Mobile: full-width stacked links under a hairline. Logo: mono `tanuv.info` with diamond accent mark.
+Three pill clusters: logo (`tanuv.info` + accent dot), primary nav with icons (Home, About, Focus, Projects, Contact), resume pill. Desktop from 960px; below that, hamburger + mobile menu with hairline rows. Active/hover links go full opacity signal blue. Sticky header blurs the field.
 
-### Spec sheet & skills
-Bordered rows, accent mono labels, wrap-flow items with small ink dots — reads as a bill of materials, not a chip cloud.
+### Icon link row
+44px circular pill hits under hero CTAs (GitHub, LinkedIn, X, Notes, resume). Hairline border; hover signal border/color and 1px lift.
 
-### Signature: registration marks
-Fixed 18×18 crosshairs at the four viewport corners (desktop only). Part of the print metaphor; keep quiet (≈0.55 opacity).
+### Work rows
+Featured and recent rows share a three-column grid (name / desc / CTA) collapsing under 700px. Featured uses stronger name weight and signal CTA; recent is quieter with muted CTA until hover. Both nudge `translateX(3px)` on hover. Secondary block separated by a dashed hairline.
+
+### Busy status
+STATUS shows Busy in busy red with an 8px solid busy-dot. Animation `busy-glow` expands a red glow ring (not a green live blinker). JS pauses the animation when the dot is offscreen. Reduced motion: static soft ring.
+
+### Named Rules
+**The Busy Glow Rule.** STATUS uses busy red + expanding glow pulse. Do not reuse live green as an availability blinker on this plate.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** treat light and dark as two finishes of the same plate (paper vs blueprint).
-- **Do** lead identity with JetBrains Mono and path-style chrome.
-- **Do** structure with hairline / dashed rules and surface panels.
-- **Do** keep radius at 3px and accent usage scarce.
-- **Do** honor `prefers-reduced-motion` (already wired globally).
+- **Do** keep the name as the hero display signal and the status plate as the right-hand scan summary.
+- **Do** reuse pill chrome at 44px height and surface radius 12px for plates/photo.
+- **Do** keep projects as Selected work then Also on GitHub, with the dashed separator marking secondary rank.
+- **Do** route contact through real email (`tanuvnair@gmail.com`) with copy-to-clipboard.
+- **Do** honor `prefers-reduced-motion` by dropping hero entrance and freezing the busy glow.
 
 ### Don't:
-- **Don't** add soft multi-layer shadows or floating glass cards.
-- **Don't** introduce a second accent hue (purple, teal, terracotta) alongside cobalt/cyan.
-- **Don't** round corners into modern SaaS softness.
-- **Don't** replace mono brand chrome with a display serif or Inter-led nav.
-- **Don't** invent testimonials, metrics strips, or decorative illustration as system patterns.
+- **Don't** restore a centered SOFTWARE / ENGINEER / SYSTEMS stage lockup or Binil layout clone.
+- **Don't** add light mode, theme toggle, footer, contact forms, or fake metrics.
+- **Don't** put floating `//` comment meta, absolute email pills on the hero, or numbered Focus 01-04 chrome.
+- **Don't** use Connect-style live green blinkers for STATUS; Busy is red glow only.
+- **Don't** introduce a second typeface or card-heavy dashboard density on the first viewport.

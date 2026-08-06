@@ -1,127 +1,251 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-06T20:05:00.000Z",
+  "generatedAt": "2026-08-07T03:59:00+05:30",
   "title": "Design System: tanuv.info",
   "extensions": {
     "colorMeta": {
-      "paper-bg": {
+      "near-black": {
         "role": "neutral",
-        "displayName": "Paper BG",
-        "canonical": "#FAFAF8",
-        "tonalRamp": ["#14171A", "#2A2E33", "#5B6168", "#8A8F96", "#C4C6C2", "#E3E3DF", "#FAFAF8", "#FFFFFF"]
+        "displayName": "Near Black",
+        "canonical": "#0E100F",
+        "tonalRamp": [
+          "#0E100F",
+          "#161916",
+          "#242826",
+          "#3A3F3C",
+          "#5C625E",
+          "#8A908B",
+          "#C4C9C4",
+          "#E8EBE7"
+        ]
       },
-      "ink": {
+      "cream-ink": {
         "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#14171A",
-        "tonalRamp": ["#0A0C0E", "#14171A", "#2A2E33", "#5B6168", "#8A8F96", "#C4C6C2", "#E3E3DF", "#FAFAF8"]
+        "displayName": "Cream Ink",
+        "canonical": "#FFFFE3",
+        "tonalRamp": [
+          "#3D3D2E",
+          "#6B6B52",
+          "#9A9A8A",
+          "#C4C4A8",
+          "#E0E0C4",
+          "#F2F2D4",
+          "#FFFFE3",
+          "#FFFFF0"
+        ]
       },
-      "graphite": {
+      "olive-muted": {
         "role": "neutral",
-        "displayName": "Graphite",
-        "canonical": "#5B6168",
-        "tonalRamp": ["#1A1D21", "#2A2E33", "#3F454C", "#5B6168", "#7A8088", "#A3A8AE", "#D0D2D0", "#EDEEEA"]
+        "displayName": "Olive Muted",
+        "canonical": "#9A9A8A",
+        "tonalRamp": [
+          "#2A2A24",
+          "#45453C",
+          "#5E5E52",
+          "#78786A",
+          "#9A9A8A",
+          "#B8B8A8",
+          "#D4D4C6",
+          "#EDEDE4"
+        ]
       },
       "hairline": {
         "role": "neutral",
         "displayName": "Hairline",
-        "canonical": "#E3E3DF",
-        "tonalRamp": ["#5B6168", "#8A8F96", "#B0B3AE", "#C9CAC5", "#D8D8D3", "#E3E3DF", "#EFEFEE", "#FAFAF8"]
+        "canonical": "rgba(255, 255, 227, 0.14)",
+        "tonalRamp": [
+          "rgba(255, 255, 227, 0.04)",
+          "rgba(255, 255, 227, 0.08)",
+          "rgba(255, 255, 227, 0.14)",
+          "rgba(255, 255, 227, 0.22)",
+          "rgba(255, 255, 227, 0.35)",
+          "rgba(255, 255, 227, 0.5)",
+          "rgba(255, 255, 227, 0.7)",
+          "rgba(255, 255, 227, 0.9)"
+        ]
       },
-      "cobalt-signal": {
+      "signal-blue": {
         "role": "primary",
-        "displayName": "Cobalt Signal",
-        "canonical": "#2F5DE0",
-        "tonalRamp": ["#0E1C4A", "#16307A", "#1F42A8", "#2F5DE0", "#5A82E8", "#8AA8F0", "#C5D4F8", "#EAF0FF"]
+        "displayName": "Signal Blue",
+        "canonical": "#18A0FB",
+        "tonalRamp": [
+          "#06324F",
+          "#0A4A73",
+          "#0E6AA3",
+          "#18A0FB",
+          "#3BB0FF",
+          "#6DC4FF",
+          "#A6DBFF",
+          "#D9F0FF"
+        ]
       },
-      "cobalt-wash": {
+      "signal-soft": {
         "role": "primary",
-        "displayName": "Cobalt Wash",
-        "canonical": "#EAF0FF",
-        "tonalRamp": ["#2F5DE0", "#5A82E8", "#8AA8F0", "#B3C6F5", "#D0DBF8", "#E0E8FC", "#EAF0FF", "#F5F8FF"]
+        "displayName": "Signal Soft",
+        "canonical": "rgba(24, 160, 251, 0.14)",
+        "tonalRamp": [
+          "rgba(24, 160, 251, 0.06)",
+          "rgba(24, 160, 251, 0.1)",
+          "rgba(24, 160, 251, 0.14)",
+          "rgba(24, 160, 251, 0.22)",
+          "rgba(24, 160, 251, 0.35)",
+          "rgba(24, 160, 251, 0.5)",
+          "rgba(24, 160, 251, 0.7)",
+          "rgba(24, 160, 251, 0.9)"
+        ]
+      },
+      "signal-hover": {
+        "role": "primary",
+        "displayName": "Signal Hover",
+        "canonical": "#3bb0ff",
+        "tonalRamp": [
+          "#0A4A73",
+          "#0E6AA3",
+          "#18A0FB",
+          "#3BB0FF",
+          "#5CBCFF",
+          "#8AD0FF",
+          "#B8E4FF",
+          "#E3F5FF"
+        ]
       },
       "surface": {
         "role": "neutral",
         "displayName": "Surface",
-        "canonical": "#FFFFFF",
-        "tonalRamp": ["#14171A", "#5B6168", "#E3E3DF", "#EFEFEE", "#F5F5F2", "#FAFAF8", "#FDFDFB", "#FFFFFF"]
+        "canonical": "#161916",
+        "tonalRamp": [
+          "#0E100F",
+          "#161916",
+          "#1E2220",
+          "#2A302C",
+          "#3E4641",
+          "#5A635C",
+          "#8A948C",
+          "#C5CDC6"
+        ]
       },
-      "blueprint-bg": {
+      "busy-red": {
+        "role": "secondary",
+        "displayName": "Busy Red",
+        "canonical": "#FF3B3B",
+        "tonalRamp": [
+          "#4A0F0F",
+          "#7A1818",
+          "#B02424",
+          "#FF3B3B",
+          "#FF6B6B",
+          "#FF9A9A",
+          "#FFC4C4",
+          "#FFE8E8"
+        ]
+      },
+      "grid-faint": {
         "role": "neutral",
-        "displayName": "Blueprint BG",
-        "canonical": "#0A2452",
-        "tonalRamp": ["#061530", "#0A2452", "#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#93AEDD", "#EAF2FF"]
+        "displayName": "Grid Faint",
+        "canonical": "rgba(255, 255, 227, 0.04)",
+        "tonalRamp": [
+          "rgba(255, 255, 227, 0.02)",
+          "rgba(255, 255, 227, 0.04)",
+          "rgba(255, 255, 227, 0.06)",
+          "rgba(255, 255, 227, 0.1)",
+          "rgba(255, 255, 227, 0.16)",
+          "rgba(255, 255, 227, 0.28)",
+          "rgba(255, 255, 227, 0.45)",
+          "rgba(255, 255, 227, 0.7)"
+        ]
       },
-      "blueprint-ink": {
+      "selection-ink": {
         "role": "neutral",
-        "displayName": "Blueprint Ink",
-        "canonical": "#EAF2FF",
-        "tonalRamp": ["#0A2452", "#163A7A", "#4A74B0", "#93AEDD", "#B8CCEB", "#D4E2F5", "#EAF2FF", "#F5F9FF"]
-      },
-      "blueprint-muted": {
-        "role": "neutral",
-        "displayName": "Blueprint Muted",
-        "canonical": "#93AEDD",
-        "tonalRamp": ["#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#6A92C8", "#93AEDD", "#C5D4F0", "#EAF2FF"]
-      },
-      "blueprint-line": {
-        "role": "neutral",
-        "displayName": "Blueprint Line",
-        "canonical": "rgba(234, 242, 255, 0.16)",
-        "tonalRamp": ["rgba(234,242,255,0.06)", "rgba(234,242,255,0.10)", "rgba(234,242,255,0.16)", "rgba(234,242,255,0.24)", "rgba(234,242,255,0.36)", "rgba(234,242,255,0.50)", "rgba(234,242,255,0.70)", "rgba(234,242,255,0.90)"]
-      },
-      "cyan-trace": {
-        "role": "primary",
-        "displayName": "Cyan Trace",
-        "canonical": "#7FB2FF",
-        "tonalRamp": ["#0E2C63", "#1A4A8A", "#2F6AB8", "#4A8CE0", "#7FB2FF", "#A6CBFF", "#D0E4FF", "#EAF2FF"]
-      },
-      "cyan-wash": {
-        "role": "primary",
-        "displayName": "Cyan Wash",
-        "canonical": "rgba(127, 178, 255, 0.12)",
-        "tonalRamp": ["rgba(127,178,255,0.06)", "rgba(127,178,255,0.12)", "rgba(127,178,255,0.20)", "rgba(127,178,255,0.32)", "rgba(127,178,255,0.48)", "rgba(127,178,255,0.64)", "rgba(127,178,255,0.80)", "#7FB2FF"]
-      },
-      "blueprint-surface": {
-        "role": "neutral",
-        "displayName": "Blueprint Surface",
-        "canonical": "#0E2C63",
-        "tonalRamp": ["#061530", "#0A2452", "#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#93AEDD", "#EAF2FF"]
-      },
-      "blueprint-btn-ink": {
-        "role": "neutral",
-        "displayName": "Blueprint Button Ink",
-        "canonical": "#08163A",
-        "tonalRamp": ["#040B1C", "#08163A", "#0A2452", "#0E2C63", "#163A7A", "#4A74B0", "#93AEDD", "#EAF2FF"]
-      },
-      "status-live": {
-        "role": "primary",
-        "displayName": "Status Live",
-        "canonical": "#FF0000",
-        "tonalRamp": ["#4A0000", "#8A0000", "#C00000", "#FF0000", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE0E0"]
+        "displayName": "Selection Ink",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#4A4A4A",
+          "#6E6E6E",
+          "#929292",
+          "#B6B6B6",
+          "#D0D0D0",
+          "#E4E4E4",
+          "#F5F5F5",
+          "#FFFFFF"
+        ]
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero name lockup only." },
-      "headline": { "displayName": "Headline", "purpose": "Section titles." },
-      "title": { "displayName": "Title", "purpose": "Project names and logo weight." },
-      "body": { "displayName": "Body", "purpose": "Paragraph reading; about and supporting copy." },
-      "label": { "displayName": "Label", "purpose": "Nav, form labels, dataplate, footer, buttons." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name only (Tanuv Nair)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles: About, Focus, Projects, Contact."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Focus names, project block titles, featured work names, contact email."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Leads, paragraphs, default UI copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Status-plate keys (ROLE / STACK / BASE / STATUS)."
+      }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "logo-halo",
+        "value": "0 0 0 3px rgba(24, 160, 251, 0.14)",
+        "purpose": "Soft ring under the logo signal dot."
+      },
+      {
+        "name": "busy-glow-start",
+        "value": "0 0 0 0 rgba(255, 59, 59, 0.55)",
+        "purpose": "Busy-dot glow pulse start keyframe."
+      },
+      {
+        "name": "busy-glow-mid",
+        "value": "0 0 0 8px rgba(255, 59, 59, 0)",
+        "purpose": "Busy-dot glow pulse expanded ring (70%)."
+      },
+      {
+        "name": "busy-glow-reduced",
+        "value": "0 0 0 3px rgba(255, 59, 59, 0.28)",
+        "purpose": "Static busy ring when prefers-reduced-motion is set."
+      }
+    ],
     "motion": [
-      { "name": "theme-swap", "value": "0.35s ease", "purpose": "Background and ink transition on theme change." },
-      { "name": "state", "value": "0.15s–0.2s ease", "purpose": "Hover color, border, and 1–2px lift." },
-      { "name": "reveal", "value": "0.6s ease", "purpose": "Scroll reveal opacity + translateY(14px) → 0." },
-      { "name": "caret-blink", "value": "1s step-end infinite", "purpose": "Hero typing caret." },
-      { "name": "scroll-cue", "value": "2.4s ease-in-out infinite", "purpose": "Desktop scroll hint float." }
+      {
+        "name": "ease-craft",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Primary easing for hero entrance, busy glow, and hover transforms."
+      },
+      {
+        "name": "hero-in",
+        "value": "hero-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both",
+        "purpose": "Hero grid fade, unblur, and 12px rise on load."
+      },
+      {
+        "name": "busy-glow",
+        "value": "busy-glow 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite",
+        "purpose": "STATUS busy-dot expanding red glow. Paused offscreen via IntersectionObserver."
+      },
+      {
+        "name": "hover-lift",
+        "value": "translateY(-1px)",
+        "purpose": "Buttons and icon links on hover."
+      },
+      {
+        "name": "row-nudge",
+        "value": "translateX(3px)",
+        "purpose": "Featured and recent project rows on hover."
+      }
     ],
     "breakpoints": [
-      { "name": "form-split", "value": "640px" },
-      { "name": "nav-desktop", "value": "768px" },
-      { "name": "projects-2", "value": "700px" },
+      { "name": "work-collapse", "value": "700px" },
+      { "name": "about-split", "value": "760px" },
       { "name": "hero-split", "value": "900px" },
-      { "name": "projects-3", "value": "1024px" }
+      { "name": "nav-desktop", "value": "960px" }
     ]
   },
   "components": [
@@ -129,99 +253,145 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Ink-filled mono CTA; cyan fill in dark mode.",
-      "html": "<button class=\"ds-btn-primary\">View work</button>",
-      "css": ".ds-btn-primary { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.9rem; padding: 13px 26px; border-radius: 3px; border: 1px solid transparent; background: var(--ink, #14171A); color: var(--bg, #FAFAF8); cursor: pointer; transition: transform 0.15s ease, opacity 0.2s ease; } .ds-btn-primary:hover { transform: translateY(-1px); opacity: 0.88; } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; } html.dark .ds-btn-primary { background: var(--accent, #7FB2FF); color: #08163A; }"
+      "description": "Signal-filled pill CTA with icon, used for Download resume.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L10.5 0H4zm6.5 1.5L14 5h-2.5A1.5 1.5 0 0 1 10 3.5V1.5zM8.75 7v3.19l1.22-1.22.53-.53L11.56 9.5l-.53.53-2.12 2.12a.75.75 0 0 1-1.06 0L5.72 10.03l-.53-.53L6.25 8.44l.53.53L8 10.19V7h.75z\"/></svg>Download resume</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); font-size: 0.95rem; font-weight: 600; padding: 0.85rem 1.35rem; border-radius: 999px; border: 1px solid transparent; background: var(--accent, #18A0FB); color: var(--bg, #0E100F); text-decoration: none; cursor: pointer; transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease; } .ds-btn-primary:hover { background: var(--accent-hover, #3bb0ff); color: var(--bg, #0E100F); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #18A0FB); outline-offset: 3px; }"
     },
     {
       "name": "Ghost Button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Outlined secondary action; accent on hover.",
-      "html": "<button class=\"ds-btn-ghost\">Get in touch</button>",
-      "css": ".ds-btn-ghost { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.9rem; padding: 13px 26px; border-radius: 3px; border: 1px solid var(--line, #E3E3DF); background: transparent; color: var(--ink, #14171A); cursor: pointer; transition: transform 0.15s ease, border-color 0.2s ease, color 0.2s ease; } .ds-btn-ghost:hover { transform: translateY(-1px); border-color: var(--accent, #2F5DE0); color: var(--accent, #2F5DE0); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+      "description": "Outlined signal pill for View work and Copy email.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M1.5 3.5A1.5 1.5 0 0 1 3 2h3.2l1 1.2H13A1.5 1.5 0 0 1 14.5 4.7v7.8A1.5 1.5 0 0 1 13 14H3a1.5 1.5 0 0 1-1.5-1.5v-9z\"/></svg>View work</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); font-size: 0.95rem; font-weight: 600; padding: 0.85rem 1.35rem; border-radius: 999px; border: 1px solid var(--accent, #18A0FB); background: transparent; color: var(--accent, #18A0FB); text-decoration: none; cursor: pointer; transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease; } .ds-btn-ghost:hover { background: var(--accent-soft, rgba(24, 160, 251, 0.14)); transform: translateY(-1px); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--accent, #18A0FB); outline-offset: 3px; }"
     },
     {
-      "name": "Nav CTA",
+      "name": "Nav Pill",
       "kind": "nav",
-      "refersTo": "nav-cta",
-      "description": "Accent-bordered path link used for /contact.",
-      "html": "<a class=\"ds-nav-cta\" href=\"#contact\">/contact →</a>",
-      "css": ".ds-nav-cta { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.85rem; color: var(--accent, #2F5DE0); border: 1px solid var(--accent, #2F5DE0); padding: 6px 13px; border-radius: 3px; text-decoration: none; transition: background 0.2s ease; } .ds-nav-cta:hover { background: var(--accent-soft, #EAF0FF); } .ds-nav-cta:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+      "refersTo": "nav-pill",
+      "description": "Centered desktop nav chrome with icon + label links and active signal state.",
+      "html": "<nav class=\"ds-nav-pill\" aria-label=\"Primary\"><a class=\"ds-nav-link is-active\" href=\"#\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M8 1.2 1.5 6.4V14a.8.8 0 0 0 .8.8h3.9V10h3.6v4.8h3.9a.8.8 0 0 0 .8-.8V6.4L8 1.2z\"/></svg>Home</a><a class=\"ds-nav-link\" href=\"#\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1.2c-2.5 0-6 1.25-6 3.75V14h12v-1.05C14 10.45 10.5 9.2 8 9.2z\"/></svg>About</a><a class=\"ds-nav-link\" href=\"#\">Projects</a></nav>",
+      "css": ".ds-nav-pill { display: inline-flex; align-items: center; gap: 1.15rem; height: 44px; padding: 0 1.1rem; border: 1px solid var(--line, rgba(255, 255, 227, 0.14)); border-radius: 999px; font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); font-size: 0.95rem; font-weight: 500; color: var(--ink, #FFFFE3); background: transparent; } .ds-nav-link { display: inline-flex; align-items: center; gap: 0.4rem; color: inherit; text-decoration: none; opacity: 0.72; transition: opacity 0.2s ease, color 0.2s ease; } .ds-nav-link:hover, .ds-nav-link.is-active { opacity: 1; color: var(--accent, #18A0FB); } .ds-nav-link:focus-visible { outline: 2px solid var(--accent, #18A0FB); outline-offset: 3px; }"
     },
     {
-      "name": "Text Field",
-      "kind": "input",
-      "refersTo": "input-field",
-      "description": "Surface field with mono uppercase label.",
-      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Email</span><input class=\"ds-input\" type=\"email\" placeholder=\"you@company.com\" /></label>",
-      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; } .ds-field-label { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.78rem; color: var(--muted, #5B6168); text-transform: uppercase; letter-spacing: 0.04em; } .ds-input { font-family: var(--font-sans, Inter, sans-serif); font-size: 1rem; padding: 12px 14px; border: 1px solid var(--line, #E3E3DF); border-radius: 3px; background: var(--surface, #FFFFFF); color: var(--ink, #14171A); transition: border-color 0.2s ease; } .ds-input:focus { border-color: var(--accent, #2F5DE0); outline: none; } .ds-input:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+      "name": "Logo Pill",
+      "kind": "nav",
+      "refersTo": "logo-pill",
+      "description": "Domain mark with signal dot and soft halo.",
+      "html": "<a class=\"ds-logo-pill\" href=\"#\"><span class=\"ds-logo-dot\" aria-hidden=\"true\"></span>tanuv.info</a>",
+      "css": ".ds-logo-pill { display: inline-flex; align-items: center; gap: 0.55rem; height: 44px; padding: 0 1rem; border: 1px solid var(--line, rgba(255, 255, 227, 0.14)); border-radius: 999px; font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); font-size: 0.95rem; font-weight: 600; letter-spacing: -0.02em; color: var(--ink, #FFFFE3); text-decoration: none; background: transparent; } .ds-logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent, #18A0FB); box-shadow: 0 0 0 3px var(--accent-soft, rgba(24, 160, 251, 0.14)); } .ds-logo-pill:focus-visible { outline: 2px solid var(--accent, #18A0FB); outline-offset: 3px; }"
     },
     {
-      "name": "Project Card",
-      "kind": "card",
-      "refersTo": "project-card",
-      "description": "GitHub project plate with dashed meta footer.",
-      "html": "<a class=\"ds-project-card\" href=\"#\"><span class=\"ds-project-name\">tm1go</span><p class=\"ds-project-desc\">Go package for the IBM TM1 REST API.</p><div class=\"ds-project-meta\"><span><span class=\"ds-lang-dot\"></span>Go</span><span>★ 0</span></div></a>",
-      "css": ".ds-project-card { display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--line, #E3E3DF); border-radius: 3px; padding: 22px; background: var(--surface, #FFFFFF); text-decoration: none; color: inherit; transition: border-color 0.2s ease, transform 0.2s ease; } .ds-project-card:hover { border-color: var(--accent, #2F5DE0); transform: translateY(-2px); } .ds-project-name { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-weight: 600; font-size: 0.98rem; color: var(--ink, #14171A); } .ds-project-desc { margin: 0; flex: 1; color: var(--muted, #5B6168); font-size: 0.9rem; font-family: var(--font-sans, Inter, sans-serif); } .ds-project-meta { display: flex; gap: 16px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.75rem; color: var(--muted, #5B6168); padding-top: 8px; border-top: 1px dashed var(--line, #E3E3DF); } .ds-lang-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2F5DE0); display: inline-block; margin-right: 5px; }"
-    },
-    {
-      "name": "Dataplate",
-      "kind": "custom",
-      "refersTo": "dataplate",
-      "description": "Hero instrument plaque with dashed key/value rows.",
-      "html": "<div class=\"ds-dataplate\"><div class=\"ds-dataplate-row\"><span>ROLE</span><span>Assoc. SWE @ Algorisys</span></div><div class=\"ds-dataplate-row\"><span>STACK</span><span>Go / SolidStart</span></div><div class=\"ds-dataplate-row\"><span>STATUS</span><span class=\"ds-status\">busy</span></div></div>",
-      "css": ".ds-dataplate { border: 1px solid var(--line, #E3E3DF); border-radius: 3px; padding: 18px 20px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.78rem; background: var(--surface, #FFFFFF); } .ds-dataplate-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px dashed var(--line, #E3E3DF); color: var(--muted, #5B6168); } .ds-dataplate-row:last-child { border-bottom: none; } .ds-dataplate-row span:last-child { color: var(--ink, #14171A); } .ds-status::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #FF0000; margin-right: 6px; }"
-    },
-    {
-      "name": "Spec Item",
+      "name": "Stack Chip",
       "kind": "chip",
-      "refersTo": null,
-      "description": "Skills/spec sheet item with ink bullet — not a filled chip.",
-      "html": "<span class=\"ds-spec-item\">Data integration (ETL)</span>",
-      "css": ".ds-spec-item { position: relative; padding-left: 14px; font-size: 0.95rem; color: var(--muted, #5B6168); font-family: var(--font-sans, Inter, sans-serif); } .ds-spec-item::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: var(--ink, #14171A); border-radius: 50%; }"
+      "refersTo": "stack-chip",
+      "description": "Hairline pill label for curated stack items in Focus.",
+      "html": "<ul class=\"ds-stack-list\"><li class=\"ds-stack-chip\">Go</li><li class=\"ds-stack-chip\">TypeScript</li><li class=\"ds-stack-chip\">PostgreSQL</li></ul>",
+      "css": ".ds-stack-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; } .ds-stack-chip { font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); font-size: 0.85rem; font-weight: 500; padding: 0.4rem 0.8rem; border: 1px solid var(--line, rgba(255, 255, 227, 0.14)); border-radius: 999px; color: var(--ink, #FFFFE3); background: transparent; }"
     },
     {
-      "name": "Path Nav Link",
-      "kind": "nav",
-      "refersTo": null,
-      "description": "Default mono path link in the primary nav.",
-      "html": "<a class=\"ds-nav-link\" href=\"#projects\">/projects</a>",
-      "css": ".ds-nav-link { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.85rem; color: var(--muted, #5B6168); text-decoration: none; transition: color 0.2s ease; } .ds-nav-link:hover { color: var(--ink, #14171A); } .ds-nav-link:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+      "name": "Status Plate",
+      "kind": "card",
+      "refersTo": "status-plate",
+      "description": "Right-hero scan plate: ROLE / STACK / BASE / STATUS with busy red glow dot.",
+      "html": "<aside class=\"ds-status-plate\" aria-label=\"Profile summary\"><div class=\"ds-status-row\"><span>ROLE</span><span>Associate SWE @ Algorisys</span></div><div class=\"ds-status-row\"><span>STACK</span><span>Go / TypeScript</span></div><div class=\"ds-status-row\"><span>BASE</span><span>Mumbai, India</span></div><div class=\"ds-status-row\"><span>STATUS</span><span class=\"ds-status-busy\"><span class=\"ds-busy-dot\" aria-hidden=\"true\"></span>Busy</span></div></aside>",
+      "css": ".ds-status-plate { border: 1px solid var(--line, rgba(255, 255, 227, 0.14)); border-radius: 12px; background: color-mix(in srgb, var(--bg, #0E100F) 55%, var(--surface, #161916)); padding: 0.35rem 1.15rem; max-width: 340px; font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); color: var(--ink, #FFFFE3); } .ds-status-row { display: flex; justify-content: space-between; gap: 1.25rem; padding: 0.85rem 0; border-bottom: 1px dashed var(--line, rgba(255, 255, 227, 0.14)); font-size: 0.9rem; } .ds-status-row:last-child { border-bottom: none; } .ds-status-row span:first-child { color: var(--muted, #9A9A8A); font-weight: 600; letter-spacing: 0.04em; font-size: 0.78rem; } .ds-status-row span:last-child { text-align: right; font-weight: 600; } .ds-status-busy { color: var(--busy, #FF3B3B); display: inline-flex; align-items: center; justify-content: flex-end; gap: 0.5rem; line-height: 1; } .ds-busy-dot { width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%; background: var(--busy, #FF3B3B); box-shadow: 0 0 0 0 rgba(255, 59, 59, 0.55); animation: ds-busy-glow 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite; } @keyframes ds-busy-glow { 0% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0.55); } 70% { box-shadow: 0 0 0 8px rgba(255, 59, 59, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0); } } @media (prefers-reduced-motion: reduce) { .ds-busy-dot { animation: none; box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.28); } }"
+    },
+    {
+      "name": "Icon Link",
+      "kind": "custom",
+      "refersTo": "icon-link",
+      "description": "Circular 44px hero reach-out for GitHub, LinkedIn, X, Notes, resume.",
+      "html": "<a class=\"ds-icon-link\" href=\"#\" aria-label=\"GitHub\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z\"/></svg></a>",
+      "css": ".ds-icon-link { width: 44px; height: 44px; border: 1px solid var(--line, rgba(255, 255, 227, 0.14)); border-radius: 999px; display: grid; place-items: center; color: var(--ink, #FFFFE3); background: transparent; text-decoration: none; transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1); } .ds-icon-link:hover { border-color: var(--accent, #18A0FB); color: var(--accent, #18A0FB); transform: translateY(-1px); } .ds-icon-link:focus-visible { outline: 2px solid var(--accent, #18A0FB); outline-offset: 3px; }"
+    },
+    {
+      "name": "Work Row",
+      "kind": "custom",
+      "refersTo": "work-item",
+      "description": "Featured project ruled row with name, description, and GitHub CTA nudge.",
+      "html": "<a class=\"ds-work-item\" href=\"#\"><span class=\"ds-work-name\">tm1go</span><span class=\"ds-work-desc\">Go package wrapping the IBM TM1 REST API for extraction and ops.</span><span class=\"ds-work-cta\">GitHub →</span></a>",
+      "css": ".ds-work-item { display: grid; grid-template-columns: minmax(7rem, 10rem) 1fr auto; gap: 1rem 1.5rem; align-items: baseline; padding: 1.35rem 0; border-bottom: 1px solid var(--line, rgba(255, 255, 227, 0.14)); font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); color: var(--ink, #FFFFE3); text-decoration: none; transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1); } .ds-work-item:hover { transform: translateX(3px); } .ds-work-name { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; transition: color 0.2s ease; } .ds-work-desc { color: var(--muted, #9A9A8A); max-width: 48ch; } .ds-work-cta { font-size: 0.9rem; font-weight: 600; color: var(--accent, #18A0FB); white-space: nowrap; transition: color 0.2s ease; } .ds-work-item:hover .ds-work-name, .ds-work-item:hover .ds-work-cta { color: var(--accent, #18A0FB); } .ds-work-item:focus-visible { outline: 2px solid var(--accent, #18A0FB); outline-offset: 3px; }"
+    },
+    {
+      "name": "Contact Email",
+      "kind": "custom",
+      "refersTo": "contact-email",
+      "description": "Direct mailto contact with ghost Copy control. No form.",
+      "html": "<div class=\"ds-contact-row\"><a class=\"ds-contact-email\" href=\"mailto:tanuvnair@gmail.com\">tanuvnair@gmail.com</a><button type=\"button\" class=\"ds-btn-ghost-small\">Copy</button></div>",
+      "css": ".ds-contact-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; font-family: var(--font, 'Hanken Grotesk', 'Segoe UI', sans-serif); } .ds-contact-email { font-size: clamp(1.35rem, 3vw, 1.85rem); font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #18A0FB); text-decoration: none; } .ds-contact-email:hover { text-decoration: underline; text-underline-offset: 3px; } .ds-btn-ghost-small { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-size: 0.85rem; font-weight: 600; padding: 0.45rem 0.9rem; border-radius: 999px; border: 1px solid var(--accent, #18A0FB); background: transparent; color: var(--accent, #18A0FB); cursor: pointer; transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease; } .ds-btn-ghost-small:hover { background: var(--accent-soft, rgba(24, 160, 251, 0.14)); transform: translateY(-1px); } .ds-contact-email:focus-visible, .ds-btn-ghost-small:focus-visible { outline: 2px solid var(--accent, #18A0FB); outline-offset: 3px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Blueprint Spec Sheet",
-    "overview": "Light mode reads as a paper engineering print — cool off-white stock, graphite ink, hairline rules. Dark mode is the blueprint itself: deep navy field, cyan traces, dashed instrument rows. The interface behaves like a fabricated plate for a working systems engineer, not a marketing landing page.\n\nDensity is deliberate and technical. Mono type carries identity, navigation, and labels; sans carries long-form reading. Corners stay nearly square. Depth comes from borders and tonal surfaces, not shadow stacks. Motion is sparse: a caret blink, a soft scroll reveal, a 1–2px hover lift.",
+    "northStar": "The Craft Bar Field",
+    "overview": "A hireability-first systems portfolio that borrows craft materials from thegr8binil.me (near-black field, faint grid, cream ink, signal blue, Hanken Grotesk, pill chrome) without cloning that site's stage lockup. The composition is left-led: the name is the display signal, the bio and CTAs sit under it, circular icon reach-outs finish the left column, and a right-hand status plate holds ROLE / STACK / BASE / STATUS for a recruiter scan.\n\nThe field is dark-only. Depth comes from hairline rules, dashed separators, a soft surface mix on the status plate, and restrained motion (hero fade-up, busy glow pulse, hover nudge). Contact is direct email plus copy. There is no footer, no theme toggle, no fake forms or metrics.",
     "keyCharacteristics": [
-      "Dual-theme world: paper spec (light) / blueprint (dark)",
-      "JetBrains Mono as the brand voice; Inter for body prose",
-      "Hairline + dashed dividers as structure",
-      "~3px radius everywhere interactive surfaces appear",
-      "Print registration crosses as a quiet desktop signature",
-      "Path-style mono navigation (/about, /projects, …)"
+      "Near-black canvas with a masked 48px grid and cream ink",
+      "Single family: Hanken Grotesk from display through labels",
+      "Pill chrome at 44px for nav, CTAs, and icon links; 12px radius for plates and photo",
+      "Left-led hero name + right status plate (Busy red glow pulse)",
+      "Ruled project rows with a quieter dashed secondary block (Also on GitHub)"
     ],
     "rules": [
-      { "name": "The One Trace Rule", "body": "Cobalt/cyan is a signal line, not a theme wash. Keep filled accent surfaces rare (nav CTA border, primary dark button, focus). Prefer ink-on-paper for primary actions in light mode.", "section": "colors" },
-      { "name": "The Theme Swap Rule", "body": "Never invent a third palette. Light and dark share the same roles; only the token values change under html.dark.", "section": "colors" },
-      { "name": "The Mono Authority Rule", "body": "If it identifies the person, the route, or a machine-readable field, it is mono. Body sans is for sentences, not chrome.", "section": "typography" },
-      { "name": "The Plate Margin Rule", "body": "Content never goes edge-to-edge; registration marks and margin breathing room are part of the artifact.", "section": "layout" },
-      { "name": "The Flat Plate Rule", "body": "Do not introduce drop shadows to “finish” a card. If it needs separation, use a hairline or a surface token.", "section": "elevation" },
-      { "name": "The Near-Square Rule", "body": "Radius stays at 3px. Do not drift toward soft 12–16px product UI corners.", "section": "shapes" }
+      {
+        "name": "The One Signal Rule",
+        "body": "Signal blue is the only interactive accent for links, CTAs, and focus. Busy red is STATUS-only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dark Field Rule",
+        "body": "The system is dark-only. Do not introduce a light theme or invert the cream-on-near-black relationship.",
+        "section": "colors"
+      },
+      {
+        "name": "The Single Face Rule",
+        "body": "Do not add a display serif, mono, or second sans. Hierarchy is weight and size only.",
+        "section": "typography"
+      },
+      {
+        "name": "The Name Is Display Rule",
+        "body": "The hero brand signal is the person's name at display scale. Do not demote the name to an eyebrow or replace it with a slogan lockup.",
+        "section": "typography"
+      },
+      {
+        "name": "The Left-Led Hero Rule",
+        "body": "First viewport: name, one lead, one CTA pair, icon row, status plate. No centered stage lockup, floating meta comments, or absolute email pills on the hero.",
+        "section": "layout"
+      },
+      {
+        "name": "The Projects Hierarchy Rule",
+        "body": "Projects → Selected work (featured ruled rows) → Also on GitHub (dashed separator, quieter recent rows, same hover nudge).",
+        "section": "layout"
+      },
+      {
+        "name": "The Hairline Depth Rule",
+        "body": "Prefer 1px cream hairlines and dashed dividers over card shadows. Lift is hover motion (1px up or 3px nudge), not layered umbras.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Pill Chrome Rule",
+        "body": "Interactive chrome shares --pill-h: 44px and pill radius. Do not invent a third radius family for buttons or nav.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Busy Glow Rule",
+        "body": "STATUS uses busy red + expanding glow pulse. Do not reuse live green as an availability blinker on this plate.",
+        "section": "components"
+      }
     ],
     "dos": [
-      "Do treat light and dark as two finishes of the same plate (paper vs blueprint).",
-      "Do lead identity with JetBrains Mono and path-style chrome.",
-      "Do structure with hairline / dashed rules and surface panels.",
-      "Do keep radius at 3px and accent usage scarce.",
-      "Do honor prefers-reduced-motion (already wired globally)."
+      "Do keep the name as the hero display signal and the status plate as the right-hand scan summary.",
+      "Do reuse pill chrome at 44px height and surface radius 12px for plates/photo.",
+      "Do keep projects as Selected work then Also on GitHub, with the dashed separator marking secondary rank.",
+      "Do route contact through real email (tanuvnair@gmail.com) with copy-to-clipboard.",
+      "Do honor prefers-reduced-motion by dropping hero entrance and freezing the busy glow."
     ],
     "donts": [
-      "Don't add soft multi-layer shadows or floating glass cards.",
-      "Don't introduce a second accent hue (purple, teal, terracotta) alongside cobalt/cyan.",
-      "Don't round corners into modern SaaS softness.",
-      "Don't replace mono brand chrome with a display serif or Inter-led nav.",
-      "Don't invent testimonials, metrics strips, or decorative illustration as system patterns."
+      "Don't restore a centered SOFTWARE / ENGINEER / SYSTEMS stage lockup or Binil layout clone.",
+      "Don't add light mode, theme toggle, footer, contact forms, or fake metrics.",
+      "Don't put floating // comment meta, absolute email pills on the hero, or numbered Focus 01-04 chrome.",
+      "Don't use Connect-style live green blinkers for STATUS; Busy is red glow only.",
+      "Don't introduce a second typeface or card-heavy dashboard density on the first viewport."
     ]
   }
 }
