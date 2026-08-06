@@ -4,231 +4,415 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <title>Tanuv Nair — Backend &amp; Distributed Systems, Mumbai</title>
+    <meta name="description"
+        content="Tanuv Nair is a software engineer in Mumbai building high-throughput distributed systems — Go backends, ETL pipelines, Linux infrastructure. Open to interesting roles." />
+    <meta property="og:title" content="Tanuv Nair — Backend &amp; Distributed Systems, Mumbai" />
+    <meta property="og:description"
+        content="Software engineer in Mumbai building high-throughput distributed systems — Go backends, ETL pipelines, Linux infrastructure. Open to interesting roles." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tanuv.info/" />
+    <meta property="og:image" content="https://tanuv.info/img/og.png" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>tanuv.info | software engineer</title>
 </head>
 
 <body>
-    <!-- registration marks -->
-    <div class="reg reg-tl" aria-hidden="true"></div>
-    <div class="reg reg-tr" aria-hidden="true"></div>
-    <div class="reg reg-bl" aria-hidden="true"></div>
-    <div class="reg reg-br" aria-hidden="true"></div>
+    <!--
+    THESIS: The portfolio is a 1984 one-bit desktop; the identity window is open
+      and dominant on load, no window management between a recruiter and the
+      facts. Refuses the dark-gradient dev hero and the resume-as-webpage.
+    OWN-WORLD: Pure black/white pixels; ordered stipple dither as the only gray;
+      black title bars with white close boxes; pixel caps for titles, small
+      Geneva-class sans for body; 32px two-color icons; marching-ants
+      selection; inverted press states.
+    STORY: The desktop boots into an open identity window — name, specialty,
+      availability, résumé one click; icons and menus route to work,
+      experience, stack, notes, contact.
+    FIRST VIEWPORT: Menu bar with tanuv.info and clock; identity window (~70%)
+      center-left with name, role, status, View work + Resume.pdf; icon column
+      at the right edge; stipple desktop behind.
+    FORM: One-bit desktop, catalog challenger chosen by the user; seed key
+      a82097d2 (index 5 superseded by challenger-one-bit).
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the
+      finish review, the verdict, and DESIGN.md
+    -->
 
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="#" class="logo">
-                <span class="logo-mark">◆</span>
-                <span>tanuv<span class="dim">.info</span></span>
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <div class="boot" aria-hidden="true">
+        <div class="zr zr-1"></div>
+        <div class="zr zr-2"></div>
+        <div class="zr zr-3"></div>
+    </div>
+
+    <header class="menubar">
+        <div class="menubar-left">
+            <a href="#about" class="menu-logo" aria-label="tanuv.info home">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                    <path d="M6 0l6 6-6 6-6-6z" />
+                </svg>
+                <span>tanuv.info</span>
             </a>
 
-            <nav class="nav-desktop" aria-label="Primary">
-                <a href="#about" data-route="/about">/about</a>
-                <a href="#projects" data-route="/projects">/projects</a>
-                <a href="#skills" data-route="/skills">/skills</a>
-                <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer" data-route="/notes">/notes
-                    ↗</a>
-                <a href="#contact" class="nav-cta" data-route="/contact">/contact&nbsp;→</a>
+            <nav class="menus" aria-label="Primary">
+                <div class="menu" data-menu>
+                    <button class="menu-title" aria-haspopup="true" aria-expanded="false">File</button>
+                    <ul class="menu-list" role="menu">
+                        <li role="none"><a role="menuitem" href="TanuvNairResume.pdf">Resume.pdf</a></li>
+                        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="menu" data-menu>
+                    <button class="menu-title" aria-haspopup="true" aria-expanded="false">Go</button>
+                    <ul class="menu-list" role="menu">
+                        <li role="none"><a role="menuitem" href="#work">Work</a></li>
+                        <li role="none"><a role="menuitem" href="#experience">Experience</a></li>
+                        <li role="none"><a role="menuitem" href="#stack">Stack</a></li>
+                        <li role="none"><a role="menuitem" href="https://mimir.vunat.in" target="_blank"
+                                rel="noopener noreferrer">Notes</a></li>
+                    </ul>
+                </div>
             </nav>
 
-            <div class="header-actions">
-                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-                    <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M8.75 0.75V0H7.25V0.75V2V2.75H8.75V2V0.75ZM11.182 3.75732L11.7123 3.22699L12.0659 2.87344L12.5962 2.34311L13.6569 3.40377L13.1265 3.9341L12.773 4.28765L12.2426 4.81798L11.182 3.75732ZM8 10.5C9.38071 10.5 10.5 9.38071 10.5 8C10.5 6.61929 9.38071 5.5 8 5.5C6.61929 5.5 5.5 6.61929 5.5 8C5.5 9.38071 6.61929 10.5 8 10.5ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM13.25 7.25H14H15.25H16V8.75H15.25H14H13.25V7.25ZM0.75 7.25H0V8.75H0.75H2H2.75V7.25H2H0.75ZM2.87348 12.0659L2.34315 12.5962L3.40381 13.6569L3.93414 13.1265L4.28769 12.773L4.81802 12.2426L3.75736 11.182L3.22703 11.7123L2.87348 12.0659ZM3.75735 4.81798L3.22702 4.28765L2.87347 3.9341L2.34314 3.40377L3.4038 2.34311L3.93413 2.87344L4.28768 3.22699L4.81802 3.75732L3.75735 4.81798ZM12.0659 13.1265L12.5962 13.6569L13.6569 12.5962L13.1265 12.0659L12.773 11.7123L12.2426 11.182L11.182 12.2426L11.7123 12.773L12.0659 13.1265ZM8.75 13.25V14V15.25V16H7.25V15.25V14V13.25H8.75Z" />
-                    </svg>
-                    <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M1.5 8.00005C1.5 5.53089 2.99198 3.40932 5.12349 2.48889C4.88136 3.19858 4.75 3.95936 4.75 4.7501C4.75 8.61609 7.88401 11.7501 11.75 11.7501C11.8995 11.7501 12.048 11.7454 12.1953 11.7361C11.0955 13.1164 9.40047 14.0001 7.5 14.0001C4.18629 14.0001 1.5 11.3138 1.5 8.00005ZM6.41706 0.577759C2.78784 1.1031 0 4.22536 0 8.00005C0 12.1422 3.35786 15.5001 7.5 15.5001C10.5798 15.5001 13.2244 13.6438 14.3792 10.9921L13.4588 9.9797C12.9218 10.155 12.3478 10.2501 11.75 10.2501C8.71243 10.2501 6.25 7.78767 6.25 4.7501C6.25 3.63431 6.58146 2.59823 7.15111 1.73217L6.41706 0.577759Z" />
-                    </svg>
-                </button>
-
-                <button id="mobile-menu-button" class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
+            <div class="menu mobile-menu" data-menu>
+                <button class="menu-title" aria-haspopup="true" aria-expanded="false">Menu</button>
+                <ul class="menu-list" role="menu">
+                    <li role="none"><a role="menuitem" href="#work">Work</a></li>
+                    <li role="none"><a role="menuitem" href="#experience">Experience</a></li>
+                    <li role="none"><a role="menuitem" href="#stack">Stack</a></li>
+                    <li role="none"><a role="menuitem" href="https://mimir.vunat.in" target="_blank"
+                            rel="noopener noreferrer">Notes</a></li>
+                    <li role="none"><a role="menuitem" href="TanuvNairResume.pdf">Resume.pdf</a></li>
+                    <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+                </ul>
             </div>
+        </div>
+
+        <p class="clock" id="clock" aria-hidden="true"></p>
     </header>
 
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="#about">/about</a>
-        <a href="#projects">/projects</a>
-        <a href="#skills">/skills</a>
-        <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer">/notes ↗</a>
-        <a href="#contact">/contact</a>
-    </div>
-    </header>
+    <aside class="desktop-icons" aria-label="Desktop">
+        <a href="#work" class="desk-icon" data-target="work">
+            <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" fill="currentColor"
+                aria-hidden="true">
+                <path d="M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z" fill-rule="evenodd" />
+            </svg>
+            <span>work</span>
+        </a>
+        <a href="#experience" class="desk-icon" data-target="experience">
+            <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" fill="currentColor"
+                aria-hidden="true">
+                <path d="M3 0h7l3 3v13H3V0zm6 1H4v14h8V4H9V1zm1 4v1H6V5h4zm0 3v1H6V8h4zm0 3v1H6v-1h4z"
+                    fill-rule="evenodd" />
+            </svg>
+            <span>experience</span>
+        </a>
+        <a href="#stack" class="desk-icon" data-target="stack">
+            <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" fill="currentColor"
+                aria-hidden="true">
+                <path d="M2 0h10l2 2v12H2V0zm9 2H5v4h6V2zm-1 1v2H6V3h4zm-6 5v5h8V8H4zm7 3h-1v1h1v-1z"
+                    fill-rule="evenodd" />
+            </svg>
+            <span>stack</span>
+        </a>
+        <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer" class="desk-icon">
+            <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges" fill="currentColor"
+                aria-hidden="true">
+                <path d="M11 0l3 3-9 9H2v-3L11 0zm0 2L4 11v1h1l7-7-1-2-1-1zM1 14h14v2H1v-2z" fill-rule="evenodd" />
+            </svg>
+            <span>notes</span>
+        </a>
+    </aside>
 
     <main>
-        <section id="hero" class="hero">
-            <div class="hero-grid">
-                <p class="eyebrow">software engineer | mumbai, india</p>
-                <h1 class="hero-title">
-                    Tanuv Nair<br>
-                    <span class="hero-cursor"><span id="typing-text"></span><span class="caret">_</span></span>
-                </h1>
-                <p class="hero-copy">
-                    I build high-throughput distributed systems and the unglamorous
-                    infrastructure underneath them - ETL pipelines, HRMS platforms,
-                    Linux servers that stay up.
-                </p>
+        <section id="about" class="window window-hero">
+            <div class="titlebar">
+                <button class="close-box" aria-label="Collapse about section"></button>
+                <span class="titlebar-text">about.txt</span>
+            </div>
+            <div class="window-body">
+                <h1 class="hero-name">Tanuv Nair</h1>
+                <p class="hero-role">Backend and distributed systems</p>
+                <p class="hero-meta">Associate Software Engineer at Algorisys &middot; Mumbai, India</p>
+                <p class="hero-copy">I build high-throughput distributed systems and the unglamorous infrastructure
+                    underneath them &mdash; ETL pipelines, HRMS platforms, Linux servers that stay up.</p>
+                <p class="hero-status"><span class="selection">Open to interesting roles</span></p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">View work</a>
-                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
-                </div>
-            </div>
-
-            <div class="dataplate" aria-hidden="true">
-                <div class="dataplate-row"><span>LAT</span><span>19.0760° N</span></div>
-                <div class="dataplate-row"><span>LNG</span><span>72.8777° E</span></div>
-                <div class="dataplate-row"><span>ROLE</span><span>Assoc. SWE @ Algorisys</span></div>
-                <div class="dataplate-row"><span>STACK</span><span>Go / SolidStart</span></div>
-                <div class="dataplate-row"><span>STATUS</span><span class="status-dot">busy</span></div>
-            </div>
-
-            <a href="#about" class="scroll-cue">
-                <span>scroll</span>
-                <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
-                    <path d="M7 1v17M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </a>
-        </section>
-
-        <section id="about" class="section">
-            <p class="section-eyebrow">/about</p>
-            <div class="about-grid">
-                <div class="about-photo-wrap">
-                    <div class="about-photo">
-                        <img src="img/avatar.png" alt="Tanuv Nair" loading="lazy" />
-                    </div>
-                    <div class="photo-tick photo-tick-tl"></div>
-                    <div class="photo-tick photo-tick-br"></div>
+                    <a href="#work" class="btn btn-default">View work</a>
+                    <a href="TanuvNairResume.pdf" class="btn">Resume.pdf</a>
                 </div>
 
-                <div class="about-copy">
-                    <p>
-                        I'm a Software Engineer and BCA graduate from Somaiya Vidyavihar
-                        University, currently working as an
-                        <strong>Associate Software Engineer at Algorisys Technologies</strong>.
-                        My day-to-day is architecting high-throughput distributed ETL
-                        pipelines in Go, shipping zero-downtime features for critical HRMS
-                        platforms, and managing Linux server infrastructure end to end.
-                    </p>
-                    <p>
-                        It started with a curiosity for how things work under the hood -
-                        AI-powered tools and MERN stack apps during my internship, then
-                        further back, building a graphics engine from scratch in C.
-                    </p>
-                    <p>
-                        Outside work I build things that solve real problems:
-                        <strong>tm1go</strong>, an open-source Go package for TM1 APIs;
-                        Fluxroom, a real-time collaborative editor; and a couple of
-                        approximate calorie trackers I keep rewriting for fun.
-                    </p>
-                    <a href="./TanuvNairResume.pdf" class="resume-link">
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M8.75 1V1.75V8.68934L10.7197 6.71967L11.25 6.18934L12.3107 7.25L11.7803 7.78033L8.70711 10.8536C8.31658 11.2441 7.68342 11.2441 7.29289 10.8536L4.21967 7.78033L3.68934 7.25L4.75 6.18934L5.28033 6.71967L7.25 8.68934V1.75V1H8.75ZM13.5 9.25V13.5H2.5V9.25V8.5H1V9.25V14C1 14.5523 1.44771 15 2 15H14C14.5523 15 15 14.5523 15 14V9.25V8.5H13.5V9.25Z" />
+                <nav class="hero-icons" aria-label="Sections">
+                    <a href="#work" class="desk-icon" data-target="work">
+                        <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                            fill="currentColor" aria-hidden="true">
+                            <path d="M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z" fill-rule="evenodd" />
                         </svg>
-                        Download résumé
+                        <span>work</span>
                     </a>
+                    <a href="#experience" class="desk-icon" data-target="experience">
+                        <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                            fill="currentColor" aria-hidden="true">
+                            <path d="M3 0h7l3 3v13H3V0zm6 1H4v14h8V4H9V1zm1 4v1H6V5h4zm0 3v1H6V8h4zm0 3v1H6v-1h4z"
+                                fill-rule="evenodd" />
+                        </svg>
+                        <span>experience</span>
+                    </a>
+                    <a href="#stack" class="desk-icon" data-target="stack">
+                        <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                            fill="currentColor" aria-hidden="true">
+                            <path d="M2 0h10l2 2v12H2V0zm9 2H5v4h6V2zm-1 1v2H6V3h4zm-6 5v5h8V8H4zm7 3h-1v1h1v-1z"
+                                fill-rule="evenodd" />
+                        </svg>
+                        <span>stack</span>
+                    </a>
+                    <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer" class="desk-icon">
+                        <svg width="32" height="32" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                            fill="currentColor" aria-hidden="true">
+                            <path d="M11 0l3 3-9 9H2v-3L11 0zm0 2L4 11v1h1l7-7-1-2-1-1zM1 14h14v2H1v-2z"
+                                fill-rule="evenodd" />
+                        </svg>
+                        <span>notes</span>
+                    </a>
+                </nav>
+            </div>
+        </section>
+
+        <section id="work" class="window">
+            <div class="titlebar">
+                <button class="close-box" aria-label="Collapse work section"></button>
+                <h2 class="titlebar-text" id="title-work">work</h2>
+            </div>
+            <div class="window-body">
+                <ul class="file-list">
+                    <li>
+                        <a class="file-row" href="https://github.com/tanuvnair/tm1go" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z" fill-rule="evenodd" />
+                            </svg>
+                            <span class="file-name">tm1go</span>
+                            <span class="file-desc">Go package wrapping the IBM TM1 REST API, inspired by tm1py</span>
+                            <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14"
+                                shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+                                <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="file-row" href="https://github.com/tanuvnair/fluxroom" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z" fill-rule="evenodd" />
+                            </svg>
+                            <span class="file-name">fluxroom</span>
+                            <span class="file-desc">Real-time collaborative text editor with live chat over
+                                websockets</span>
+                            <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14"
+                                shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+                                <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="file-row" href="https://github.com/tanuvnair/circacal" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z" fill-rule="evenodd" />
+                            </svg>
+                            <span class="file-name">circacal</span>
+                            <span class="file-desc">A very simple and approximate calorie tracker, rewritten
+                                occasionally for fun</span>
+                            <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14"
+                                shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+                                <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="file-row" href="https://github.com/tanuvnair" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z" fill-rule="evenodd" />
+                            </svg>
+                            <span class="file-name">more</span>
+                            <span class="file-desc">Everything else lives on GitHub</span>
+                            <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14"
+                                shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+                                <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="window">
+            <div class="titlebar">
+                <button class="close-box" aria-label="Collapse experience section"></button>
+                <h2 class="titlebar-text" id="title-experience">experience</h2>
+            </div>
+            <div class="window-body">
+                <div class="entry">
+                    <p class="entry-head">Associate Software Engineer</p>
+                    <p class="entry-sub">Algorisys Technologies &middot; Jul 2025 &ndash; present &middot; Mumbai</p>
+                    <ul class="entry-list">
+                        <li>Architected a high-throughput distributed ETL pipeline &mdash; Go backend, React Router v7
+                            frontend &mdash; processing millions of rows across distributed client servers, with custom
+                            TM1 and PostgreSQL adapters.</li>
+                        <li>Shipped zero-downtime features for a critical attendance and payroll HRMS platform under
+                            strict backward-compatibility.</li>
+                        <li>Built a full-stack contract lifecycle management app (SolidStart + Go REST API) ingesting
+                            multi-source data from the ETL pipeline.</li>
+                        <li>Manage Linux server provisioning and deployments end to end; fault tolerance first.</li>
+                    </ul>
+                </div>
+                <div class="entry">
+                    <p class="entry-head">Software &amp; AI Engineering Intern</p>
+                    <p class="entry-sub">Algorisys Technologies &middot; Nov 2023 &ndash; Jul 2025 &middot; Remote</p>
+                    <ul class="entry-list">
+                        <li>MERN stack tools &mdash; AI-powered note-taking and mind mapping &mdash; and a graphics
+                            engine built from scratch in C.</li>
+                    </ul>
+                </div>
+                <div class="entry">
+                    <p class="entry-head">BCA, Computer Applications</p>
+                    <p class="entry-sub">Somaiya Vidyavihar University &middot; 2022 &ndash; 2025</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <p class="section-eyebrow">/projects</p>
-            <h2 class="section-title">Latest from GitHub</h2>
-            <div id="projects-container" class="projects-grid">
-                <p class="projects-loading">fetching repositories…</p>
+        <section id="stack" class="window">
+            <div class="titlebar">
+                <button class="close-box" aria-label="Collapse stack section"></button>
+                <h2 class="titlebar-text" id="title-stack">stack.sys</h2>
             </div>
-        </section>
-
-        <section id="skills" class="section">
-            <p class="section-eyebrow">/skills</p>
-            <h2 class="section-title">Spec sheet</h2>
-
-            <div class="spec-sheet">
-                <div class="spec-row">
-                    <div class="spec-label">Skills</div>
-                    <div class="spec-items">
-                        <span>Full-stack development</span>
-                        <span>System design &amp; architecture</span>
-                        <span>REST API development</span>
-                        <span>Data integration (ETL)</span>
-                        <span>Server administration</span>
-                        <span>OOP</span>
+            <div class="window-body">
+                <div class="stack-cols">
+                    <div>
+                        <p class="stack-head">Day to day</p>
+                        <ul class="stack-list">
+                            <li>Go</li>
+                            <li>TypeScript / JavaScript</li>
+                            <li>React / Next.js / SolidStart</li>
+                            <li>Node.js</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="spec-row">
-                    <div class="spec-label">Technologies</div>
-                    <div class="spec-items">
-                        <span>Go</span>
-                        <span>TypeScript / JavaScript</span>
-                        <span>React.js / Next.js / SolidStart</span>
-                        <span>Node.js</span>
-                        <span>SAP ABAP</span>
-                        <span>PostgreSQL / MongoDB</span>
-                        <span>Docker</span>
-                        <span>Linux (Ubuntu / Fedora)</span>
-                        <span>Git</span>
-                    </div>
-                </div>
-                <div class="spec-row">
-                    <div class="spec-label">Interests</div>
-                    <div class="spec-items">
-                        <span>Computer hardware</span>
-                        <span>Custom peripherals</span>
-                        <span>Competitive gaming</span>
-                        <span>Strength training</span>
-                        <span>Audiophile equipment</span>
-                        <span>Stand-up comedy</span>
+                    <div>
+                        <p class="stack-head">Systems &amp; tools</p>
+                        <ul class="stack-list">
+                            <li>PostgreSQL / MongoDB</li>
+                            <li>Docker</li>
+                            <li>Linux (Ubuntu / Fedora)</li>
+                            <li>Git</li>
+                            <li>REST APIs &amp; ETL</li>
+                            <li>System design</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <p class="section-eyebrow">/contact</p>
-            <h2 class="section-title">Get in touch</h2>
-            <form id="contact-form" class="contact-form">
-                <div class="form-row">
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" required />
-                    </div>
-                    <div class="field">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required />
-                    </div>
-                </div>
-                <div class="field">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send message</button>
-                <p class="form-status" id="form-status" role="status"></p>
-            </form>
+        <section id="notes" class="window">
+            <div class="titlebar">
+                <button class="close-box" aria-label="Collapse notes section"></button>
+                <h2 class="titlebar-text" id="title-notes">notes</h2>
+            </div>
+            <div class="window-body">
+                <p class="notes-copy">Occasional technical writing lives on its own machine.</p>
+                <a class="file-row notes-link" href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer">
+                    <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges" fill="currentColor"
+                        aria-hidden="true">
+                        <path d="M11 0l3 3-9 9H2v-3L11 0zm0 2L4 11v1h1l7-7-1-2-1-1zM1 14h14v2H1v-2z"
+                            fill-rule="evenodd" />
+                    </svg>
+                    <span class="file-name">mimir</span>
+                    <span class="file-desc">mimir.vunat.in</span>
+                    <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14" shape-rendering="crispEdges"
+                        fill="currentColor" aria-hidden="true">
+                        <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="window">
+            <div class="titlebar">
+                <button class="close-box" aria-label="Collapse contact section"></button>
+                <h2 class="titlebar-text" id="title-contact">contact</h2>
+            </div>
+            <div class="window-body">
+                <ul class="file-list">
+                    <li>
+                        <a class="file-row" href="mailto:tanuvnair@gmail.com">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M1 3h14v10H1V3zm1 1v1.4l6 3.6 6-3.6V4H2zm12 3.1l-6 3.6-6-3.6V12h12V7.1z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                            <span class="file-name">email</span>
+                            <span class="file-desc">tanuvnair@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="file-row" href="https://www.linkedin.com/in/tanuv/" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M1 1h14v14H1V1zm3 3v2h2V4H4zm0 4v5h2V8H4zm4 0v5h2v-3h1v3h2V9.5c0-1-.7-1.5-1.7-1.5H8z" />
+                            </svg>
+                            <span class="file-name">linkedin</span>
+                            <span class="file-desc">in/tanuv</span>
+                            <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14"
+                                shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+                                <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="file-row" href="https://github.com/tanuvnair" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M4 1h2l2 2h4l2-2h2v5h-1v4h-2v3h-2v-1H9v1H7v-3H5V6H4V1zm2 5v2h2V6H6zm4 0v2h2V6h-2z" />
+                            </svg>
+                            <span class="file-name">github</span>
+                            <span class="file-desc">tanuvnair</span>
+                            <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14"
+                                shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+                                <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="file-row" href="https://x.com/tanuvnair" target="_blank" rel="noopener noreferrer">
+                            <svg width="28" height="28" viewBox="0 0 16 16" shape-rendering="crispEdges"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M2 2h3l3 4 3-4h3l-4.5 6L14 14h-3l-3-4-3 4H2l4.5-6L2 2z" />
+                            </svg>
+                            <span class="file-name">x</span>
+                            <span class="file-desc">@tanuvnair</span>
+                            <svg class="file-arrow" width="14" height="14" viewBox="0 0 14 14"
+                                shape-rendering="crispEdges" fill="currentColor" aria-hidden="true">
+                                <path d="M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-social">
-                <a href="https://mimir.vunat.in" target="_blank" rel="noopener noreferrer"
-                    aria-label="Notes">[notes]</a>
-                <a href="https://www.linkedin.com/in/tanuv/" aria-label="LinkedIn">[in]</a>
-                <a href="https://github.com/tanuvnair" aria-label="GitHub">[gh]</a>
-                <a href="https://x.com/tanuvnair" aria-label="X / Twitter">[x]</a>
-            </div>
-            <p>© <span id="year"></span> Tanuv Nair — built with Go-adjacent stubbornness.</p>
-        </div>
+        <p>&copy; <span id="year"></span> Tanuv Nair &mdash; built with Go-adjacent stubbornness.</p>
     </footer>
 
     <script src="js/main.js"></script>

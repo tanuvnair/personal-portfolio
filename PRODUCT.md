@@ -20,14 +20,15 @@ A working software engineer in Mumbai — Associate SWE at Algorisys — focused
 
 ## Operating Context
 
-Static personal site deployed on GitHub Pages. Visitors scan identity and work on one page (about, projects, skills, contact), optionally download a résumé, follow notes at mimir.vunat.in, or jump to LinkedIn / GitHub / X. Projects are loaded live from the GitHub API (with a static fallback list). Light/dark theme preference is stored locally.
+Static personal site deployed on GitHub Pages. Visitors scan identity and work on one page (identity window, work, experience, stack, notes, contact), download a résumé, follow notes at mimir.vunat.in, or jump to email / LinkedIn / GitHub / X. Projects are hand-curated static entries with real repo links. The site is a one-bit desktop world (1984 Macintosh grammar): menu bar, windows, desktop icons, single black-and-white finish.
 
 ## Capabilities and Constraints
 
-- Single-page portfolio: hero, about, projects, skills/spec sheet, contact, footer social links.
-- Contact form is present in the UI but has no backend endpoint; submit only shows a local acknowledgment.
-- Stack in code: HTML5, CSS3, vanilla JS; Tailwind CLI available as a dependency; no SPA framework.
-- Open / undecided: whether contact should eventually post to a real endpoint; whether STATUS and dataplate fields stay editorial vs. auto-updated.
+- Single-page portfolio: identity hero, work, experience, stack, notes, contact, footer.
+- Contact is email (tanuvnair@gmail.com) plus LinkedIn/GitHub/X links; there is no contact form and no backend.
+- Stack in code: hand-written HTML5, CSS3, vanilla JS; self-hosted Silkscreen (OFL); no framework, no build step.
+- Email, experience bullets, and project facts come from the public résumé (TanuvNairResume.pdf) — keep them in sync when it changes.
+- Open / undecided: window dragging and per-window zoom-open animations (deferred post-v1); whether STATUS/availability wording needs to change as employment changes.
 
 ## Brand Commitments
 

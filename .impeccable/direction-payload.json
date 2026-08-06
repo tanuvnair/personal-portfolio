@@ -1,0 +1,54 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned The Departure Board. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Departure Board",
+      "kicker": "THE ROLL",
+      "lineage": "Mumbai suburban railway: split-flap boards, enamel platform signage, working timetables",
+      "thesis": "The portfolio as a station information system: routing, scheduling, and throughput, the same engineering Tanuv ships.",
+      "palette": ["#101418", "#F2C94C", "#E4E1D8", "#D33F2E"],
+      "materials": ["split-flap modules", "enamel signage", "timetable tablature"],
+      "viewport": "A departure board spans the first viewport: Tanuv Nair as the station name, role and availability as the next departure, flaps settling into place.",
+      "risk": "Theme-park nostalgia if the flaps animate without carrying real information.",
+      "sketch": ".impeccable/sketches/assigned.webp"
+    },
+    {
+      "id": "challenger-nixie",
+      "label": "Nixie Counter",
+      "lineage": "mid-century laboratory tube counters",
+      "thesis": "Quantities as the interface: the person measured in glowing tube banks.",
+      "case": "Strong audience pull, but the grammar is numeric display and the honest facts here are not mostly numbers; clarity strains.",
+      "sketch": ".impeccable/sketches/challenger-nixie.webp",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-nixie-laboratory-counter-hero.webp"
+    },
+    {
+      "id": "challenger-one-bit",
+      "label": "One-Bit Desktop",
+      "lineage": "1984 Macintosh System desktop",
+      "thesis": "The site as a dithered desktop: windows for sections, pixel icons for proof.",
+      "case": "Beloved by engineers, but window management inserts a layer between a ten-second scan and the facts.",
+      "sketch": ".impeccable/sketches/challenger-one-bit.webp",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-one-bit-desktop-hero.webp"
+    },
+    {
+      "id": "challenger-orizuru",
+      "label": "Thirty-Two Folds",
+      "lineage": "origami instruction diagrams, one uncut sheet",
+      "thesis": "The career as a crane sequence: each project a deliberate fold carrying every earlier crease.",
+      "case": "Beautiful discipline, but a sequential fold hides the whole bird from a recruiter's glance.",
+      "sketch": ".impeccable/sketches/challenger-orizuru.webp",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-orizuru-crane-sequence-hero.webp"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The clean engineer portfolio: hero, project cards, skills row, at full craft.",
+    "viewport": "A light sans-serif hero with name, role, a project card grid, and a trimmed skills row.",
+    "sketch": ".impeccable/sketches/canon.webp"
+  }
+}

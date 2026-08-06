@@ -1,227 +1,154 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-06T20:05:00.000Z",
+  "generatedAt": "2026-08-07T02:35:00+05:30",
   "title": "Design System: tanuv.info",
   "extensions": {
     "colorMeta": {
-      "paper-bg": {
-        "role": "neutral",
-        "displayName": "Paper BG",
-        "canonical": "#FAFAF8",
-        "tonalRamp": ["#14171A", "#2A2E33", "#5B6168", "#8A8F96", "#C4C6C2", "#E3E3DF", "#FAFAF8", "#FFFFFF"]
-      },
       "ink": {
-        "role": "neutral",
+        "role": "primary",
         "displayName": "Ink",
-        "canonical": "#14171A",
-        "tonalRamp": ["#0A0C0E", "#14171A", "#2A2E33", "#5B6168", "#8A8F96", "#C4C6C2", "#E3E3DF", "#FAFAF8"]
+        "canonical": "#000000",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(37% 0 0)", "oklch(48% 0 0)", "oklch(60% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
       },
-      "graphite": {
+      "paper": {
         "role": "neutral",
-        "displayName": "Graphite",
-        "canonical": "#5B6168",
-        "tonalRamp": ["#1A1D21", "#2A2E33", "#3F454C", "#5B6168", "#7A8088", "#A3A8AE", "#D0D2D0", "#EDEEEA"]
-      },
-      "hairline": {
-        "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "#E3E3DF",
-        "tonalRamp": ["#5B6168", "#8A8F96", "#B0B3AE", "#C9CAC5", "#D8D8D3", "#E3E3DF", "#EFEFEE", "#FAFAF8"]
-      },
-      "cobalt-signal": {
-        "role": "primary",
-        "displayName": "Cobalt Signal",
-        "canonical": "#2F5DE0",
-        "tonalRamp": ["#0E1C4A", "#16307A", "#1F42A8", "#2F5DE0", "#5A82E8", "#8AA8F0", "#C5D4F8", "#EAF0FF"]
-      },
-      "cobalt-wash": {
-        "role": "primary",
-        "displayName": "Cobalt Wash",
-        "canonical": "#EAF0FF",
-        "tonalRamp": ["#2F5DE0", "#5A82E8", "#8AA8F0", "#B3C6F5", "#D0DBF8", "#E0E8FC", "#EAF0FF", "#F5F8FF"]
-      },
-      "surface": {
-        "role": "neutral",
-        "displayName": "Surface",
-        "canonical": "#FFFFFF",
-        "tonalRamp": ["#14171A", "#5B6168", "#E3E3DF", "#EFEFEE", "#F5F5F2", "#FAFAF8", "#FDFDFB", "#FFFFFF"]
-      },
-      "blueprint-bg": {
-        "role": "neutral",
-        "displayName": "Blueprint BG",
-        "canonical": "#0A2452",
-        "tonalRamp": ["#061530", "#0A2452", "#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#93AEDD", "#EAF2FF"]
-      },
-      "blueprint-ink": {
-        "role": "neutral",
-        "displayName": "Blueprint Ink",
-        "canonical": "#EAF2FF",
-        "tonalRamp": ["#0A2452", "#163A7A", "#4A74B0", "#93AEDD", "#B8CCEB", "#D4E2F5", "#EAF2FF", "#F5F9FF"]
-      },
-      "blueprint-muted": {
-        "role": "neutral",
-        "displayName": "Blueprint Muted",
-        "canonical": "#93AEDD",
-        "tonalRamp": ["#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#6A92C8", "#93AEDD", "#C5D4F0", "#EAF2FF"]
-      },
-      "blueprint-line": {
-        "role": "neutral",
-        "displayName": "Blueprint Line",
-        "canonical": "rgba(234, 242, 255, 0.16)",
-        "tonalRamp": ["rgba(234,242,255,0.06)", "rgba(234,242,255,0.10)", "rgba(234,242,255,0.16)", "rgba(234,242,255,0.24)", "rgba(234,242,255,0.36)", "rgba(234,242,255,0.50)", "rgba(234,242,255,0.70)", "rgba(234,242,255,0.90)"]
-      },
-      "cyan-trace": {
-        "role": "primary",
-        "displayName": "Cyan Trace",
-        "canonical": "#7FB2FF",
-        "tonalRamp": ["#0E2C63", "#1A4A8A", "#2F6AB8", "#4A8CE0", "#7FB2FF", "#A6CBFF", "#D0E4FF", "#EAF2FF"]
-      },
-      "cyan-wash": {
-        "role": "primary",
-        "displayName": "Cyan Wash",
-        "canonical": "rgba(127, 178, 255, 0.12)",
-        "tonalRamp": ["rgba(127,178,255,0.06)", "rgba(127,178,255,0.12)", "rgba(127,178,255,0.20)", "rgba(127,178,255,0.32)", "rgba(127,178,255,0.48)", "rgba(127,178,255,0.64)", "rgba(127,178,255,0.80)", "#7FB2FF"]
-      },
-      "blueprint-surface": {
-        "role": "neutral",
-        "displayName": "Blueprint Surface",
-        "canonical": "#0E2C63",
-        "tonalRamp": ["#061530", "#0A2452", "#0E2C63", "#163A7A", "#2A528F", "#4A74B0", "#93AEDD", "#EAF2FF"]
-      },
-      "blueprint-btn-ink": {
-        "role": "neutral",
-        "displayName": "Blueprint Button Ink",
-        "canonical": "#08163A",
-        "tonalRamp": ["#040B1C", "#08163A", "#0A2452", "#0E2C63", "#163A7A", "#4A74B0", "#93AEDD", "#EAF2FF"]
-      },
-      "status-live": {
-        "role": "primary",
-        "displayName": "Status Live",
-        "canonical": "#FF0000",
-        "tonalRamp": ["#4A0000", "#8A0000", "#C00000", "#FF0000", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE0E0"]
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(20% 0 0)", "oklch(31% 0 0)", "oklch(42% 0 0)", "oklch(53% 0 0)", "oklch(64% 0 0)", "oklch(75% 0 0)", "oklch(86% 0 0)", "oklch(97% 0 0)"]
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero name lockup only." },
-      "headline": { "displayName": "Headline", "purpose": "Section titles." },
-      "title": { "displayName": "Title", "purpose": "Project names and logo weight." },
-      "body": { "displayName": "Body", "purpose": "Paragraph reading; about and supporting copy." },
-      "label": { "displayName": "Label", "purpose": "Nav, form labels, dataplate, footer, buttons." }
+      "display": { "displayName": "Display", "purpose": "Hero name in the identity window; Silkscreen 700, used once per surface." },
+      "headline": { "displayName": "Headline", "purpose": "Role line directly under the hero name; Silkscreen 400." },
+      "title": { "displayName": "Title", "purpose": "Window title bars, file names, entry heads, buttons; Silkscreen 700 at 0.72-0.85rem." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs, file descriptions, menu items; Geneva-class 15px, measures of 52-68ch." },
+      "label": { "displayName": "Label", "purpose": "Menu-bar chrome, icon labels, status line, footer; Silkscreen 400 at 0.62-0.72rem." }
     },
-    "shadows": [],
+    "shadows": [
+      { "name": "window-shadow", "value": "4px 4px 0 #000000", "purpose": "Only depth in the system; sits under every window. Solid black, zero blur, zero alpha." },
+      { "name": "menu-popup-shadow", "value": "3px 3px 0 #000000", "purpose": "Under dropdown menus; the same hard offset one pixel closer." }
+    ],
     "motion": [
-      { "name": "theme-swap", "value": "0.35s ease", "purpose": "Background and ink transition on theme change." },
-      { "name": "state", "value": "0.15s–0.2s ease", "purpose": "Hover color, border, and 1–2px lift." },
-      { "name": "reveal", "value": "0.6s ease", "purpose": "Scroll reveal opacity + translateY(14px) → 0." },
-      { "name": "caret-blink", "value": "1s step-end infinite", "purpose": "Hero typing caret." },
-      { "name": "scroll-cue", "value": "2.4s ease-in-out infinite", "purpose": "Desktop scroll hint float." }
+      { "name": "ants-march", "value": "0.8s steps(8) infinite", "purpose": "Marching-ants focus/selection ring: 8px dashes, 2px wide, drawn from four linear-gradient edges." },
+      { "name": "boot-zoom-rect", "value": "0.45s steps(1)", "purpose": "Boot sequence: three outlined rects (46/60/74vmin) scale 0.25 to 1, staggered 80ms, then the overlay is removed. Plays once." },
+      { "name": "press-tick", "value": "translate(1px, 1px)", "purpose": "Instant button press displacement on :active; no transition." },
+      { "name": "state-snap", "value": "instant", "purpose": "All inversion state changes (hover, focus, selection) apply with zero transition; 1-bit UI snaps, it does not fade." }
     ],
     "breakpoints": [
-      { "name": "form-split", "value": "640px" },
-      { "name": "nav-desktop", "value": "768px" },
-      { "name": "projects-2", "value": "700px" },
-      { "name": "hero-split", "value": "900px" },
-      { "name": "projects-3", "value": "1024px" }
+      { "name": "stack-columns", "value": "640px", "purpose": "min-width: stack section splits to two columns." },
+      { "name": "mobile-chrome", "value": "719px", "purpose": "max-width: menus collapse into one Menu dropdown, windows stretch full-width, gutters 16px." },
+      { "name": "icon-rail", "value": "1099px", "purpose": "max-width: fixed desktop-icon rail hides; icons re-flow into a row inside the hero window." }
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Button",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Ink-filled mono CTA; cyan fill in dark mode.",
-      "html": "<button class=\"ds-btn-primary\">View work</button>",
-      "css": ".ds-btn-primary { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.9rem; padding: 13px 26px; border-radius: 3px; border: 1px solid transparent; background: var(--ink, #14171A); color: var(--bg, #FAFAF8); cursor: pointer; transition: transform 0.15s ease, opacity 0.2s ease; } .ds-btn-primary:hover { transform: translateY(-1px); opacity: 0.88; } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; } html.dark .ds-btn-primary { background: var(--accent, #7FB2FF); color: #08163A; }"
+      "refersTo": "button",
+      "description": "Standard pixel-labeled action; inverts on hover/focus, ticks 1px on press.",
+      "html": "<button class=\"ds-btn\" type=\"button\">Resume.pdf</button>",
+      "css": ".ds-btn { font-family: var(--font-pixel); font-weight: 700; font-size: 0.78rem; background: var(--paper); color: var(--ink); border: 1px solid var(--ink); border-radius: 0; padding: 9px 20px; display: inline-block; cursor: pointer; } .ds-btn:hover, .ds-btn:focus-visible { background: var(--ink); color: var(--paper); } .ds-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; } .ds-btn:active { transform: translate(1px, 1px); }"
     },
     {
-      "name": "Ghost Button",
+      "name": "Default Button",
       "kind": "button",
-      "refersTo": "button-ghost",
-      "description": "Outlined secondary action; accent on hover.",
-      "html": "<button class=\"ds-btn-ghost\">Get in touch</button>",
-      "css": ".ds-btn-ghost { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.9rem; padding: 13px 26px; border-radius: 3px; border: 1px solid var(--line, #E3E3DF); background: transparent; color: var(--ink, #14171A); cursor: pointer; transition: transform 0.15s ease, border-color 0.2s ease, color 0.2s ease; } .ds-btn-ghost:hover { transform: translateY(-1px); border-color: var(--accent, #2F5DE0); color: var(--accent, #2F5DE0); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+      "refersTo": "button-default",
+      "description": "The one primary action per view, wearing the classic double ring outside its 1px border.",
+      "html": "<button class=\"ds-btn-default\" type=\"button\">View work</button>",
+      "css": ".ds-btn-default { font-family: var(--font-pixel); font-weight: 700; font-size: 0.78rem; background: var(--paper); color: var(--ink); border: 1px solid var(--ink); border-radius: 0; outline: 2px solid var(--ink); outline-offset: 2px; padding: 9px 20px; display: inline-block; cursor: pointer; } .ds-btn-default:hover, .ds-btn-default:focus-visible { background: var(--ink); color: var(--paper); } .ds-btn-default:active { transform: translate(1px, 1px); }"
     },
     {
-      "name": "Nav CTA",
-      "kind": "nav",
-      "refersTo": "nav-cta",
-      "description": "Accent-bordered path link used for /contact.",
-      "html": "<a class=\"ds-nav-cta\" href=\"#contact\">/contact →</a>",
-      "css": ".ds-nav-cta { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.85rem; color: var(--accent, #2F5DE0); border: 1px solid var(--accent, #2F5DE0); padding: 6px 13px; border-radius: 3px; text-decoration: none; transition: background 0.2s ease; } .ds-nav-cta:hover { background: var(--accent-soft, #EAF0FF); } .ds-nav-cta:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
-    },
-    {
-      "name": "Text Field",
-      "kind": "input",
-      "refersTo": "input-field",
-      "description": "Surface field with mono uppercase label.",
-      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Email</span><input class=\"ds-input\" type=\"email\" placeholder=\"you@company.com\" /></label>",
-      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; } .ds-field-label { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.78rem; color: var(--muted, #5B6168); text-transform: uppercase; letter-spacing: 0.04em; } .ds-input { font-family: var(--font-sans, Inter, sans-serif); font-size: 1rem; padding: 12px 14px; border: 1px solid var(--line, #E3E3DF); border-radius: 3px; background: var(--surface, #FFFFFF); color: var(--ink, #14171A); transition: border-color 0.2s ease; } .ds-input:focus { border-color: var(--accent, #2F5DE0); outline: none; } .ds-input:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
-    },
-    {
-      "name": "Project Card",
-      "kind": "card",
-      "refersTo": "project-card",
-      "description": "GitHub project plate with dashed meta footer.",
-      "html": "<a class=\"ds-project-card\" href=\"#\"><span class=\"ds-project-name\">tm1go</span><p class=\"ds-project-desc\">Go package for the IBM TM1 REST API.</p><div class=\"ds-project-meta\"><span><span class=\"ds-lang-dot\"></span>Go</span><span>★ 0</span></div></a>",
-      "css": ".ds-project-card { display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--line, #E3E3DF); border-radius: 3px; padding: 22px; background: var(--surface, #FFFFFF); text-decoration: none; color: inherit; transition: border-color 0.2s ease, transform 0.2s ease; } .ds-project-card:hover { border-color: var(--accent, #2F5DE0); transform: translateY(-2px); } .ds-project-name { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-weight: 600; font-size: 0.98rem; color: var(--ink, #14171A); } .ds-project-desc { margin: 0; flex: 1; color: var(--muted, #5B6168); font-size: 0.9rem; font-family: var(--font-sans, Inter, sans-serif); } .ds-project-meta { display: flex; gap: 16px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.75rem; color: var(--muted, #5B6168); padding-top: 8px; border-top: 1px dashed var(--line, #E3E3DF); } .ds-lang-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2F5DE0); display: inline-block; margin-right: 5px; }"
-    },
-    {
-      "name": "Dataplate",
+      "name": "Window",
       "kind": "custom",
-      "refersTo": "dataplate",
-      "description": "Hero instrument plaque with dashed key/value rows.",
-      "html": "<div class=\"ds-dataplate\"><div class=\"ds-dataplate-row\"><span>ROLE</span><span>Assoc. SWE @ Algorisys</span></div><div class=\"ds-dataplate-row\"><span>STACK</span><span>Go / SolidStart</span></div><div class=\"ds-dataplate-row\"><span>STATUS</span><span class=\"ds-status\">busy</span></div></div>",
-      "css": ".ds-dataplate { border: 1px solid var(--line, #E3E3DF); border-radius: 3px; padding: 18px 20px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.78rem; background: var(--surface, #FFFFFF); } .ds-dataplate-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px dashed var(--line, #E3E3DF); color: var(--muted, #5B6168); } .ds-dataplate-row:last-child { border-bottom: none; } .ds-dataplate-row span:last-child { color: var(--ink, #14171A); } .ds-status::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #FF0000; margin-right: 6px; }"
+      "refersTo": "window",
+      "description": "Signature container: black title bar with white close box, 1px chrome, hard 4px offset shadow.",
+      "html": "<section class=\"ds-window\"><div class=\"ds-titlebar\"><button class=\"ds-close-box\" type=\"button\" aria-label=\"Collapse window\"></button><span class=\"ds-titlebar-text\">about.txt</span></div><div class=\"ds-window-body\">Window content renders in Geneva 15px on white, with measures kept near 58-68ch.</div></section>",
+      "css": ".ds-window { background: var(--paper); color: var(--ink); border: 1px solid var(--ink); border-radius: 0; box-shadow: var(--window-shadow); max-width: 440px; } .ds-titlebar { background: var(--ink); color: var(--paper); display: flex; align-items: center; gap: 10px; height: 30px; padding: 0 8px; user-select: none; } .ds-titlebar-text { font-family: var(--font-pixel); font-weight: 700; font-size: 0.72rem; flex: 1; text-align: center; margin-right: 22px; } .ds-close-box { width: 13px; height: 13px; border: 1px solid var(--paper); border-radius: 0; background: transparent; flex-shrink: 0; cursor: pointer; padding: 0; } .ds-close-box:hover { background: var(--paper); } .ds-window-body { padding: 28px 30px; font-family: var(--font-body); font-size: 15px; line-height: 1.55; }"
     },
     {
-      "name": "Spec Item",
-      "kind": "chip",
-      "refersTo": null,
-      "description": "Skills/spec sheet item with ink bullet — not a filled chip.",
-      "html": "<span class=\"ds-spec-item\">Data integration (ETL)</span>",
-      "css": ".ds-spec-item { position: relative; padding-left: 14px; font-size: 0.95rem; color: var(--muted, #5B6168); font-family: var(--font-sans, Inter, sans-serif); } .ds-spec-item::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; background: var(--ink, #14171A); border-radius: 50%; }"
-    },
-    {
-      "name": "Path Nav Link",
+      "name": "Menu Bar",
       "kind": "nav",
-      "refersTo": null,
-      "description": "Default mono path link in the primary nav.",
-      "html": "<a class=\"ds-nav-link\" href=\"#projects\">/projects</a>",
-      "css": ".ds-nav-link { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.85rem; color: var(--muted, #5B6168); text-decoration: none; transition: color 0.2s ease; } .ds-nav-link:hover { color: var(--ink, #14171A); } .ds-nav-link:focus-visible { outline: 2px solid var(--accent, #2F5DE0); outline-offset: 2px; }"
+      "refersTo": "menu-bar",
+      "description": "Fixed 30px top bar: pixel logo and menu titles on the left, Geneva minute clock on the right.",
+      "html": "<header class=\"ds-menubar\"><a class=\"ds-menu-logo\" href=\"#\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6 0l6 6-6 6-6-6z\"/></svg><span>tanuv.info</span></a><button class=\"ds-menu-title\" type=\"button\">File</button><button class=\"ds-menu-title\" type=\"button\">Go</button><span class=\"ds-clock\">Fri 2:30 AM</span></header>",
+      "css": ".ds-menubar { height: 30px; background: var(--paper); border-bottom: 1px solid var(--ink); display: flex; align-items: center; gap: 4px; padding: 0 10px; font-family: var(--font-pixel); font-size: 0.68rem; color: var(--ink); } .ds-menu-logo { display: flex; align-items: center; gap: 7px; font-weight: 700; padding: 4px 8px; color: inherit; text-decoration: none; height: 100%; } .ds-menu-title { font-family: var(--font-pixel); font-size: 0.68rem; padding: 6px 10px; height: 100%; background: none; border: none; color: inherit; cursor: pointer; } .ds-menu-title:hover, .ds-menu-title:focus-visible { background: var(--ink); color: var(--paper); outline: none; } .ds-clock { margin-left: auto; font-family: var(--font-body); font-size: 0.78rem; padding-right: 4px; }"
+    },
+    {
+      "name": "Dropdown Menu",
+      "kind": "custom",
+      "refersTo": "menu-item-hover",
+      "description": "White popup with 1px border and 3px hard offset shadow; Geneva items invert on hover.",
+      "html": "<ul class=\"ds-menu-list\"><li><a href=\"#\">Resume.pdf</a></li><li><a href=\"#\">Contact</a></li></ul>",
+      "css": ".ds-menu-list { list-style: none; margin: 0; padding: 3px 0; min-width: 150px; display: inline-block; background: var(--paper); border: 1px solid var(--ink); border-radius: 0; box-shadow: 3px 3px 0 var(--ink); } .ds-menu-list a { display: block; padding: 7px 14px; font-family: var(--font-body); font-size: 0.85rem; color: var(--ink); text-decoration: none; } .ds-menu-list a:hover, .ds-menu-list a:focus-visible { background: var(--ink); color: var(--paper); outline: none; }"
+    },
+    {
+      "name": "File Row",
+      "kind": "custom",
+      "refersTo": "file-row",
+      "description": "The system's link table row: pixel icon, Silkscreen name, Geneva description, external arrow; whole row inverts on hover.",
+      "html": "<a class=\"ds-file-row\" href=\"#\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 16 16\" shape-rendering=\"crispEdges\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z\" fill-rule=\"evenodd\"/></svg><span class=\"ds-file-name\">tm1go</span><span class=\"ds-file-desc\">Go package wrapping the IBM TM1 REST API</span><svg class=\"ds-file-arrow\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" shape-rendering=\"crispEdges\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M9 1h4v4h-2V4.4L6.4 9 5 7.6 9.6 3H9V1zM2 3h4v2H4v7h7V9h2v5H2V3z\"/></svg></a>",
+      "css": ".ds-file-row { display: flex; align-items: center; gap: 14px; padding: 13px 12px; background: var(--paper); color: var(--ink); text-decoration: none; border-radius: 0; } .ds-file-row svg { flex-shrink: 0; } .ds-file-name { font-family: var(--font-pixel); font-weight: 700; font-size: 0.8rem; min-width: 96px; } .ds-file-desc { font-family: var(--font-body); font-size: 0.85rem; flex: 1; } .ds-file-arrow { margin-left: auto; } .ds-file-row:hover, .ds-file-row:focus-visible { background: var(--ink); color: var(--paper); outline: none; }"
+    },
+    {
+      "name": "Desktop Icon",
+      "kind": "custom",
+      "refersTo": "desk-icon-label",
+      "description": "32px two-color glyph over a paper label chip; hover/selected inverts both the glyph field and the label.",
+      "html": "<a class=\"ds-desk-icon\" href=\"#\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 16 16\" shape-rendering=\"crispEdges\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M1 2h5l2 2h7v10H1V2zm1 3v8h12V6H2v-1z\" fill-rule=\"evenodd\"/></svg><span>work</span></a>",
+      "css": ".ds-desk-icon { display: inline-flex; flex-direction: column; align-items: center; gap: 5px; width: 76px; padding: 6px 2px; text-align: center; color: var(--ink); text-decoration: none; } .ds-desk-icon svg { display: block; } .ds-desk-icon span { font-family: var(--font-pixel); font-size: 0.62rem; background: var(--paper); padding: 1px 4px; } .ds-desk-icon:hover svg, .ds-desk-icon:focus-visible svg { color: var(--paper); background: var(--ink); } .ds-desk-icon:hover span, .ds-desk-icon:focus-visible span { background: var(--ink); color: var(--paper); } .ds-desk-icon:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }"
+    },
+    {
+      "name": "Selection Chip",
+      "kind": "chip",
+      "refersTo": "selection-chip",
+      "description": "Permanently inverted Silkscreen span for the availability status — a line that reads as already highlighted.",
+      "html": "<span class=\"ds-selection\">Open to interesting roles</span>",
+      "css": ".ds-selection { font-family: var(--font-pixel); font-size: 0.72rem; background: var(--ink); color: var(--paper); padding: 4px 8px; border-radius: 0; }"
+    },
+    {
+      "name": "Meta Tag",
+      "kind": "chip",
+      "refersTo": "meta-tag",
+      "description": "The dithered gray tag for dates and org lines: 25% stipple fill inside a 1px border.",
+      "html": "<span class=\"ds-meta-tag\">Algorisys Technologies &middot; Jul 2025 &ndash; present &middot; Mumbai</span>",
+      "css": ".ds-meta-tag { display: inline-block; font-family: var(--font-body); font-size: 0.82rem; color: var(--ink); background-color: var(--paper); background-image: var(--stipple-25); border: 1px solid var(--ink); border-radius: 0; padding: 2px 6px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Blueprint Spec Sheet",
-    "overview": "Light mode reads as a paper engineering print — cool off-white stock, graphite ink, hairline rules. Dark mode is the blueprint itself: deep navy field, cyan traces, dashed instrument rows. The interface behaves like a fabricated plate for a working systems engineer, not a marketing landing page.\n\nDensity is deliberate and technical. Mono type carries identity, navigation, and labels; sans carries long-form reading. Corners stay nearly square. Depth comes from borders and tonal surfaces, not shadow stacks. Motion is sparse: a caret blink, a soft scroll reveal, a 1–2px hover lift.",
+    "northStar": "The One-Bit Desktop",
+    "overview": "The site is a 1984 Macintosh-class desktop rendered in pure one-bit graphics: black pixels and white pixels, nothing in between. It boots with a zoom-rect flourish into an already-open identity window, and every surface — menu bar, windows, dropdowns, desktop icons, file lists — speaks 1984 system-software grammar: black title bars with white close boxes, marching-ants selection, inverted press states, ordered dither instead of gray. Density is information-forward but airy: one staggered column of windows on a checkerboard desktop, generous gaps, small Geneva-class body text doing the reading while a pixel face runs the chrome. Motion ticks in steps() rather than gliding; state changes are instant inversions. The world has a single finish — there is no dark mode, no theme toggle, no color.",
     "keyCharacteristics": [
-      "Dual-theme world: paper spec (light) / blueprint (dark)",
-      "JetBrains Mono as the brand voice; Inter for body prose",
-      "Hairline + dashed dividers as structure",
-      "~3px radius everywhere interactive surfaces appear",
-      "Print registration crosses as a quiet desktop signature",
-      "Path-style mono navigation (/about, /projects, …)"
+      "Two values only: #000000 ink and #ffffff paper; ordered dither is the only gray",
+      "Silkscreen (self-hosted, OFL) for chrome and identity; Geneva-class sans for reading",
+      "1px black chrome everywhere; square corners with zero radius, no exceptions",
+      "One shadow: a 4px hard black offset under windows — the era's native depth",
+      "Inversion (ink-paper swap) as the universal hover / press / selection state",
+      "Marching ants as the focus and navigation-flash signal",
+      "Stepped, 1-bit motion: boot zoom-rect, ticking ants, 1px press displacement"
     ],
     "rules": [
-      { "name": "The One Trace Rule", "body": "Cobalt/cyan is a signal line, not a theme wash. Keep filled accent surfaces rare (nav CTA border, primary dark button, focus). Prefer ink-on-paper for primary actions in light mode.", "section": "colors" },
-      { "name": "The Theme Swap Rule", "body": "Never invent a third palette. Light and dark share the same roles; only the token values change under html.dark.", "section": "colors" },
-      { "name": "The Mono Authority Rule", "body": "If it identifies the person, the route, or a machine-readable field, it is mono. Body sans is for sentences, not chrome.", "section": "typography" },
-      { "name": "The Plate Margin Rule", "body": "Content never goes edge-to-edge; registration marks and margin breathing room are part of the artifact.", "section": "layout" },
-      { "name": "The Flat Plate Rule", "body": "Do not introduce drop shadows to “finish” a card. If it needs separation, use a hairline or a surface token.", "section": "elevation" },
-      { "name": "The Near-Square Rule", "body": "Radius stays at 3px. Do not drift toward soft 12–16px product UI corners.", "section": "shapes" }
+      { "name": "The Two Values Rule", "body": "Black and white are the only values. There is no gray hex, no rgba() wash, no opacity blend, no accent color. If a surface needs a middle tone, use the checker or the 25% stipple — gray is a pattern here, never a value.", "section": "colors" },
+      { "name": "The Inversion Rule", "body": "The universal state change is a full ink-paper swap. Hover, press, selection, focus, and open menus all invert; nothing lightens, darkens, fades, or tints.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Identity and labels are Silkscreen; sentences are Geneva. Never set body paragraphs in the pixel face (it is illegible at length), and never set a title bar, button, or icon label in the body face (it stops sounding like the machine).", "section": "typography" },
+      { "name": "The Staggered Desktop Rule", "body": "Windows never form a flush full-width stack on desktop. Alternate the alignment, vary the width within the 560-760px band, and keep the 56px air between them — the scatter is the desktop metaphor.", "section": "layout" },
+      { "name": "The Hard Offset Rule", "body": "Shadows are solid black, offset down-right, zero blur, zero spread, zero alpha — 4px for windows, 3px for popups. Do not finish anything with a soft shadow; if it needs separation, use a 1px border or inversion.", "section": "elevation" },
+      { "name": "The Square Pixel Rule", "body": "Radius is 0 on every surface, and all artwork snaps to the pixel grid. Do not round corners, soften edges, or drop in antialiased/glyph icons — crispEdges or nothing.", "section": "shapes" }
     ],
     "dos": [
-      "Do treat light and dark as two finishes of the same plate (paper vs blueprint).",
-      "Do lead identity with JetBrains Mono and path-style chrome.",
-      "Do structure with hairline / dashed rules and surface panels.",
-      "Do keep radius at 3px and accent usage scarce.",
-      "Do honor prefers-reduced-motion (already wired globally)."
+      "Do express every hover, press, selection, and open state as a full ink-paper inversion — never a tint, fade, or opacity change.",
+      "Do keep all chrome at 1px black; the only depth is the 4px (windows) / 3px (popups) hard black offset.",
+      "Do reach for the checker or 25% stipple whenever a design wants gray — dither is the middle tone.",
+      "Do give the single primary action the double-ring default treatment (1px border + 2px outline, 2px offset).",
+      "Do author icons as 1-bit SVGs on a 16x16 grid, currentColor, crispEdges — and set text, never rasterize it.",
+      "Do run all animation in steps() and honor prefers-reduced-motion (boot off, ants frozen, instant scroll)."
     ],
     "donts": [
-      "Don't add soft multi-layer shadows or floating glass cards.",
-      "Don't introduce a second accent hue (purple, teal, terracotta) alongside cobalt/cyan.",
-      "Don't round corners into modern SaaS softness.",
-      "Don't replace mono brand chrome with a display serif or Inter-led nav.",
-      "Don't invent testimonials, metrics strips, or decorative illustration as system patterns."
+      "Don't introduce a third value: no gray hexes, no rgba() blends, no hue, no opacity tricks.",
+      "Don't round any corner — radius is 0 on windows, buttons, chips, menus, and tags alike.",
+      "Don't add soft, blurred, or layered shadows; the hard offset is the only shadow the desktop knows.",
+      "Don't add a dark mode or theme toggle; the one-bit finish is the whole point, and inversion already means selection here.",
+      "Don't use eased tween transitions on UI chrome — state changes snap instantly, animation ticks in steps.",
+      "Don't substitute emoji, icon fonts, or antialiased SVGs for the authored pixel icon set."
     ]
   }
 }

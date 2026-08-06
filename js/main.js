@@ -1,144 +1,151 @@
 // ---------------------------------------------------------------------------
-// theme (light / blueprint-dark)
+// boot overlay cleanup (CSS hides it; this removes it regardless)
 // ---------------------------------------------------------------------------
-(function initTheme() {
-  const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = stored || (prefersDark ? 'dark' : 'light');
-  if (theme === 'dark') document.documentElement.classList.add('dark');
+setTimeout(() => {
+  document.querySelector('.boot')?.remove();
+}, 1200);
+
+// ---------------------------------------------------------------------------
+// menu bar clock (updates on the minute, like the original)
+// ---------------------------------------------------------------------------
+(function initClock() {
+  const clock = document.getElementById('clock');
+  if (!clock) return;
+
+  function tick() {
+    const now = new Date();
+    const day = now.toLocaleDateString('en-US', { weekday: 'short' });
+    const time = now.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    });
+    clock.textContent = `${day} ${time}`;
+  }
+
+  tick();
+  const msToNextMinute = (60 - new Date().getSeconds()) * 1000;
+  setTimeout(() => {
+    tick();
+    setInterval(tick, 60000);
+  }, msToNextMinute);
 })();
 
-document.getElementById('themeToggle').addEventListener('click', () => {
-  const isDark = document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
+// ---------------------------------------------------------------------------
+// menus (click to open, hover to switch, Esc to close, arrows to move)
+// ---------------------------------------------------------------------------
+(function initMenus() {
+  const menus = Array.from(document.querySelectorAll('[data-menu]'));
+  let openMenu = null;
 
-// ---------------------------------------------------------------------------
-// mobile menu
-// ---------------------------------------------------------------------------
-const menuBtn = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-menuBtn.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  menuBtn.setAttribute('aria-expanded', isOpen);
-});
-mobileMenu.querySelectorAll('a').forEach((a) =>
-  a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', 'false');
-  })
-);
-
-// ---------------------------------------------------------------------------
-// hero typing effect
-// ---------------------------------------------------------------------------
-const phrases = [
-  'backend engineer',
-  'systems architect',
-  'go / typescript',
-  'building tm1go',
-];
-const typingEl = document.getElementById('typing-text');
-let phraseIdx = 0, charIdx = 0, deleting = false;
-
-function typeLoop() {
-  const current = phrases[phraseIdx];
-  if (!deleting) {
-    charIdx++;
-    typingEl.textContent = current.slice(0, charIdx);
-    if (charIdx === current.length) {
-      deleting = true;
-      setTimeout(typeLoop, 1400);
-      return;
-    }
-  } else {
-    charIdx--;
-    typingEl.textContent = current.slice(0, charIdx);
-    if (charIdx === 0) {
-      deleting = false;
-      phraseIdx = (phraseIdx + 1) % phrases.length;
-    }
+  function closeAll() {
+    menus.forEach((menu) => {
+      menu.classList.remove('open');
+      menu.querySelector('.menu-title').setAttribute('aria-expanded', 'false');
+    });
+    openMenu = null;
   }
-  setTimeout(typeLoop, deleting ? 40 : 70);
-}
-typeLoop();
 
-// ---------------------------------------------------------------------------
-// reveal-on-scroll
-// ---------------------------------------------------------------------------
-document.querySelectorAll('.about-grid, .projects-grid, .spec-sheet, .contact-form').forEach((el) => {
-  el.classList.add('reveal');
-});
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        revealObserver.unobserve(entry.target);
+  function open(menu) {
+    closeAll();
+    menu.classList.add('open');
+    menu.querySelector('.menu-title').setAttribute('aria-expanded', 'true');
+    openMenu = menu;
+  }
+
+  menus.forEach((menu) => {
+    const title = menu.querySelector('.menu-title');
+    const items = Array.from(menu.querySelectorAll('.menu-list a'));
+
+    title.addEventListener('click', (event) => {
+      event.stopPropagation();
+      if (openMenu === menu) {
+        closeAll();
+      } else {
+        open(menu);
       }
     });
-  },
-  { threshold: 0.15 }
-);
-document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-// ---------------------------------------------------------------------------
-// GitHub projects
-// ---------------------------------------------------------------------------
-const FALLBACK_REPOS = [
-  { name: 'tm1go', description: 'Go package for the IBM TM1 REST API.', language: 'Go', stargazers_count: 0, html_url: 'https://github.com/tanuvnair/tm1go' },
-  { name: 'fluxroom', description: 'Real-time collaborative text editor.', language: 'TypeScript', stargazers_count: 0, html_url: 'https://github.com/tanuvnair' },
-  { name: 'portfolio', description: 'This site - source available on request.', language: 'HTML', stargazers_count: 0, html_url: 'https://github.com/tanuvnair' },
-];
+    title.addEventListener('mouseenter', () => {
+      if (openMenu && openMenu !== menu) open(menu);
+    });
 
-async function loadProjects() {
-  const container = document.getElementById('projects-container');
-  try {
-    const res = await fetch('https://api.github.com/users/tanuvnair/repos?sort=updated&per_page=6');
-    if (!res.ok) throw new Error('GitHub API error');
-    let repos = await res.json();
-    repos = repos.filter((r) => !r.fork).slice(0, 6);
-    if (!repos.length) throw new Error('No repos');
-    renderProjects(repos);
-  } catch (err) {
-    renderProjects(FALLBACK_REPOS);
-  }
-}
+    title.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown' && openMenu === menu) {
+        event.preventDefault();
+        items[0]?.focus();
+      }
+    });
 
-function renderProjects(repos) {
-  const container = document.getElementById('projects-container');
-  container.innerHTML = '';
-  repos.forEach((repo) => {
-    const card = document.createElement('a');
-    card.href = repo.html_url;
-    card.target = '_blank';
-    card.rel = 'noopener noreferrer';
-    card.className = 'project-card';
-    card.innerHTML = `
-      <span class="project-name">${repo.name}</span>
-      <p class="project-desc">${repo.description || 'No description provided.'}</p>
-      <div class="project-meta">
-        ${repo.language ? `<span><span class="lang-dot"></span>${repo.language}</span>` : ''}
-        <span>★ ${repo.stargazers_count ?? 0}</span>
-      </div>
-    `;
-    container.appendChild(card);
+    items.forEach((item, index) => {
+      item.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          items[(index + 1) % items.length].focus();
+        } else if (event.key === 'ArrowUp') {
+          event.preventDefault();
+          items[(index - 1 + items.length) % items.length].focus();
+        }
+      });
+      item.addEventListener('click', closeAll);
+    });
   });
-}
-loadProjects();
+
+  document.addEventListener('click', (event) => {
+    if (openMenu && !openMenu.contains(event.target)) closeAll();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && openMenu) {
+      const title = openMenu.querySelector('.menu-title');
+      closeAll();
+      title.focus();
+    }
+  });
+})();
 
 // ---------------------------------------------------------------------------
-// contact form (no backend wired up - swap action for your endpoint)
+// windowshade (double-click title bar or click close box to roll a window up)
 // ---------------------------------------------------------------------------
-const form = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  if (!name) return;
-  formStatus.textContent = `Thanks, ${name.split(' ')[0]} - message noted. I'll reply soon.`;
-  form.reset();
-});
+(function initWindowShade() {
+  document.querySelectorAll('.window').forEach((windowEl) => {
+    const titlebar = windowEl.querySelector('.titlebar');
+    const closeBox = windowEl.querySelector('.close-box');
+
+    function toggle() {
+      windowEl.classList.toggle('collapsed');
+    }
+
+    closeBox.addEventListener('click', toggle);
+    titlebar.addEventListener('dblclick', (event) => {
+      if (event.target === closeBox) return;
+      toggle();
+    });
+  });
+})();
+
+// ---------------------------------------------------------------------------
+// navigation flash (marching ants on the window you jump to)
+// ---------------------------------------------------------------------------
+(function initNavFlash() {
+  const anchors = Array.from(document.querySelectorAll('a[href^="#"]'));
+  let flashTimer = null;
+
+  anchors.forEach((anchor) => {
+    anchor.addEventListener('click', () => {
+      const id = anchor.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target || !target.classList.contains('window')) return;
+
+      document.querySelectorAll('.window.ants').forEach((el) => el.classList.remove('ants'));
+      clearTimeout(flashTimer);
+      requestAnimationFrame(() => {
+        target.classList.add('ants');
+        flashTimer = setTimeout(() => target.classList.remove('ants'), 1600);
+      });
+    });
+  });
+})();
 
 // ---------------------------------------------------------------------------
 // footer year
