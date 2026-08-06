@@ -1,146 +1,225 @@
 // ---------------------------------------------------------------------------
-// theme (light / blueprint-dark)
-// ---------------------------------------------------------------------------
-(function initTheme() {
-  const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = stored || (prefersDark ? 'dark' : 'light');
-  if (theme === 'dark') document.documentElement.classList.add('dark');
-})();
-
-document.getElementById('themeToggle').addEventListener('click', () => {
-  const isDark = document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
-
-// ---------------------------------------------------------------------------
 // mobile menu
 // ---------------------------------------------------------------------------
 const menuBtn = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = [...mobileMenu.querySelectorAll('a')];
+
+function setMenuOpen(isOpen) {
+  mobileMenu.classList.toggle('open', isOpen);
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
+  if (isOpen) {
+    mobileLinks[0]?.focus();
+  } else {
+    menuBtn.focus();
+  }
+}
+
 menuBtn.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  menuBtn.setAttribute('aria-expanded', isOpen);
+  setMenuOpen(!mobileMenu.classList.contains('open'));
 });
-mobileMenu.querySelectorAll('a').forEach((a) =>
+
+mobileLinks.forEach((a) =>
   a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', 'false');
+    setMenuOpen(false);
   })
 );
 
-// ---------------------------------------------------------------------------
-// hero typing effect
-// ---------------------------------------------------------------------------
-const phrases = [
-  'backend engineer',
-  'systems architect',
-  'go / typescript',
-  'building tm1go',
-];
-const typingEl = document.getElementById('typing-text');
-let phraseIdx = 0, charIdx = 0, deleting = false;
+document.addEventListener('keydown', (event) => {
+  if (!mobileMenu.classList.contains('open')) return;
 
-function typeLoop() {
-  const current = phrases[phraseIdx];
-  if (!deleting) {
-    charIdx++;
-    typingEl.textContent = current.slice(0, charIdx);
-    if (charIdx === current.length) {
-      deleting = true;
-      setTimeout(typeLoop, 1400);
-      return;
-    }
-  } else {
-    charIdx--;
-    typingEl.textContent = current.slice(0, charIdx);
-    if (charIdx === 0) {
-      deleting = false;
-      phraseIdx = (phraseIdx + 1) % phrases.length;
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    setMenuOpen(false);
+    return;
+  }
+
+  if (event.key !== 'Tab' || !mobileLinks.length) return;
+
+  const first = mobileLinks[0];
+  const last = mobileLinks[mobileLinks.length - 1];
+  const active = document.activeElement;
+
+  if (event.shiftKey && (active === first || active === menuBtn)) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && (active === last || active === menuBtn)) {
+    event.preventDefault();
+    if (active === menuBtn) {
+      first.focus();
+    } else {
+      menuBtn.focus();
     }
   }
-  setTimeout(typeLoop, deleting ? 40 : 70);
-}
-typeLoop();
-
-// ---------------------------------------------------------------------------
-// reveal-on-scroll
-// ---------------------------------------------------------------------------
-document.querySelectorAll('.about-grid, .projects-grid, .spec-sheet, .contact-form').forEach((el) => {
-  el.classList.add('reveal');
 });
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
 // ---------------------------------------------------------------------------
-// GitHub projects
+// nav active state on scroll
 // ---------------------------------------------------------------------------
-const FALLBACK_REPOS = [
-  { name: 'tm1go', description: 'Go package for the IBM TM1 REST API.', language: 'Go', stargazers_count: 0, html_url: 'https://github.com/tanuvnair/tm1go' },
-  { name: 'fluxroom', description: 'Real-time collaborative text editor.', language: 'TypeScript', stargazers_count: 0, html_url: 'https://github.com/tanuvnair' },
-  { name: 'portfolio', description: 'This site - source available on request.', language: 'HTML', stargazers_count: 0, html_url: 'https://github.com/tanuvnair' },
-];
+const navLinks = [...document.querySelectorAll('.nav-pill a')];
+const sections = navLinks
+  .map((a) => document.querySelector(a.getAttribute('href')))
+  .filter(Boolean);
 
-async function loadProjects() {
-  const container = document.getElementById('projects-container');
-  try {
-    const res = await fetch('https://api.github.com/users/tanuvnair/repos?sort=updated&per_page=6');
-    if (!res.ok) throw new Error('GitHub API error');
-    let repos = await res.json();
-    repos = repos.filter((r) => !r.fork).slice(0, 6);
-    if (!repos.length) throw new Error('No repos');
-    renderProjects(repos);
-  } catch (err) {
-    renderProjects(FALLBACK_REPOS);
-  }
-}
-
-function renderProjects(repos) {
-  const container = document.getElementById('projects-container');
-  container.innerHTML = '';
-  repos.forEach((repo) => {
-    const card = document.createElement('a');
-    card.href = repo.html_url;
-    card.target = '_blank';
-    card.rel = 'noopener noreferrer';
-    card.className = 'project-card';
-    card.innerHTML = `
-      <span class="project-name">${repo.name}</span>
-      <p class="project-desc">${repo.description || 'No description provided.'}</p>
-      <div class="project-meta">
-        ${repo.language ? `<span><span class="lang-dot"></span>${repo.language}</span>` : ''}
-        <span>★ ${repo.stargazers_count ?? 0}</span>
-      </div>
-    `;
-    container.appendChild(card);
+function setActiveNav(href) {
+  navLinks.forEach((link) => {
+    link.classList.toggle('is-active', link.getAttribute('href') === href);
   });
 }
-loadProjects();
 
-// ---------------------------------------------------------------------------
-// contact form (no backend wired up - swap action for your endpoint)
-// ---------------------------------------------------------------------------
-const form = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  if (!name) return;
-  formStatus.textContent = `Thanks, ${name.split(' ')[0]} - message noted. I'll reply soon.`;
-  form.reset();
+function updateActiveNav() {
+  if (!sections.length) return;
+
+  const last = sections[sections.length - 1];
+  // Short trailing sections (Contact) never hit a mid-viewport band; pin when
+  // the last section reaches the upper half, or the page is at the bottom.
+  const atPageEnd =
+    window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+  if (atPageEnd || last.getBoundingClientRect().top < window.innerHeight * 0.55) {
+    setActiveNav(`#${last.id}`);
+    return;
+  }
+
+  const marker = window.innerHeight * 0.35;
+  let current = sections[0];
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= marker) {
+      current = section;
+    }
+  }
+  setActiveNav(`#${current.id}`);
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    setActiveNav(link.getAttribute('href'));
+  });
 });
 
+let navRaf = 0;
+window.addEventListener(
+  'scroll',
+  () => {
+    if (navRaf) return;
+    navRaf = requestAnimationFrame(() => {
+      navRaf = 0;
+      updateActiveNav();
+    });
+  },
+  { passive: true }
+);
+window.addEventListener('resize', updateActiveNav);
+updateActiveNav();
+
 // ---------------------------------------------------------------------------
-// footer year
+// Busy LED: pause loop when offscreen
 // ---------------------------------------------------------------------------
-document.getElementById('year').textContent = new Date().getFullYear();
+const busyDot = document.querySelector('.busy-dot');
+if (busyDot && 'IntersectionObserver' in window) {
+  const busyObserver = new IntersectionObserver(
+    ([entry]) => {
+      busyDot.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+    },
+    { threshold: 0 }
+  );
+  busyObserver.observe(busyDot);
+}
+
+// ---------------------------------------------------------------------------
+// GitHub: recently pushed (exclude featured)
+// ---------------------------------------------------------------------------
+const FEATURED = new Set(['tm1go', 'fluxroom', 'circacal', 'aideas', 'tanuvnair.github.io']);
+
+const FALLBACK_REPOS = [
+  {
+    name: 'snag',
+    description: 'A simple URL shortener in Go.',
+    language: 'Go',
+    html_url: 'https://github.com/tanuvnair/snag',
+  },
+  {
+    name: 'pixgo',
+    description: 'A simple image to pixel art generator.',
+    language: 'Go',
+    html_url: 'https://github.com/tanuvnair/pixgo',
+  },
+  {
+    name: 'unfold',
+    description: 'Find hidden subscriptions in seconds.',
+    language: 'TypeScript',
+    html_url: 'https://github.com/tanuvnair/unfold',
+  },
+];
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+async function loadRecent() {
+  try {
+    const res = await fetch(
+      'https://api.github.com/users/tanuvnair/repos?sort=updated&per_page=12'
+    );
+    if (!res.ok) throw new Error('GitHub API error');
+    let repos = await res.json();
+    repos = repos
+      .filter((r) => !r.fork && !FEATURED.has(r.name) && r.description)
+      .slice(0, 3);
+    if (!repos.length) throw new Error('No repos');
+    renderRecent(repos);
+  } catch (err) {
+    renderRecent(FALLBACK_REPOS);
+  }
+}
+
+function renderRecent(repos) {
+  const container = document.getElementById('projects-container');
+  container.innerHTML = '';
+  if (!repos.length) {
+    container.innerHTML =
+      '<p class="projects-empty">No other public repos to show right now.</p>';
+    return;
+  }
+  repos.forEach((repo) => {
+    const a = document.createElement('a');
+    a.href = repo.html_url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.className = 'recent-item';
+    const lang = repo.language
+      ? `<span class="recent-lang">${escapeHtml(repo.language)}</span>`
+      : '';
+    a.innerHTML = `
+      <span class="recent-main">
+        <span class="recent-name">${escapeHtml(repo.name)}</span>
+        ${lang}
+      </span>
+      <span class="recent-desc">${escapeHtml(repo.description)}</span>
+      <span class="recent-cta">Open →</span>
+    `;
+    container.appendChild(a);
+  });
+}
+loadRecent();
+
+// ---------------------------------------------------------------------------
+// copy email
+// ---------------------------------------------------------------------------
+const copyBtn = document.getElementById('copy-email');
+const copyStatus = document.getElementById('copy-status');
+copyBtn.addEventListener('click', async () => {
+  const email = copyBtn.dataset.email;
+  try {
+    await navigator.clipboard.writeText(email);
+    copyStatus.textContent = 'Copied to clipboard.';
+  } catch (err) {
+    copyStatus.textContent = 'Copy failed; use the email link instead.';
+  }
+  setTimeout(() => {
+    copyStatus.textContent = '';
+  }, 2500);
+});
